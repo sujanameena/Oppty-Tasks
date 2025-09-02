@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Eligibility Checker</title>
+    <link rel="stylesheet" href="eligibility.css">
+    <script src="eligibility.js"></script>
+
+
+
+    <div class="container">
+        <h2>Exam Eligibility Checker</h2>
+        <p>Enter your attendance percentage:</p>
+        <input type="number" id="attendance" placeholder="Enter percentage" min="0" max="100">
+        
+        <div class="medical-checkbox">
+            <input type="checkbox" id="option1">
+            <label for="option1">Has medical certificate</label>
+        </div>
+        <div class="sportsPlayer-checkbox">
+            <input type="checkbox" id="option2">
+            <label for="option1">Is sports player</label>
+        </div>
+        <button onclick="checkEligibility()">Check Eligibility</button>
+        <p class="result" id="result"></p>
+    </div>
+
+
+</body>
+
+</html>

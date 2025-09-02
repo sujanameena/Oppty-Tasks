@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 40px;
+        }
+        .container {
+            width: 350px;
+            height: 200px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #080707;
+            border-radius: 15px;
+            background-image: linear-gradient(45deg, rgb(107, 6, 120), rgb(233, 217, 233));
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: rgb(87, 73, 190);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Palindrome Checker</h1>
+        <input type="text" id="text" placeholder="Enter text or number">
+        <button onclick="checkPalindrome()">Submit</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function checkPalindrome() {
+            const str = document.getElementById('text').value.trim();
+            let result = '';
+            if (str === '') {
+                result = 'Please enter some text or number.';
+            } else {
+                const reversedStr = str.split('').reverse().join('');
+                if (str === reversedStr) {
+                    result = `"${str}" is a Palindrome.`;
+                } else {
+                    result = `"${str}" is Not a Palindrome.`;
+                }
+            }
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+
+</html>

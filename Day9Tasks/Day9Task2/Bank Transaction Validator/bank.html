@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transaction Validator</title>
+    <link rel="stylesheet" href="bank.css">
+    <script src="bank.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2> Banking System</h2>
+
+        <input type="number" id="amount" placeholder="Enter amount" min="1">
+
+        <div>
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+            <button onclick="checkBalance()">Check Balance</button>
+        </div>
+
+        <div id="output" class="output"></div>
+
+    </div>
+
+</body>
+
+</html>

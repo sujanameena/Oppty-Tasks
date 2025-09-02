@@ -1,0 +1,473 @@
+.first-page {
+    background-color: rgba(24 1 75);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.page1-heading1-container {
+    color: white;
+}
+
+.page1-heading2-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.heading2 {
+    color: white;
+    font-size: 120px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+}
+
+.paragraph {
+    width: 100%;
+    color: white;
+    font-size: 60px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+}
+
+.button {
+    border-radius: 50px;
+    color: white;
+    padding: 20px 39px;
+    text-align: center;
+    text-decoration: double;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(206, 68, 17);
+    align-items: center;
+}
+
+.button-container {
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.page1-heading3-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.heading3 {
+    color: white;
+    font-size: 90px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-top: 100px;
+}
+
+.title-name-column {
+    color: white;
+    height: 50px;
+    padding-left: 100px;
+    font-size: 40px;
+}
+
+.title-volume-column {
+    color: white;
+    height: 50px;
+    padding-right: 100px;
+    font-size: 40px;
+}
+
+.horizontal-line {
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: 10px auto;
+}
+
+.row2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 10px;
+}
+
+.bitcoin-logo {
+    align-items: left;
+    width: 4%;
+    height: 50px;
+    margin: left;
+    display: block;
+    margin-left: 50px;
+}
+
+.bitcoin-text {
+    width: 7%;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    margin-left: 30px;
+
+}
+
+.BTC-text {
+    width: 4%;
+    color: grey;
+    font-size: 25px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.row2-crypto-value-parent {
+    margin-left: 57%;
+}
+
+.row2-crypto-Value1 {
+    font-size: 30px;
+    color: white;
+    margin: 0;
+}
+
+.row2-crypto-value2 {
+    font-size: 25px;
+    color: grey;
+    margin: 0;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.row3 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 10px;
+}
+
+.ethereum-logo {
+    align-items: left;
+    width: 4%;
+    height: 50px;
+    margin: left;
+    display: block;
+    margin-left: 50px;
+    border-radius: 50px;
+}
+
+.ethereum-text {
+    width: 7%;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    margin-left: 30px;
+
+}
+
+.ETH-text {
+    width: 4%;
+    color: grey;
+    font-size: 25px;
+    margin: 0;
+    margin-left: 34px;
+}
+
+.row3-crypto-value-parent {
+    margin-left: 56%;
+}
+
+.row3-crypto-Value1 {
+    font-size: 30px;
+    color: white;
+    margin: 0;
+}
+
+.row3-crypto-value2 {
+    font-size: 25px;
+    color: grey;
+    margin: 0;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.cardano-logo {
+    align-items: left;
+    width: 4%;
+    height: 50px;
+    margin: left;
+    display: block;
+    margin-left: 50px;
+    border-radius: 50px;
+}
+
+.cardano-text {
+    width: 7%;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    margin-left: 30px;
+
+}
+
+.ADA-text {
+    width: 4%;
+    color: grey;
+    font-size: 25px;
+    margin: 0;
+    margin-left: 34px;
+}
+
+.row4-crypto-value-parent {
+    margin-left: 56%;
+}
+
+.second-page {
+    background-color: rgba(253, 246, 251);
+    margin: 0;
+}
+
+.page2-heading1-container {
+    color: black;
+    font-size: 50px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+    padding-top: 20px;
+}
+
+.dollar-image {
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 250px;
+    margin: auto;
+    display: block;
+}
+
+.page2-heading2-container {
+    color: black;
+    font-size: 50px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+    padding-top: 10px;
+}
+
+.page2-paragraph1 {
+    width: 100%;
+    color: black;
+    font-size: 60px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+}
+
+.security-image {
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 280px;
+    margin: auto;
+    display: block;
+}
+
+.page2-heading3-container {
+    color: black;
+    font-size: 50px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+    padding-top: 10px;
+}
+
+.page2-paragraph2 {
+    width: 100%;
+    color: black;
+    font-size: 60px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+}
+
+.reliability-image {
+    align-items: center;
+    justify-content: center;
+    width: 24%;
+    height: 250px;
+    margin: auto;
+    display: block;
+}
+
+.page2-heading4-container {
+    color: black;
+    font-size: 50px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+    padding-top: 10px;
+}
+
+.page2-paragraph3 {
+    width: 100%;
+    color: black;
+    font-size: 60px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+}
+
+.third-page {
+    background-color: rgba(24 1 75);
+    margin: 0;
+}
+
+.page3-heading1-container {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+    padding-top: 20px;
+}
+
+.page3-paragraph1 {
+    width: 100%;
+    color: white;
+    font-size: 60px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+}
+
+.mobiles-image {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 800px;
+    margin: auto;
+    display: block;
+}
+
+.applications-image {
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 135px;
+    margin: auto;
+    display: block;
+}
+
+.fourth-page {
+    background-color: rgba(253, 246, 251);
+    margin: 0;
+}
+
+.page4-heading1-container {
+    color: black;
+    font-size: 50px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+    padding-top: 20px;
+}
+
+.page4-image1 {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 1500px;
+    margin: auto;
+    display: block;
+}
+
+.page4-image2 {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 1500px;
+    margin: auto;
+    display: block;
+    padding-top: 100px;
+}
+
+.page4-image3 {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 1500px;
+    margin: auto;
+    display: block;
+    padding-top: 100px;
+}
+
+.fifth-page {
+    background-color: rgba(24 1 75);
+    margin: 0;
+}
+
+.page5-heading1-container {
+    color: white;
+    font-size: 120px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: poppins;
+    padding-top: 5px;
+}
+
+.page5-paragraph1 {
+    width: 100%;
+    color: white;
+    font-size: 60px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+    position: relative;
+    top: -210px
+}

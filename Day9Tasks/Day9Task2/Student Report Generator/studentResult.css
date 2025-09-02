@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:out-of-range {
+    border: 2px solid red;
+    background: #ffe5e5;
+}
+
+button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #3a7bd5;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2a5cab;
+}
+
+.output {
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.grade-A {
+    color: green;
+}
+
+.grade-B {
+    color: blue;
+}
+
+.grade-C {
+    color: orange;
+}
+
+.fail {
+    color: red;
+}

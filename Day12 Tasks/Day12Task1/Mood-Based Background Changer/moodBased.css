@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+    padding: 50px;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.message {
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.happy {
+    background-color:rgb(219, 219, 11);
+    color: white;
+}
+
+.sad {
+    background-color: rgb(45, 133, 168);
+    color: white;
+}
+
+.angry {
+    background-color: rgb(232, 48, 48);
+    color: white;
+}
+
+.relaxed {
+    background-color: rgb(25, 137, 25);
+    color: white;
+}

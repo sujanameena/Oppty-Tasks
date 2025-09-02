@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime NUmber Checker</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 40px;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #080707;
+            border-radius: 15px;
+            background-image: linear-gradient(45deg, rgb(177, 227, 173), rgb(113, 211, 198), rgb(165, 117, 168));
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: rgb(217, 135, 220);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Prime Number Checker</h1>
+        <input type="number" id="num" placeholder="Enter Number">
+        <button onclick="checkPrime()">Submit</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function checkPrime() {
+            const n = parseInt(document.getElementById('num').value) || 0;
+            let result = '';
+            if (isNaN(n) || n < 2) {
+                result = 'Enter a number greater than 1.';
+            } else {
+                let isPrime = true;
+                for (let i = 2; i <= n / 2; i++) {
+                    if (n % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                result = isPrime ? n + ' is a Prime Number' : n + ' is Not a Prime Number';
+            }
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+
+</html>

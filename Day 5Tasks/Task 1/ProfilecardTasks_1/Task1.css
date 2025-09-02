@@ -1,0 +1,76 @@
+.profile-card {
+    background-image: linear-gradient(106deg, rgb(77, 110, 232), rgb(202, 227, 240));
+    height: 500px;
+    width: 300px;
+    border: 15px rgb(187, 236, 187);
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    line-height: 1;
+}
+
+.main-photo {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: medium;
+    border-color: rgb(215, 104, 104) rgb(220, 124, 126) rgb(236, 129, 143) rgb(200, 97, 145);
+}
+
+.linked-in {
+    width: 44px;
+    height: 33px;
+    border-radius: 40%;
+}
+
+.twitter {
+    width: 36px;
+    height: 33px;
+}
+
+.github {
+    width: 36px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+.row {
+    height: 50px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.column {
+    float: left;
+    width: 13%;
+    height: 50px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.button {
+    border-radius: 50px;
+    color: white;
+    padding: 9px 39px;
+    text-align: center;
+    text-decoration: double;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 2px;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rgb(7, 141, 237), rgb(55, 202, 212), rgb(180, 217, 234));
+    border: none;
+}
+
+.button-container {
+    margin: 20px;
+}

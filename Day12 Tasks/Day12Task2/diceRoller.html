@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s ease;
+            padding: 50px;
+        }
+
+        button {
+            margin: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>🎲 Dice Roller Simulator 🎲</h2>
+
+    <button onclick="rollDice()">Roll Dice</button>
+
+    <p id="result">Click the button to roll the dice!</p>
+
+    <script>
+        function rollDice() {
+            let number = Math.floor(Math.random() * 6) + 1;
+
+            let diceFaces = ["🎲", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+
+            let result = document.getElementById("result");
+            result.textContent = "You rolled: " + number + " " + diceFaces[number];
+
+            if (number === 1 || number === 2) {
+                document.body.style.backgroundColor = "tomato";
+            } else if (number === 3 || number === 4) {
+                document.body.style.backgroundColor = "yellow";
+            } else {
+                document.body.style.backgroundColor = "lightgreen";
+            }
+        }
+    </script>
+</body>
+
+</html>

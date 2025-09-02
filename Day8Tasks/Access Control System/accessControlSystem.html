@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Access Control System</title>
+  <link rel="stylesheet" href="accessControlSystem.css">
+  <script src="accessControlSystem.js"></script>
+
+  <div id="login" class="container show">
+    <h2>Access Control System</h2>
+    <h3>Login Input</h3>
+    <input type="text" id="Login-Username" placeholder="Username" required><br>
+    <input type="password" id="Login-Password" placeholder="Password" required><br>
+    <button type="submit" onclick="validateLogin()">Submit</button>
+    <div id="result1"></div>
+  </div>
+
+  <div id="admin" class="container hide">
+    <h2>Admin Input</h2>
+    <input type="text" id="Admin-Username" placeholder="Username" required><br>
+    <input type="password" id="Admin-Password" placeholder="Password" required><br>
+    <button type="submit" onclick="validateAdmin()">Submit</button>
+    <div id="result2"></div>
+  </div>
+
+  <div id="specialPass" class="container hide">
+    <h2>Special Pass Input</h2>
+    <input type="text" id="Specialpass-username" placeholder="Username" required><br>
+    <input type="password" id="Specialpass-password" placeholder="Password" required><br>
+    <button type="submit" onclick="validatePass()">Submit</button>
+    <div id="result3"></div>
+  </div>
+
+  <div id="accessGranted" class="container hide">
+    <div id="result4"></div>
+  </div>
+</body>
+
+</html>

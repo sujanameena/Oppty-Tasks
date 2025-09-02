@@ -1,0 +1,24 @@
+body {
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      background: white;
+    }
+    .counter-box {
+      text-align: center;
+      background: rgb(232, 170, 170);
+      padding: 20px;
+      border-radius: 12px;
+    }
+    #counter {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 8px 16px;
+      margin: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce cart</title>
+    <link rel="stylesheet" href="shoppingCart.css">
+    <script src="shoppingCart.js"></script>
+</head>
+
+<body>
+    <div id="premiumChecker" class="container">
+        <h2>E-commerce cart</h2>
+        <div class="premium-checkbox">
+            <input type="checkbox" id="option1">
+            <label for="option1">Premium customer</label>
+        </div>
+
+        <div id="cart-items" class="cartItems">
+            <h3> Enter value of the items</h3>
+            <input type="number" id="item-value" class="item" placeholder="Enter the value of the item">
+         </div>   
+        <button onclick="addInputTag()">Add more items</button>
+        <button onclick="checkDiscount()">Calculate Final Price</button>
+        <div id="result" class="result"></div>
+        </div>
+
+</body>
+</html>

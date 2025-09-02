@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report Generator</title>
+    <link rel="stylesheet" href="studentResult.css">
+    <script src="studentResult.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Result Report</h2>
+
+        <div class="input-group">
+            <input type="text" id="studentName" placeholder="Enter Student Name">
+        </div>
+        <div class="input-group">
+            <input type="number" class="marks" placeholder="English" min="0" max="100">
+        </div>
+        <div class="input-group">
+            <input type="number" class="marks" placeholder="Telugu" min="0" max="100">
+        </div>
+        <div class="input-group">
+            <input type="number" class="marks" placeholder="Maths" min="0" max="100">
+        </div>
+        <div class="input-group">
+            <input type="number" class="marks" placeholder="Science" min="0" max="100">
+        </div>
+        <div class="input-group">
+            <input type="number" class="marks" placeholder="Social" min="0" max="100">
+        </div>
+        <div class="input-group">
+            <input type="number" class="marks" placeholder="Hindi" min="0" max="100">
+        </div>
+
+        <button onclick="generateReport()">Generate Report</button>
+
+        <div id="output" class="output"></div>
+    </div>
+</body>
+
+</html>
