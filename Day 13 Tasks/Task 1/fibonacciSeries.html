@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 60px;
+            background-color: white;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        input,
+        button {
+            padding: 8px 12px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: green;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: lightgreen;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Fibonacci Series Generator</h2>
+
+    <label for="number">Enter number:</label>
+    <input type="number" id="number" min="1" placeholder="Enter number">
+    <button onclick="generateFibonacci()">Generate</button>
+
+    <p id="output"></p>
+
+    <script>
+        function generateFibonacci() {
+
+      let n = parseInt(document.getElementById("number").value);
+
+      if (isNaN(n) || n <= 0) {
+        document.getElementById("output").innerText = "Please enter a valid positive number!";
+        return;
+      }
+
+      let result = "";
+      let a = 0;
+      let b = 1;
+
+      for (let i = 1; i <= n; i++) {
+        result = result +  a + (i < n ? ", " : "");
+        let next = a + b;
+        a = b;
+        b = next;
+      }
+
+      document.getElementById("output").innerText = "Fibonacci Series: " + result;
+    }
+    </script>
+</body>
+
+</html>

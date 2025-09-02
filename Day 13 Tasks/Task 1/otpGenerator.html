@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random OTP Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 60px;
+            background: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        select,
+        button {
+            padding: 8px 12px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Random OTP Generator</h2>
+
+    <label for="otpType">Choose OTP Type:</label>
+
+    <select id="otpType">
+        <option value="numeric">Numeric</option>
+        <option value="alphanumeric">Alphanumeric</option>
+    </select>
+
+    <button onclick="generateOTP()">Generate OTP</button>
+
+    <p id="otp"></p>
+
+    <script>
+        function generateOTP() {
+      let type = document.getElementById("otpType").value;
+      let otp = "";
+
+      if (type === "numeric") {
+        for (let i = 0; i < 6; i++) {
+          otp = otp + Math.floor(Math.random() * 10);
+        }
+      } else {
+        let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        for (let i = 0; i < 6; i++) {
+          let index = Math.floor(Math.random() * chars.length);
+          otp = otp + chars.charAt(index);
+        }
+      }
+
+      document.getElementById("otp").innerHTML = "Your OTP: " + otp;
+    }
+ </script>
+
+</body>
+
+</html>

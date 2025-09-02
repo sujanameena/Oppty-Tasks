@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            margin: 8px;
+            padding: 6px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>BMI Calculator</h2>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter weight"><br>
+
+    <label for="height">Height (m):</label>
+    <input type="number" id="height" placeholder="Enter height in meters"><br><br>
+
+    <button onclick="calculateBMI()">Calculate</button>
+
+    <p id="result"></p>
+    <p id="category"></p>
+
+    <script>
+        function calculateBMI() {
+            let weight = parseFloat(document.getElementById("weight").value);
+            let height = parseFloat(document.getElementById("height").value);
+
+            if (weight > 0 && height > 0) {
+                let bmi = weight / Math.pow(height, 2);
+
+                document.getElementById("result").innerHTML = "Your BMI is: " + bmi.toFixed(2);
+
+                let status = "";
+                if (bmi < 18.5) {
+                    status = "Underweight";
+                } else if (bmi < 24.9) {
+                    status = "Normal";
+                } else if (bmi < 29.9) {
+                    status = "Overweight";
+                } else {
+                    status = "Obese";
+                }
+                document.getElementById("category").innerHTML = "Category: " + status;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

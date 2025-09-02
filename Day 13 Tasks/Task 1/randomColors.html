@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 60px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            margin-top: 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #colorCode {
+            font-size: 22px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #preview {
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Random HEX Color Code Generator</h2>
+
+    <button onclick="generateColor()">Generate Color</button>
+
+    <div id="preview"></div>
+    <p id="colorCode">HEX Code: #FFFFFF</p>
+
+
+    <script>
+        function generateColor() {
+
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+
+            let hexR = r.toString(16).padStart(2, '0');
+            let hexG = g.toString(16).padStart(2, '0');
+            let hexB = b.toString(16).padStart(2, '0');
+
+            let hexColor = "#" + hexR + hexG + hexB;
+
+            document.getElementById("preview").style.backgroundColor = hexColor;
+
+            document.getElementById("colorCode").innerText = "HEX Code: " + hexColor.toUpperCase();
+        }
+
+    </script>
+
+</body>
+
+</html>
