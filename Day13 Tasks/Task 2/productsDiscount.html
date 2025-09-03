@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Discount Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: white;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        select,
+        input,
+        button {
+            padding: 8px 12px;
+            margin: 8px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        button {
+            background: rgb(64, 168, 64);
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: green;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Product Discount Calculator</h2>
+
+    <label for="product">Select Product:</label>
+    <select id="product">
+        <option value="laptop">Laptop</option>
+        <option value="mouse">Mouse</option>
+        <option value="keyboard">Keyboard</option>
+    </select><br>
+
+    <label for="discount">Enter Discount:</label>
+    <input type="number" id="discount" placeholder="Enter discount in (%)"><br>
+
+    <button onclick="calculatePrice()">Get Final Price</button>
+
+    <p id="error"></p>
+    <p id="originalPrice"></p>
+    <p id="finalPrice"></p>
+
+    <script>
+        function calculatePrice() {
+            let products = {
+                laptop: 50000,
+                mouse: 800,
+                keyboard: 1500
+            };
+
+            let product = document.getElementById("product").value;
+            let discount = parseFloat(document.getElementById("discount").value);
+
+            if (isNaN(discount) || discount < 0 || discount > 100) {
+                document.getElementById("error").innerHTML = "Please enter a valid discount (0-100)";
+                document.getElementById("error").style.color = "red";
+                return;
+            }
+
+            let originalPrice = products[product];
+            let finalPrice = originalPrice - (originalPrice * (discount / 100));
+
+            document.getElementById("originalPrice").innerHTML =
+                "Original Price:-  " + Math.round(originalPrice);
+            document.getElementById("finalPrice").innerHTML =
+                "Total Amount:-  " + Math.round(finalPrice);
+        }
+    </script>
+</body>
+
+</html>
