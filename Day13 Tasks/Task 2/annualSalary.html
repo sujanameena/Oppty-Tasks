@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary with Bonus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: white;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        input,
+        button {
+            padding: 8px 12px;
+            margin: 8px;
+            border: 1px solid rgb(7, 7, 7);
+            border-radius: 5px;
+        }
+
+        button {
+            background: rgb(81, 196, 222);
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: rgb(8, 166, 223);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Employee Salary with Bonus</h2>
+
+    <label for="name">Employee Name:</label>
+    <input type="text" id="name" placeholder="Enter name"><br>
+
+    <label for="salary">Monthly Salary:</label>
+    <input type="number" id="salary" placeholder="Enter salary"><br>
+
+    <label for="bonus">Bonus:</label>
+    <input type="number" id="bonus" placeholder="Enter bonus in (%)"><br>
+
+    <button onclick="showSalary()">Calculate Annual Salary</button>
+
+    <p id="error"></p>
+    <p id="employeeName"></p>
+    <p id="annualSalary"></p>
+
+    <script>
+        function showSalary() {
+            let empName = document.getElementById("name").value;
+            let salary = parseFloat(document.getElementById("salary").value);
+            let bonus = parseFloat(document.getElementById("bonus").value);
+
+            if (!empName || isNaN(salary) || isNaN(bonus) || salary <= 0 || bonus < 0) {
+                document.getElementById("error").innerHTML = "Please enter a valid details";
+                document.getElementById("error").style.color = "red";
+                return;
+            }
+
+            let employee = {
+                name: empName,
+                monthlySalary: salary,
+                bonusPercent: bonus,
+
+                calculateAnnualSalary: function () {
+                    let annual = this.monthlySalary * 12;
+                    let bonusAmount = annual * (this.bonusPercent / 100);
+                    return Math.round(annual + bonusAmount);
+                }
+            };
+
+            let finalSalary = employee.calculateAnnualSalary();
+
+            document.getElementById("employeeName").innerHTML =
+                "Employee Name:-  " + employee.name;
+            document.getElementById("employeeName").style.color = "green";
+            document.getElementById("annualSalary").innerHTML =
+                "Total Amount:-  " + Math.round(finalSalary);
+                document.getElementById("annualSalary").style.color = "green";
+        }
+
+    </script>
+</body>
+
+</html>
