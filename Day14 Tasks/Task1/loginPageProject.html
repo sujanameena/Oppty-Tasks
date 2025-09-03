@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page development</title>
+    <link rel="stylesheet" href="loginPageProject.css">
+    <script src="loginPageProject.js"></script>
+</head>
+
+<body>
+    <div class="loginContainer" id="loginBox">
+        <h2>Login</h2>
+        <input type="text" id="emailID" placeholder="sample: abcd@email.com"><br>
+
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Submit</button>
+
+        <div class="emailVerificationContainer">
+            <p id="emailVerificationResult"></p>
+        </div>
+        <div class="passwordStrengthContainer">
+            <p id="passwordStrengthResult"></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
