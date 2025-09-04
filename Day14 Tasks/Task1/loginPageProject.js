@@ -3,6 +3,11 @@ function login() {
     let isValidPassword = passwordStrengthResult();
 
     if (isValidEmail && isValidPassword) {
+
+        document.getElementById("thankYouMsg").style.display = "block";
+    }
+
+    if (isValidEmail && isValidPassword) {
         setTimeout(() => {
             window.location.href = "welcome.html";
         }, 2000);
@@ -15,28 +20,28 @@ function emailVerificationResult() {
     let message = document.getElementById("emailVerificationResult");
 
     if (email === "") {
-        message.textContent = "Please enter an email";
+        message.textContent = "❌ Please enter an email";
         message.className = "error";
         return false;
     }
     else if (!email.includes("@")) {
-        message.textContent = "Missing '@' in email";
+        message.textContent = "❌ Missing '@' in email";
         message.className = "error";
         return false;
     }
     else if (!email.endsWith(".com")) {
-        message.textContent = "Email must end with '.com'";
+        message.textContent = "❌ Email must end with '.com'";
         message.className = "error";
         return false;
     }
     else {
         let parts = email.split("@");
         if (parts[0].length === 0) {
-            message.textContent = "Missing name before '@'";
+            message.textContent = "❌ Missing name before '@'";
             message.className = "error";
             return false;
         } else {
-            message.textContent = "Valid email address!";
+            message.textContent = "✅ Valid email address!";
             message.className = "success";
             return true;
         }
@@ -53,14 +58,14 @@ function passwordStrengthResult() {
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
     if (minLength && hasUpperCase && hasNumber && hasSpecialChar) {
-        result.textContent = "Password is Strong!";
+        result.textContent = "✅ Password is Strong!";
         result.style.color = "green";
-        console.log("Password is Strong!");
+        console.log("✅ Password is Strong!");
         return true;
     } else {
-        result.textContent = "Password is Weak!";
+        result.textContent = "❌ Password is Weak!";
         result.style.color = "red";
-        console.log("Password is Weak!");
+        console.log("❌ Password is Weak!");
         return false;
     }
 }
