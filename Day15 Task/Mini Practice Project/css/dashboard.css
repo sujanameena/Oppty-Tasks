@@ -1,13 +1,32 @@
-.sidebar {
-    width: 220px;
-    /* background: linear-gradient(to bottom,grey,rgb(75, 39, 39)); */
-    background: black;
+.navigationBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 60px;
     color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;    
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+}
+
+.sidebar {
     margin-top: 60px;
-    height: 100vh;
     position: fixed;
     left: -220px;
-    padding-top: 60px;
     transition: left 0.3s ease;
 }
 
@@ -19,39 +38,9 @@
     display: block;
     color: white;
     text-decoration: none;
-    padding: 15px;
+    padding: 5px;
 }
 
 .sidebar a:hover {
     background: grey;
-}
-
-.navigationBar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: linear-gradient(to bottom,grey,rgb(152, 180, 229));
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 0 5px;
-}
-
-.hamburger {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger div {
-    width: 30px;
-    height: 4px;
-    background: white;
-    border-radius: 2px;
-}
-
-.content.shifted {
-    margin-left: 220px;
 }

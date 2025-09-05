@@ -8,7 +8,8 @@ body {
 .head {
     width: 100%;
     height: 80px;
-    background: linear-gradient(60deg, black, rgb(231, 190, 149), grey, rgb(200, 125, 39));
+    background: linear-gradient(60deg, black, rgb(231, 190, 149),
+            grey, rgb(200, 125, 39));
     color: white;
     display: flex;
     justify-content: space-between;
@@ -23,21 +24,14 @@ body {
 }
 
 .img-container {
-    /* height: 60px; */
     width: 110px;
-    /* overflow: hidden; */
-    /* border-radius: 15px; */
-    /* margin-left: 10px; */
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
 .wave-img {
-    /* width: 50px; */
     height: 28px;
-    /* object-fit: cover; */
     animation: waveMove 5s ease-in-out infinite;
 }
 
@@ -66,9 +60,6 @@ body {
 .name {
     font-size: 40px;
     font-family: cursive;
-    /* display: flex; */
-    /* justify-content: flex-start; */
-    /* text-align: left; */
     margin-left: 10px;
 }
 
@@ -80,8 +71,6 @@ body {
 }
 
 .search-bar {
-    /* margin-left: 50px; */
-    /* width: 500px; */
     display: flex;
     height: 100%;
     align-items: center;
@@ -120,10 +109,7 @@ body {
 
 .login-btn {
     padding-left: 10px;
-    /* display: inline-block; */
     background: rgb(69, 75, 77);
-    /* color: white; */
-    /* text-decoration: none; */
     border-radius: 8px;
     font-weight: bold;
     margin-left: 40px;
@@ -132,6 +118,7 @@ body {
     height: 35px;
     align-content: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .login-btn:hover {
@@ -143,47 +130,3 @@ body {
     font-size: 25px;
     margin-right: 25px;
 }
-
-/* .store-container {
-    display: flex;
-    padding: 32px;
-
-} */
-
-
-
-
-
-
-
-
-
-/* .filters {
-    width: 250px;
-    margin-right: 32px;
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.filter-group {
-    margin-bottom: 25px;
-}
-
-#category-filter {
-    margin-top: -20px;
-
-}
-
-#price-range {
-    width: 100%;
-} */
-
-
-
-/* CSS FOR SEARCH BAR */
-
-
-
-/* CSS FOR LOGIN BUTTON */

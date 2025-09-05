@@ -7,7 +7,7 @@
     <title>Zyllo.com</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="eCommerce.js"></script>
 </head>
 
@@ -23,7 +23,8 @@
 
         <div class="items">
             <div class="search-bar">
-                <input type="text" class="search-input" placeholder="🔍 Search for products and more..">
+                <input type="text" class="search-input" id="searchInput"
+                    placeholder="🔍 Search for products and more..">
                 <button>Search</button>
             </div>
             <a class="login-btn" onclick="openPage('login')">👤 Login</a>
@@ -33,28 +34,7 @@
             🛒 <span id="cart-item-count">0</span> items
         </div>
     </header>
-    <div></div>
 
-    <!-- <main class="store-container">
-        <aside class="filters">
-            <h2>Filters</h2>
-            <div class="filter-group">
-                <h4>Category</h4>
-                <select id="category-filter">
-                    <option value="all">All</option>
-                    <option value="fashion">Fashion</option>
-                    <option value="electronics">Electronics</option>
-                    <option value="mobiles">Mobiles</option>
-                    <option value="Furniture">Furniture</option>
-                </select>
-            </div>
-            <div class="priceRange">
-                <h4>Price Range</h4>
-                <input type="range" id="price-range" min="300" max="1000" value="1000">
-                <p>Max Price: ₹<span id="max-price-display">3000+</span></p>
-            </div>
-        </aside>
-    </main> -->
 
     <div class="navigationBar">
         <div class="hamburger" onclick="toggleSidebar()">
@@ -62,11 +42,11 @@
             <div></div>
             <div></div>
         </div>
-        <h2 style="margin-left:15px;">My Dashboard</h2>
+        <h2 style="margin-left:15px;">Filters</h2>
     </div>
 
+
     <div class="sidebar" id="sidebar">
-        <a href="#">Filters</a>
         <a href="#">Shop by category</a>
         <select id="category-filter">
             <option value="all">All</option>
@@ -76,7 +56,7 @@
             <option value="Furniture">Furniture</option>
         </select>
     </div>
-    
+
 
 </body>
 
