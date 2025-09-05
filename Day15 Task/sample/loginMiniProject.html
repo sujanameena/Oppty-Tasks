@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZYLLO E-Commerce</title>
+  <style>
+    /* body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    } */
+
+    /* Header (main page) */
+    /* .head {
+      background: linear-gradient(60deg, rgb(13, 58, 80), rgb(92, 143, 164), rgb(26, 123, 150));
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+    }
+    .login-btn {
+      background: #333;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    } */
+
+    /* Overlay pages (login/register/forgot) */
+    .page {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .page.active {
+      display: flex;
+    }
+
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+      text-align: center;
+    }
+    .form-box h2 {
+      margin-bottom: 20px;
+      color: #0d3a50;
+    }
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background: #0d3a50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .form-box button:hover {
+      background: #1a7b96;
+    }
+    .links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .links a {
+      color: #0d3a50;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content area */
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Page
+  <div class="head">
+    <h1>ZYLLO</h1>
+    <div class="cart">🛒 0 items</div>
+    <a class="login-btn" onclick="openPage('login')">👤 Login</a>
+  </div>
+  <div class="content" id="mainPage">
+    <h2>Welcome to ZYLLO E-Commerce!</h2>
+    <p>Explore our products and best deals.</p>
+  </div> -->
+
+  <!-- Login Page -->
+  <div class="page" id="login">
+    <div class="form-box">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <button onclick="handleLogin()">Login</button>
+      <div class="links">
+        <p><a onclick="openPage('register')">New Registration</a></p>
+        <p><a onclick="openPage('forgot')">Forgot Password?</a></p>
+      </div>
+      <p><a onclick="closePages()">Close ✖</a></p>
+    </div>
+  </div>
+
+  <!-- Registration Page -->
+  <div class="page" id="register">
+    <div class="form-box">
+      <h2>Register</h2>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button onclick="registerUser()">Register</button>
+      <div class="links">
+        <p><a onclick="openPage('login')">Back to Login</a></p>
+      </div>
+      <p><a onclick="closePages()">Close ✖</a></p>
+    </div>
+  </div>
+
+  <!-- Forgot Password Page -->
+  <div class="page" id="forgot">
+    <div class="form-box">
+      <h2>Forgot Password</h2>
+      <input type="email" placeholder="Enter your email" required>
+      <button>Reset Password</button>
+      <div class="links">
+        <p><a onclick="openPage('login')">Back to Login</a></p>
+      </div>
+      <p><a onclick="closePages()">Close ✖</a></p>
+    </div>
+  </div>
+
+  <script>
+    function openPage(id) {
+      closePages();
+      document.getElementById(id).classList.add("active");
+    }
+
+    function closePages() {
+      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    }
+
+    function handleLogin() {
+      const email = document.getElementById("loginEmail").value.trim();
+      const pass = document.getElementById("loginPass").value.trim();
+
+      if(email === "" || pass === "") {
+        alert("Please enter email and password");
+        return;
+      }
+
+      // ✅ Fake login: accept any credentials
+      alert("Login successful! Redirecting to main page...");
+      closePages(); // close login form
+      document.getElementById("mainPage").scrollIntoView({behavior:"smooth"}); 
+    }
+
+    function registerUser() {
+      alert("Registration successful! Please login now.");
+      openPage("login");
+    }
+  </script>
+
+</body>
+</html>

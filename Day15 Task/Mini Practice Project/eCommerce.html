@@ -7,6 +7,7 @@
     <title>Zyllo.com</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="login.css">
     <script src="eCommerce.js"></script>
 </head>
 
@@ -14,21 +15,25 @@
     <header class="head">
         <div class="logo_container">
             <div class="img-container">
-                <img src="zylloLogo.png" alt="WaveImage" class="wave-img">
+                <img src="zylloLogo.png" alt="zyllo-Logo" class="wave-img">
             </div>
             <div class="name">ZYLLO</div>
         </div>
+
+
         <div class="items">
             <div class="search-bar">
                 <input type="text" class="search-input" placeholder="🔍 Search for products and more..">
                 <button>Search</button>
             </div>
-            <a href="login.html" class="login-btn">👤 Login</a>
+            <a class="login-btn" onclick="openPage('login')">👤 Login</a>
         </div>
+
         <div class="cart">
             🛒 <span id="cart-item-count">0</span> items
         </div>
     </header>
+    <div></div>
 
     <!-- <main class="store-container">
         <aside class="filters">
@@ -50,6 +55,16 @@
             </div>
         </aside>
     </main> -->
+
+    <div class="navigationBar">
+        <div class="hamburger" onclick="toggleSidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h2 style="margin-left:15px;">My Dashboard</h2>
+    </div>
+
     <div class="sidebar" id="sidebar">
         <a href="#">Filters</a>
         <a href="#">Shop by category</a>
@@ -60,16 +75,8 @@
             <option value="mobiles">Mobiles</option>
             <option value="Furniture">Furniture</option>
         </select>
-
     </div>
-    <div class="navigationBar">
-        <div class="hamburger" onclick="toggleSidebar()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <h2 style="margin-left:15px;">My Dashboard</h2>
-    </div>
+    
 
 </body>
 

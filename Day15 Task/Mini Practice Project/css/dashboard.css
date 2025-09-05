@@ -1,7 +1,9 @@
 .sidebar {
     width: 220px;
-    background: rgb(160, 155, 155);
+    /* background: linear-gradient(to bottom,grey,rgb(75, 39, 39)); */
+    background: black;
     color: white;
+    margin-top: 60px;
     height: 100vh;
     position: fixed;
     left: -220px;
@@ -15,13 +17,13 @@
 
 .sidebar a {
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 15px;
 }
 
 .sidebar a:hover {
-    background: #444;
+    background: grey;
 }
 
 .navigationBar {
@@ -29,8 +31,7 @@
     left: 0;
     right: 0;
     height: 60px;
-    /* background: rgb(69, 75, 77); */
-    background: linear-gradient(to top,grey,rgb(55, 53, 53));
+    background: linear-gradient(to bottom,grey,rgb(152, 180, 229));
     color: white;
     display: flex;
     align-items: center;
