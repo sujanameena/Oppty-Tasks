@@ -1,0 +1,56 @@
+.sidebar {
+    width: 220px;
+    background: rgb(160, 155, 155);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: -220px;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.sidebar a:hover {
+    background: #444;
+}
+
+.navigationBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 60px;
+    /* background: rgb(69, 75, 77); */
+    background: linear-gradient(to top,grey,rgb(55, 53, 53));
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+}
+
+.content.shifted {
+    margin-left: 220px;
+}
