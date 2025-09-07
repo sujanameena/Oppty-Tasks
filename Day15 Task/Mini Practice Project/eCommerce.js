@@ -1,9 +1,17 @@
+category = "All";
+price = 100000;
+
 // DASHBOARD FUNCTION
 function toggleSidebar() {
   document.getElementById("sidebar").classList.toggle("active");
 }
+function updatePriceValue(val) {
+  document.getElementById("priceValue").textContent = val;
+  price = val;
+  showProducts();
+}
 
-// COMPLETE LOGIN FUNCTION
+// COMPLETE LOGIN FUNCTION STARTING
 let users = [{ username: "user", password: "pass" }];
 let currentUser = null;
 
@@ -84,84 +92,179 @@ function logout() {
   updateHeader();
   alert("Logged out!");
 }
+// COMPLETE LOGIN FUNCTION ENDING
 
-// ADDING CONSTANT IMAGES
-const products = [
-      {
-        id: 1,
-        name: "Wireless Headphones",
-        category: "electronics",
-        price: 1499,
-        stock: 10,
-        img: "..../Day15 Task/Mini Practice Project/assets/realme_earbuds.jpg",
-        desc: "High quality wireless headphones with noise cancellation."
-      },
-      {
-        id: 2,
-        name: "Smartphone",
-        category: "mobiles",
-        price: 150000,
-        stock: 5,
-        img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80",
-        desc: "Latest smartphone with advanced features."
-      },
-      {
-        id: 3,
-        name: "T-Shirt",
-        category: "fashion",
-        price: 499,
-        stock: 20,
-        img: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
-        desc: "Comfortable cotton t-shirt in various sizes."
-      },
-      {
-        id: 4,
-        name: "Sofa",
-        category: "furniture",
-        price: 2999,
-        stock: 2,
-        img: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=400&q=80",
-        desc: "Modern sofa for your living room."
-      }
-    ];
-    // Render product cards
-      for (let i = 0; i < filtered.length; i++) {
-        const p = filtered[i];
-        productsDiv.innerHTML += `
-          <div class="product-card">
-            <img src="${p.img}" alt="${p.name}" />
-            <div class="product-title">${p.name}</div>
-            <div class="product-desc">${p.desc}</div>
-            <div class="product-price">₹${p.price}</div>
-            <div class="product-stock">${p.stock > 0 ? "In Stock: " + p.stock : "<span style='color:red'>Out of Stock</span>"}</div>
-            <button class="add-to-cart-btn" onclick="addToCart(${p.id})" ${p.stock === 0 ? "disabled" : ""}>Add to Cart</button>
-          </div>
-        `;
-      }
-  
 
-    function addToCart(id) {
-      const product = products.find(p => p.id === id);
-      if (product && product.stock > 0) {
-        product.stock--;
-        orders++;
-        updateOrders();
-        renderProducts();
-      }
+// ADDING IMAGES STARTING
+
+function createProductCard({ image, name, description, rating, price }) {
+  const card = document.createElement("div");
+  card.className = "product-card";
+
+  card.innerHTML = `
+        <img src="${image}" alt="${name}" style="width:100%; border-radius: 8px;">
+        <h2 style="margin: 10px 0 5px;">${name}</h2>
+        <p style="color: #555;">${description}</p>
+        <div style="margin: 8px 0;">
+          <span style="color: #f5b50a;">${"&#9733;".repeat(
+            Math.round(rating)
+          )}</span>
+          <span style="color: #888;">${rating.toFixed(1)}</span>
+        </div>
+        <div style="font-weight: bold; margin-bottom: 10px;">₹${price}</div>
+        <button style="margin-bottom:auto; background: #007bff; color: #fff; border: none; padding: 10px 16px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+      `;
+  return card;
+}
+
+function showProducts() {
+  const products = [
+    {
+      image: "assets/appleLaptop.jpeg",
+      name: "Mac book Air",
+      description: "Short description of product 3.",
+      rating: 4.0,
+      price: 130000,
+      category: "Electronics",
+    },
+    {
+      image: "assets/apple-iphone-14-pro-5.jpg",
+      name: "Apple iPhone 14 Pro",
+      description: "Latest Apple iPhone with advanced features.",
+      rating: 4.8,
+      price: 100000,
+      category: "Mobiles",
+    },
+    {
+      image: "assets/bed1.jpeg",
+      name: "Classic Wooden Bed",
+      description: "Elegant wooden bed for a comfortable sleep.",
+      rating: 4.6,
+      price: 29999,
+      category: "Furniture",
+    },
+    {
+      image: "assets/bed2.jpg",
+      name: "Luxury King Bed",
+      description: "Spacious king size bed with premium finish.",
+      rating: 4.7,
+      price: 39999,
+      category: "Furniture",
+    },
+    {
+      image: "assets/chair1.jpg",
+      name: "Office Chair",
+      description: "Ergonomic office chair for daily use.",
+      rating: 4.3,
+      price: 8999,
+      category: "Furniture",
+    },
+    {
+      image: "assets/chair2.jpg",
+      name: "Dining Chair",
+      description: "Stylish dining chair for your home.",
+      rating: 4.1,
+      price: 4999,
+      category: "Furniture",
+    },
+    {
+      image: "assets/chair3.jpeg",
+      name: "Lounge Chair",
+      description: "Comfortable lounge chair for relaxation.",
+      rating: 4.5,
+      price: 12999,
+      category: "Furniture",
+    },
+    {
+      image: "assets/frock.jpeg",
+      name: "Kids Frock",
+      description: "Cute frock for kids, available in all sizes.",
+      rating: 4.4,
+      price: 2499,
+      category: "Fashion",
+    },
+    {
+      image: "assets/lenovo laptop.jpg",
+      name: "Lenovo Laptop",
+      description: "High performance Lenovo laptop for work and play.",
+      rating: 4.6,
+      price: 74999,
+      category: "Electronics",
+    },
+    {
+      image: "assets/realme_earbuds.jpg",
+      name: "Realme Earbuds",
+      description: "Wireless earbuds with long battery life.",
+      rating: 4.2,
+      price: 3999,
+      category: "Electronics",
+    },
+    {
+      image: "assets/samsung-galaxy-a34-5g-500x500.webp",
+      name: "Samsung Galaxy A34 5G",
+      description: "Affordable 5G smartphone from Samsung.",
+      rating: 4.3,
+      price: 29999,
+      category: "Mobiles",
+    },
+    {
+      image: "assets/sareeImage.jpeg",
+      name: "Designer Saree",
+      description: "Elegant saree for festive occasions.",
+      rating: 4.7,
+      price: 7999,
+      category: "Fashion",
+    },
+    {
+      image: "assets/sofa.jpg",
+      name: "3-Seater Sofa",
+      description: "Comfortable 3-seater sofa for your living room.",
+      rating: 4.5,
+      price: 49999,
+      category: "Furniture",
+    },
+    {
+      image: "assets/sofa1.webp",
+      name: "Modern Sofa",
+      description: "Stylish modern sofa with premium fabric.",
+      rating: 4.4,
+      price: 59999,
+      category: "Furniture",
+    },
+    {
+      image: "assets/sofa2.webp",
+      name: "L-Shaped Sofa",
+      description: "Spacious L-shaped sofa for large families.",
+      rating: 4.6,
+      price: 69999,
+      category: "Furniture",
+    },
+    {
+      image: "assets/t-shirts.png",
+      name: "Men's T-Shirt",
+      description: "Comfortable cotton t-shirt for men.",
+      rating: 4.2,
+      price: 1999,
+      category: "Fashion",
+    },
+  ];
+
+  const container = document.getElementById("products-container");
+  container.innerHTML = "";
+
+  // Render the rest of the products
+  products.forEach((product) => {
+    if (
+      product.price <= price &&
+      (category === "All" || product.category === category)
+    ) {
+      container.appendChild(createProductCard(product));
     }
+  });
+}
+function changeCategory(val) {
+  category = val;
+  showProducts();
+}
 
-    function updateOrders() {
-      document.getElementById('order-count').textContent = orders;
-      document.getElementById('order-count2').textContent = orders;
-    }
-
-    // Event listeners for filters
-    document.getElementById('category').addEventListener('change', renderProducts);
-    document.getElementById('priceRange').addEventListener('input', function() {
-      document.getElementById('price-value').textContent = this.value;
-      renderProducts();
-    });
-
-    // Initial render
-    renderProducts();
-    updateOrders();
+// ADDING IMAGES ENDING

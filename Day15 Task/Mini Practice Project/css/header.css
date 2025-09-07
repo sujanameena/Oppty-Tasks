@@ -96,7 +96,7 @@ body {
     height: 35px;
     padding: 8px 16px;
     font-size: 16px;
-    background: rgb(69, 75, 77);
+    background: black;
     color: white;
     border: none;
     border-radius: 8px;
@@ -111,4 +111,5 @@ body {
     cursor: pointer;
     font-size: 25px;
     margin-right: 25px;
+    color: black;
 }

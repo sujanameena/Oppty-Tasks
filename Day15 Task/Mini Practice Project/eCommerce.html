@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/products.css" />
     <script src="eCommerce.js"></script>
   </head>
 
@@ -50,17 +51,32 @@
     <!-- DASHBOARD SIDEBAR -->
     <div class="sidebar" id="sidebar">
       <a href="#">Shop by category</a>
-      <select id="category-filter">
-        <option value="all">All</option>
-        <option value="fashion">Fashion</option>
-        <option value="electronics">Electronics</option>
-        <option value="mobiles">Mobiles</option>
+      <select id="category-filter" onchange="changeCategory(this.value)">
+        <option value="All">All</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Mobiles">Mobiles</option>
         <option value="Furniture">Furniture</option>
       </select>
-      <label for="priceRange">Price Range: <span id="price-value">5000</span></label>
-      <input type="range" id="priceRange" min="0" max="5000" value="5000" step="100" />
+      <div class="price-range-container">
+        <label for="priceRange">Price Range:</label>
+        <input
+          type="range"
+          id="priceRange"
+          min="0"
+          max="2000"
+          step="10"
+          value="75000"
+          oninput="updatePriceValue(this.value)"
+        />
+        <div class="price-min-max">
+          <span class="priceValuemin" id="priceValueMin">
+            Min : 0 to Max:
+          </span>
+          <span class="priceValue" id="priceValue">75000</span>
+        </div>
+      </div>
     </div>
-
 
     <!-- EXTENSION FOR LOGIN BUTTON -->
     <div class="modal" id="login-modal">
@@ -105,9 +121,21 @@
         <button onclick="closeModal()">Close</button>
       </div>
     </div>
+    <!-- Product List Section (content will be loaded from another HTML file) -->
+    <div id="product-list"></div>
 
-    <!-- ADDING IMAGES -->
-     <div class="products" id="products"></div>
-
+    <!--- show products -->
+    <div id="all-products">
+      <div id="products-container" class="productsContainer"></div>
+    </div>
+    <script>
+      window.onload = function () {
+          showProducts();
+      };
+      window.onclick = function () {
+        closeModal();
+        closeSideBar();
+      }
+    </script>
   </body>
 </html>

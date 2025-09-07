@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student CRUD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="number"] {
+      padding: 5px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-right: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .action-btn {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student(CRUD)</h2>
+  <div>
+    <input type="text" id="student-name" placeholder="Enter name" />
+    <input type="number" id="student-age" placeholder="Enter age" />
+    <button onclick="addStudent()">Add</button>
+  </div>
+
+  <table id="student-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Students will appear here -->
+    </tbody>
+  </table>
+
+  <script>
+    let students = [];
+    let editIndex = -1;
+
+    function renderTable() {
+      const tbody = document.getElementById("student-table").querySelector("tbody");
+      tbody.innerHTML = "";
+
+      students.forEach((student, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${student.name}</td>
+          <td>${student.age}</td>
+          <td>
+            <button class="action-btn" onclick="editStudent(${index})">Edit</button>
+            <button class="action-btn" onclick="deleteStudent(${index})">Delete</button>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    function addStudent() {
+      const nameInput = document.getElementById("student-name");
+      const ageInput = document.getElementById("student-age");
+      const name = nameInput.value.trim();
+      const age = ageInput.value.trim();
+
+      if (name === "" || age === "") {
+        alert("Please enter both name and age.");
+        return;
+      }
+
+      if (editIndex >= 0) {
+        // Update
+        students[editIndex] = { name, age };
+        editIndex = -1;
+        document.querySelector("button").textContent = "Add";
+      } else {
+        // Add
+        students.push({ name, age });
+      }
+
+      nameInput.value = "";
+      ageInput.value = "";
+      renderTable();
+    }
+
+    function editStudent(index) {
+      const student = students[index];
+      document.getElementById("student-name").value = student.name;
+      document.getElementById("student-age").value = student.age;
+      editIndex = index;
+      document.querySelector("button").textContent = "Save";
+    }
+
+    function deleteStudent(index) {
+      students.splice(index, 1);
+      renderTable();
+    }
+
+    // Initialize with empty table
+    renderTable();
+  </script>
+
+</body>
+</html>

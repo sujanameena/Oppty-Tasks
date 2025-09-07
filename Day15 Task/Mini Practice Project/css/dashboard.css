@@ -1,5 +1,4 @@
 .navigationBar {
-    position: fixed;
     left: 0;
     right: 0;
     height: 60px;
@@ -24,10 +23,13 @@
 }
 
 .sidebar {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     position: fixed;
-    left: -220px;
+    left: -250px;
     transition: left 0.3s ease;
+    background-color: antiquewhite;
+    height:100%;
+    width: 250px;
 }
 
 .sidebar.active {
@@ -36,11 +38,46 @@
 
 .sidebar a {
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 5px;
+
 }
 
 .sidebar a:hover {
     background: grey;
+}
+.category-filter{
+    padding: 10px;
+}
+.price-range-container {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+#priceRange {
+  width: 200px;
+}
+
+.priceValue {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: large;
+}
+
+.price-min-max {
+    display: flex;
+    flex-direction: row;
+}
+.priceValuemin{
+    margin-right: 0;
+    font-weight: bold;
+    font-size: large;
+}
+
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
