@@ -1,63 +1,113 @@
 <!DOCTYPE html>
 <html lang="eng">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zyllo.com</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <script src="eCommerce.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="head">
-        <div class="logo_container">
-            <div class="img-container">
-                <img src="zylloLogo.png" alt="zyllo-Logo" class="wave-img">
-            </div>
-            <div class="name">ZYLLO</div>
+      <div class="logo_container">
+        <div class="img-container">
+          <img src="assets/zylloLogo.png" alt="zyllo-Logo" class="wave-img" />
         </div>
+        <div class="name">ZYLLO</div>
+      </div>
 
-
-        <div class="items">
-            <div class="search-bar">
-                <input type="text" class="search-input" id="searchInput"
-                    placeholder="🔍 Search for products and more..">
-                <button>Search</button>
-            </div>
-            <a class="login-btn" onclick="openPage('login')">👤 Login</a>
+      <div class="items">
+        <div class="search-bar">
+          <input
+            type="text"
+            class="search-input"
+            id="searchInput"
+            placeholder="🔍 Search for products and more.."
+          />
+          <button>Search</button>
         </div>
-
-        <div class="cart">
-            🛒 <span id="cart-item-count">0</span> items
+        <div id="login-info" class="login-info">
+          <p class="login-user-name"></p>
+          <button class="login-btn" onclick="showLogin()">👤Login</button>
         </div>
+      </div>
+
+      <div class="cart">🛒 <span id="cart-item-count">0</span> items</div>
     </header>
 
-
     <div class="navigationBar">
-        <div class="hamburger" onclick="toggleSidebar()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <h2 style="margin-left:15px;">Filters</h2>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h2 style="margin-left: 15px">Filters</h2>
     </div>
 
-
+    <!-- DASHBOARD SIDEBAR -->
     <div class="sidebar" id="sidebar">
-        <a href="#">Shop by category</a>
-        <select id="category-filter">
-            <option value="all">All</option>
-            <option value="fashion">Fashion</option>
-            <option value="electronics">Electronics</option>
-            <option value="mobiles">Mobiles</option>
-            <option value="Furniture">Furniture</option>
-        </select>
+      <a href="#">Shop by category</a>
+      <select id="category-filter">
+        <option value="all">All</option>
+        <option value="fashion">Fashion</option>
+        <option value="electronics">Electronics</option>
+        <option value="mobiles">Mobiles</option>
+        <option value="Furniture">Furniture</option>
+      </select>
+      <label for="priceRange">Price Range: <span id="price-value">5000</span></label>
+      <input type="range" id="priceRange" min="0" max="5000" value="5000" step="100" />
     </div>
 
 
-</body>
+    <!-- EXTENSION FOR LOGIN BUTTON -->
+    <div class="modal" id="login-modal">
+      <div class="modal-content">
+        <h3>Login</h3>
+        <input type="text" id="login-username" placeholder="Username" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <button class="link" onclick="showRegister()">New User?</button>
+        <button class="link" onclick="showForgot()">Forgot Password?</button>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
 
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+      <div class="modal-content">
+        <h3>Register</h3>
+        <input
+          type="text"
+          id="register-username"
+          placeholder="Choose Username"
+        />
+        <input
+          type="password"
+          id="register-password"
+          placeholder="Choose Password"
+        />
+        <button onclick="register()">Register</button>
+        <button class="link" onclick="showLogin()">Back to Login</button>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal" id="forgot-modal">
+      <div class="modal-content">
+        <h3>Forgot Password</h3>
+        <input type="text" id="forgot-username" placeholder="Enter Username" />
+        <button onclick="forgotPassword()">Reset Password</button>
+        <button class="link" onclick="showLogin()">Back to Login</button>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <!-- ADDING IMAGES -->
+     <div class="products" id="products"></div>
+
+  </body>
 </html>

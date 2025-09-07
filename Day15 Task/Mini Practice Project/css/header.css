@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-image: url("../backgroundImage.jpg");
+    background-image: url("../assets/backgroundImage.jpg");
     background-size: cover;
 }
 
@@ -104,24 +104,6 @@ body {
 }
 
 .search-bar button:hover {
-    background: grey;
-}
-
-.login-btn {
-    padding-left: 10px;
-    background: rgb(69, 75, 77);
-    border-radius: 8px;
-    font-weight: bold;
-    margin-left: 40px;
-    font-size: 16px;
-    width: 90px;
-    height: 35px;
-    align-content: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.login-btn:hover {
     background: grey;
 }
 
