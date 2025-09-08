@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/cart.css" />
     <script src="eCommerce.js"></script>
   </head>
 
@@ -20,23 +21,54 @@
         <div class="name">ZYLLO</div>
       </div>
 
-      <div class="items">
-        <div class="search-bar">
-          <input
-            type="text"
-            class="search-input"
-            id="searchInput"
-            placeholder="🔍 Search for products and more.."
-          />
-          <button>Search</button>
-        </div>
+      <!-- <div class="items"> -->
+        <!-- <div class="search-bar"> -->
+          <!-- <input -->
+            <!-- type="text" -->
+            <!-- class="search-input" -->
+            <!-- id="searchInput" -->
+            <!-- placeholder="🔍 Search for products and more.." -->
+          <!-- /> -->
+          <!-- <button>Search</button> -->
+        <!-- </div> -->
         <div id="login-info" class="login-info">
           <p class="login-user-name"></p>
           <button class="login-btn" onclick="showLogin()">👤Login</button>
         </div>
       </div>
+      <div class="product-grid" id="productGrid"></div>
 
-      <div class="cart">🛒 <span id="cart-item-count">0</span> items</div>
+      <!-- Cart at header -->
+      <!-- <div class="cart">🛒 <span id="cart-item-count">0</span> items</div> -->
+      <!-- <div class="cart-modal-bg" id="cartModalBg"> -->
+      <div class="cart-header" onclick="openCart()">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </div>
+      <div class="cart-modal-bg" id="cartModalBg">
+        <div class="cart-modal">
+          <button class="close-cart" onclick="closeCart()">×</button>
+          <h3>Your Cart</h3>
+          <div id="cartItems" style="color: rgb(4, 3, 3);"></div>
+          <div class="cart-total">Total: ₹<span id="cartTotal">0</span></div>
+          <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+      </div>
+
+      <!-- Customer Details Form -->
+      <div class="customer-form-bg" id="customerFormBg" >
+        <form class="customer-form" onsubmit="submitCustomer(event)">
+          <h3>Customer Details</h3>
+          <label>Name:</label>
+          <input type="text" id="custName" required />
+          <label>Email:</label>
+          <input type="email" id="custEmail" required />
+          <label>Address:</label>
+          <input type="text" id="custAddress" required />
+          <label>Phone:</label>
+          <input type="tel" id="custPhone" required />
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
     </header>
 
     <div class="navigationBar">
@@ -46,6 +78,21 @@
         <div></div>
       </div>
       <h2 style="margin-left: 15px">Filters</h2>
+    </div>
+    <!-- Customer Details Form -->
+    <div class="customer-form-bg" id="customerFormBg">
+      <form class="customer-form" onsubmit="submitCustomer(event)">
+        <h3>Customer Details</h3>
+        <label>Name:</label>
+        <input type="text" id="custName" required />
+        <label>Email:</label>
+        <input type="email" id="custEmail" required />
+        <label>Address:</label>
+        <input type="text" id="custAddress" required />
+        <label>Phone:</label>
+        <input type="tel" id="custPhone" required />
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
     </div>
 
     <!-- DASHBOARD SIDEBAR -->
@@ -64,16 +111,16 @@
           type="range"
           id="priceRange"
           min="0"
-          max="2000"
+          max="300000"
           step="10"
-          value="75000"
+          value="2000"
           oninput="updatePriceValue(this.value)"
         />
         <div class="price-min-max">
           <span class="priceValuemin" id="priceValueMin">
             Min : 0 to Max:
           </span>
-          <span class="priceValue" id="priceValue">75000</span>
+          <span class="priceValue" id="priceValue">300000</span>
         </div>
       </div>
     </div>
@@ -130,12 +177,11 @@
     </div>
     <script>
       window.onload = function () {
-          showProducts();
+        showProducts();
       };
       window.onclick = function () {
         closeModal();
-        closeSideBar();
-      }
+      };
     </script>
   </body>
 </html>

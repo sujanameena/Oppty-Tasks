@@ -1,124 +1,7 @@
 category = "All";
-price = 100000;
+price = 300000;
 
-// DASHBOARD FUNCTION
-function toggleSidebar() {
-  document.getElementById("sidebar").classList.toggle("active");
-}
-function updatePriceValue(val) {
-  document.getElementById("priceValue").textContent = val;
-  price = val;
-  showProducts();
-}
-
-// COMPLETE LOGIN FUNCTION STARTING
-let users = [{ username: "user", password: "pass" }];
-let currentUser = null;
-
-function showLogin() {
-  closeModal();
-  document.getElementById("login-modal").style.display = "flex";
-}
-function showRegister() {
-  closeModal();
-  document.getElementById("register-modal").style.display = "flex";
-}
-function showForgot() {
-  closeModal();
-  document.getElementById("forgot-modal").style.display = "flex";
-}
-function closeModal() {
-  document.getElementById("login-modal").style.display = "none";
-  document.getElementById("register-modal").style.display = "none";
-  document.getElementById("forgot-modal").style.display = "none";
-}
-
-function login() {
-  const username = document.getElementById("login-username").value;
-  const password = document.getElementById("login-password").value;
-
-  for (i = 0; i < users.length; i++) {
-    if (users[i].username === username && users[i].password === password) {
-      currentUser = users[i];
-      updateHeader();
-      alert("Login successful!");
-      closeModal();
-      return;
-    }
-  }
-  alert("invalid cred");
-}
-
-function register() {
-  const username = document.getElementById("register-username").value;
-  const password = document.getElementById("register-password").value;
-  if (!username || !password) {
-    alert("Please fill all fields!");
-    return;
-  }
-  if (users.find((u) => u.username === username)) {
-    alert("Username already exists!");
-    return;
-  }
-  users.push({ username, password });
-  alert("Registration successful! Please login.");
-  showLogin();
-}
-
-function forgotPassword() {
-  const username = document.getElementById("forgot-username").value;
-  if (users.find((u) => u.username === username)) {
-    alert("Password reset link sent to your email (simulated).");
-  } else {
-    alert("Username not found!");
-  }
-  showLogin();
-}
-
-function updateHeader() {
-  const headerUser = document.getElementById("login-info");
-  if (currentUser) {
-    headerUser.innerHTML = `
-          <span class="logout-btn" >Hello, ${currentUser.username}</span>
-          <button class="logout-btn" onclick="logout()">Logout</button>
-        `;
-  } else {
-    headerUser.innerHTML = `<button class="login-btn" onclick="showLogin()">Login</button>`;
-  }
-}
-
-function logout() {
-  currentUser = null;
-  updateHeader();
-  alert("Logged out!");
-}
-// COMPLETE LOGIN FUNCTION ENDING
-
-
-// ADDING IMAGES STARTING
-
-function createProductCard({ image, name, description, rating, price }) {
-  const card = document.createElement("div");
-  card.className = "product-card";
-
-  card.innerHTML = `
-        <img src="${image}" alt="${name}" style="width:100%; border-radius: 8px;">
-        <h2 style="margin: 10px 0 5px;">${name}</h2>
-        <p style="color: #555;">${description}</p>
-        <div style="margin: 8px 0;">
-          <span style="color: #f5b50a;">${"&#9733;".repeat(
-            Math.round(rating)
-          )}</span>
-          <span style="color: #888;">${rating.toFixed(1)}</span>
-        </div>
-        <div style="font-weight: bold; margin-bottom: 10px;">₹${price}</div>
-        <button style="margin-bottom:auto; background: #007bff; color: #fff; border: none; padding: 10px 16px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
-      `;
-  return card;
-}
-
-function showProducts() {
-  const products = [
+const products = [
     {
       image: "assets/appleLaptop.jpeg",
       name: "Mac book Air",
@@ -249,6 +132,123 @@ function showProducts() {
     },
   ];
 
+// DASHBOARD FUNCTION
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("active");
+}
+function updatePriceValue(val) {
+  document.getElementById("priceValue").textContent = val;
+  price = val;
+  showProducts();
+}
+
+// COMPLETE LOGIN FUNCTION STARTING
+let users = [{ username: "user", password: "pass" }];
+let currentUser = null;
+
+function showLogin() {
+  closeModal();
+  document.getElementById("login-modal").style.display = "flex";
+}
+function showRegister() {
+  closeModal();
+  document.getElementById("register-modal").style.display = "flex";
+}
+function showForgot() {
+  closeModal();
+  document.getElementById("forgot-modal").style.display = "flex";
+}
+function closeModal() {
+  document.getElementById("login-modal").style.display = "none";
+  document.getElementById("register-modal").style.display = "none";
+  document.getElementById("forgot-modal").style.display = "none";
+}
+
+function login() {
+  const username = document.getElementById("login-username").value;
+  const password = document.getElementById("login-password").value;
+
+  for (i = 0; i < users.length; i++) {
+    if (users[i].username === username && users[i].password === password) {
+      currentUser = users[i];
+      updateHeader();
+      alert("Login successful!");
+      closeModal();
+      return;
+    }
+  }
+  alert("invalid cred");
+}
+
+function register() {
+  const username = document.getElementById("register-username").value;
+  const password = document.getElementById("register-password").value;
+  if (!username || !password) {
+    alert("Please fill all fields!");
+    return;
+  }
+  if (users.find((u) => u.username === username)) {
+    alert("Username already exists!");
+    return;
+  }
+  users.push({ username, password });
+  alert("Registration successful! Please login.");
+  showLogin();
+}
+
+function forgotPassword() {
+  const username = document.getElementById("forgot-username").value;
+  if (users.find((u) => u.username === username)) {
+    alert("Password reset link sent to your email (simulated).");
+  } else {
+    alert("Username not found!");
+  }
+  showLogin();
+}
+
+function updateHeader() {
+  const headerUser = document.getElementById("login-info");
+  if (currentUser) {
+    headerUser.innerHTML = `
+          <span class="logout-btn" >Hello, ${currentUser.username}</span>
+          <button class="logout-btn" onclick="logout()">Logout</button>
+        `;
+  } else {
+    headerUser.innerHTML = `<button class="login-btn" onclick="showLogin()">Login</button>`;
+  }
+}
+
+function logout() {
+  currentUser = null;
+  updateHeader();
+  alert("Logged out!");
+}
+//LOGIN FUNCTION ENDING
+
+// ADDING IMAGES STARTING
+
+function createProductCard({ image, name, description, rating, price }) {
+  const card = document.createElement("div");
+  card.className = "product-card";
+  name = name.trim();
+  card.innerHTML = `
+        <img src="${image}" alt="${name}" style="width:100%; border-radius: 8px;">
+        <h2 style="margin: 10px 0 5px;">${name}</h2>
+        <p style="color: #555;">${description}</p>
+        <div style="margin: 8px 0;">
+          <span style="color: #f5b50a;">${"&#9733;".repeat(
+            Math.round(rating)
+          )}</span>
+          <span style="color: #888;">${rating.toFixed(1)}</span>
+        </div>
+        <div style="font-weight: bold; margin-bottom: 10px;">₹${price}</div>
+        <button class="addToCartButton" onclick="addToCart('${name}')">Add to Cart</button>
+      `;
+  return card;
+}
+
+function showProducts() {
+
   const container = document.getElementById("products-container");
   container.innerHTML = "";
 
@@ -267,4 +267,88 @@ function changeCategory(val) {
   showProducts();
 }
 
-// ADDING IMAGES ENDING
+// Add to cart
+let cart = [];
+
+function addToCart(name) {
+  const product = products.find((p) => p.name === name);
+  const cartItem = cart.find((item) => item.name === name);
+  if (cartItem) {
+    cartItem.qty += 1;
+  } else {
+    cart.push({ ...product, qty: 1 });
+  }
+  updateCartCount();
+}
+
+function updateCartCount() {
+  document.getElementById("cartCount").textContent = cart.reduce(
+    (sum, item) => sum + item.qty,
+    0
+  );
+}
+
+function openCart() {
+  renderCart();
+  document.getElementById("cartModalBg").style.display = "flex";
+}
+
+function closeCart() {
+  document.getElementById("cartModalBg").style.display = "none";
+}
+
+function renderCart() {
+  const cartDiv = document.getElementById("cartItems");
+  cartDiv.innerHTML = "";
+  let total = 0;
+  cart.forEach((item) => {
+    total += item.price * item.qty;
+    cartDiv.innerHTML += `
+          <div class="cart-item">
+            <span>${item.name} x${item.qty}</span>
+            <span>₹${item.price * item.qty}</span>
+            <button onclick="removeFromCart('${item.name}')" style="background:#f44336;color:#fff;border:none;border-radius:4px;padding:2px 8px;cursor:pointer;">-</button>
+          </div>
+        `;
+  });
+  if (cart.length === 0) cartDiv.innerHTML = "<em>Cart is empty</em>";
+  document.getElementById("cartTotal").textContent = total;
+}
+
+function removeFromCart(name) {
+  const idx = cart.findIndex((item) => item.name === name);
+  if (idx > -1) {
+    if (cart[idx].qty > 1) {
+      cart[idx].qty -= 1;
+    } else {
+      cart.splice(idx, 1);
+    }
+  }
+  updateCartCount();
+  renderCart();
+}
+
+function checkout() {
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+  closeCart();
+  document.getElementById("customerFormBg").style.display = "flex";
+}
+
+function submitCustomer(event) {
+  event.preventDefault();
+  // You can process the order here (e.g., send to server)
+  alert(
+    "Order placed!\nThank you, " +
+      document.getElementById("custName").value +
+      "!"
+  );
+  cart = [];
+  updateCartCount();
+  document.getElementById("customerFormBg").style.display = "none";
+}
+
+// Initial render
+updateCartCount();

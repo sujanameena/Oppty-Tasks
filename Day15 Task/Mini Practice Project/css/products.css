@@ -5,3 +5,17 @@
   padding: 20px;
   width: 300px;
 }
+
+.addToCartButton{
+  margin-bottom:auto; 
+  background: #007bff; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 16px; 
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+.customer-form-bg{
+  color: black;
+}
