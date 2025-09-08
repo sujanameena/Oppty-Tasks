@@ -39,6 +39,9 @@
     .action-btn {
       margin-right: 5px;
     }
+    #student-table{
+        width: 30%;
+    }
   </style>
 </head>
 <body>
@@ -47,7 +50,7 @@
   <div>
     <input type="text" id="student-name" placeholder="Enter name" />
     <input type="number" id="student-age" placeholder="Enter age" />
-    <button onclick="addStudent()">Add</button>
+    <button onclick="addInput()">Add</button>
   </div>
 
   <table id="student-table">
@@ -59,7 +62,7 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Students will appear here -->
+    
     </tbody>
   </table>
 
@@ -85,7 +88,7 @@
       });
     }
 
-    function addStudent() {
+    function addInput() {
       const nameInput = document.getElementById("student-name");
       const ageInput = document.getElementById("student-age");
       const name = nameInput.value.trim();
@@ -97,12 +100,10 @@
       }
 
       if (editIndex >= 0) {
-        // Update
         students[editIndex] = { name, age };
         editIndex = -1;
         document.querySelector("button").textContent = "Add";
       } else {
-        // Add
         students.push({ name, age });
       }
 
@@ -124,7 +125,6 @@
       renderTable();
     }
 
-    // Initialize with empty table
     renderTable();
   </script>
 
