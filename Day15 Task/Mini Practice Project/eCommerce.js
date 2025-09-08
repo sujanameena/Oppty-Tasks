@@ -2,135 +2,135 @@ category = "All";
 price = 300000;
 
 const products = [
-    {
-      image: "assets/appleLaptop.jpeg",
-      name: "Mac book Air",
-      description: "Short description of product 3.",
-      rating: 4.0,
-      price: 130000,
-      category: "Electronics",
-    },
-    {
-      image: "assets/apple-iphone-14-pro-5.jpg",
-      name: "Apple iPhone 14 Pro",
-      description: "Latest Apple iPhone with advanced features.",
-      rating: 4.8,
-      price: 100000,
-      category: "Mobiles",
-    },
-    {
-      image: "assets/bed1.jpeg",
-      name: "Classic Wooden Bed",
-      description: "Elegant wooden bed for a comfortable sleep.",
-      rating: 4.6,
-      price: 29999,
-      category: "Furniture",
-    },
-    {
-      image: "assets/bed2.jpg",
-      name: "Luxury King Bed",
-      description: "Spacious king size bed with premium finish.",
-      rating: 4.7,
-      price: 39999,
-      category: "Furniture",
-    },
-    {
-      image: "assets/chair1.jpg",
-      name: "Office Chair",
-      description: "Ergonomic office chair for daily use.",
-      rating: 4.3,
-      price: 8999,
-      category: "Furniture",
-    },
-    {
-      image: "assets/chair2.jpg",
-      name: "Dining Chair",
-      description: "Stylish dining chair for your home.",
-      rating: 4.1,
-      price: 4999,
-      category: "Furniture",
-    },
-    {
-      image: "assets/chair3.jpeg",
-      name: "Lounge Chair",
-      description: "Comfortable lounge chair for relaxation.",
-      rating: 4.5,
-      price: 12999,
-      category: "Furniture",
-    },
-    {
-      image: "assets/frock.jpeg",
-      name: "Kids Frock",
-      description: "Cute frock for kids, available in all sizes.",
-      rating: 4.4,
-      price: 2499,
-      category: "Fashion",
-    },
-    {
-      image: "assets/lenovo laptop.jpg",
-      name: "Lenovo Laptop",
-      description: "High performance Lenovo laptop for work and play.",
-      rating: 4.6,
-      price: 74999,
-      category: "Electronics",
-    },
-    {
-      image: "assets/realme_earbuds.jpg",
-      name: "Realme Earbuds",
-      description: "Wireless earbuds with long battery life.",
-      rating: 4.2,
-      price: 3999,
-      category: "Electronics",
-    },
-    {
-      image: "assets/samsung-galaxy-a34-5g-500x500.webp",
-      name: "Samsung Galaxy A34 5G",
-      description: "Affordable 5G smartphone from Samsung.",
-      rating: 4.3,
-      price: 29999,
-      category: "Mobiles",
-    },
-    {
-      image: "assets/sareeImage.jpeg",
-      name: "Designer Saree",
-      description: "Elegant saree for festive occasions.",
-      rating: 4.7,
-      price: 7999,
-      category: "Fashion",
-    },
-    {
-      image: "assets/sofa.jpg",
-      name: "3-Seater Sofa",
-      description: "Comfortable 3-seater sofa for your living room.",
-      rating: 4.5,
-      price: 49999,
-      category: "Furniture",
-    },
-    {
-      image: "assets/sofa1.webp",
-      name: "Modern Sofa",
-      description: "Stylish modern sofa with premium fabric.",
-      rating: 4.4,
-      price: 59999,
-      category: "Furniture",
-    },
-    {
-      image: "assets/sofa2.webp",
-      name: "L-Shaped Sofa",
-      description: "Spacious L-shaped sofa for large families.",
-      rating: 4.6,
-      price: 69999,
-      category: "Furniture",
-    },
-    {
-      image: "assets/t-shirts.png",
-      name: "Men's T-Shirt",
-      description: "Comfortable cotton t-shirt for men.",
-      rating: 4.2,
-      price: 1999,
-      category: "Fashion",
-    },
-  ];
+  {
+    image: "assets/appleLaptop.jpeg",
+    name: "Mac book Air",
+    description: "Short description of product 3.",
+    rating: 4.0,
+    price: 130000,
+    category: "Electronics",
+  },
+  {
+    image: "assets/apple-iphone-14-pro-5.jpg",
+    name: "Apple iPhone 14 Pro",
+    description: "Latest Apple iPhone with advanced features.",
+    rating: 4.8,
+    price: 100000,
+    category: "Mobiles",
+  },
+  {
+    image: "assets/bed1.jpeg",
+    name: "Classic Wooden Bed",
+    description: "Elegant wooden bed for a comfortable sleep.",
+    rating: 4.6,
+    price: 29999,
+    category: "Furniture",
+  },
+  {
+    image: "assets/bed2.jpg",
+    name: "Luxury King Bed",
+    description: "Spacious king size bed with premium finish.",
+    rating: 4.7,
+    price: 39999,
+    category: "Furniture",
+  },
+  {
+    image: "assets/chair1.jpg",
+    name: "Office Chair",
+    description: "Ergonomic office chair for daily use.",
+    rating: 4.3,
+    price: 8999,
+    category: "Furniture",
+  },
+  {
+    image: "assets/chair2.jpg",
+    name: "Dining Chair",
+    description: "Stylish dining chair for your home.",
+    rating: 4.1,
+    price: 4999,
+    category: "Furniture",
+  },
+  {
+    image: "assets/chair3.jpeg",
+    name: "Lounge Chair",
+    description: "Comfortable lounge chair for relaxation.",
+    rating: 4.5,
+    price: 12999,
+    category: "Furniture",
+  },
+  {
+    image: "assets/frock.jpeg",
+    name: "Kids Frock",
+    description: "Cute frock for kids, available in all sizes.",
+    rating: 4.4,
+    price: 2499,
+    category: "Fashion",
+  },
+  {
+    image: "assets/lenovo laptop.jpg",
+    name: "Lenovo Laptop",
+    description: "High performance Lenovo laptop for work and play.",
+    rating: 4.6,
+    price: 74999,
+    category: "Electronics",
+  },
+  {
+    image: "assets/realme_earbuds.jpg",
+    name: "Realme Earbuds",
+    description: "Wireless earbuds with long battery life.",
+    rating: 4.2,
+    price: 3999,
+    category: "Electronics",
+  },
+  {
+    image: "assets/samsung-galaxy-a34-5g-500x500.webp",
+    name: "Samsung Galaxy A34 5G",
+    description: "Affordable 5G smartphone from Samsung.",
+    rating: 4.3,
+    price: 29999,
+    category: "Mobiles",
+  },
+  {
+    image: "assets/sareeImage.jpeg",
+    name: "Designer Saree",
+    description: "Elegant saree for festive occasions.",
+    rating: 4.7,
+    price: 7999,
+    category: "Fashion",
+  },
+  {
+    image: "assets/sofa.jpg",
+    name: "3-Seater Sofa",
+    description: "Comfortable 3-seater sofa for your living room.",
+    rating: 4.5,
+    price: 49999,
+    category: "Furniture",
+  },
+  {
+    image: "assets/sofa1.webp",
+    name: "Modern Sofa",
+    description: "Stylish modern sofa with premium fabric.",
+    rating: 4.4,
+    price: 59999,
+    category: "Furniture",
+  },
+  {
+    image: "assets/sofa2.webp",
+    name: "L-Shaped Sofa",
+    description: "Spacious L-shaped sofa for large families.",
+    rating: 4.6,
+    price: 69999,
+    category: "Furniture",
+  },
+  {
+    image: "assets/t-shirts.png",
+    name: "Men's T-Shirt",
+    description: "Comfortable cotton t-shirt for men.",
+    rating: 4.2,
+    price: 1999,
+    category: "Fashion",
+  },
+];
 
 // DASHBOARD FUNCTION
 function toggleSidebar() {
@@ -243,12 +243,58 @@ function createProductCard({ image, name, description, rating, price }) {
         </div>
         <div style="font-weight: bold; margin-bottom: 10px;">₹${price}</div>
         <button class="addToCartButton" onclick="addToCart('${name}')">Add to Cart</button>
+        <button class="addToWishlistButton" onclick="addToWishlist('${name}')">Add to Wishlist</button>
       `;
   return card;
 }
 
-function showProducts() {
+var wishlist = [];
+function addToWishlist(name) {
+  const product = products.find((p) => p.name === name);
+  const wishlistItem = wishlist.find((item) => item.name === name);
+  if (wishlistItem) {
+    wishlistItem.qty += 1;
+  } else {
+    wishlist.push({ ...product, qty: 1 });
+  }
+}
 
+function moveToCart() {
+  wishlist.forEach((wishItem) => {
+    const cartItem = cart.find((item) => item.name === wishItem.name);
+    if (cartItem) {
+      cartItem.qty += wishItem.qty;
+    } else {
+      cart.push({ ...wishItem });
+    }
+  });
+  wishlist = [];
+  renderWishlist();
+  updateCartCount();
+}
+
+
+function renderWishlist() {
+  const wishlistDiv = document.getElementById("wishlistItems");
+  wishlistDiv.innerHTML = "";
+  let total = 0;
+  wishlist.forEach((item) => {
+    total += item.price * item.qty;
+    wishlistDiv.innerHTML += `
+          <div class="cart-item">
+            <span>${item.name} x${item.qty}</span>
+            <span>₹${item.price * item.qty}</span>
+            <button onclick="removeFromCart('${
+              item.name
+            }')" style="background:#f44336;color:#fff;border:none;border-radius:4px;padding:2px 8px;cursor:pointer;">-</button>
+          </div>
+        `;
+  });
+  if (wishlist.length === 0) wishlistDiv.innerHTML = "<em>Wishlist is empty</em>";
+  document.getElementById("wishlistTotal").textContent = total;
+}
+
+function showProducts() {
   const container = document.getElementById("products-container");
   container.innerHTML = "";
 
@@ -293,10 +339,18 @@ function openCart() {
   document.getElementById("cartModalBg").style.display = "flex";
 }
 
+function openWishlist() {
+  renderWishlist();
+  document.getElementById("wishlistModalBg").style.display = "flex";
+}
+
 function closeCart() {
   document.getElementById("cartModalBg").style.display = "none";
 }
 
+function closeWishlist() {
+  document.getElementById("wishlistModalBg").style.display = "none";
+}
 function renderCart() {
   const cartDiv = document.getElementById("cartItems");
   cartDiv.innerHTML = "";
@@ -307,7 +361,9 @@ function renderCart() {
           <div class="cart-item">
             <span>${item.name} x${item.qty}</span>
             <span>₹${item.price * item.qty}</span>
-            <button onclick="removeFromCart('${item.name}')" style="background:#f44336;color:#fff;border:none;border-radius:4px;padding:2px 8px;cursor:pointer;">-</button>
+            <button onclick="removeFromCart('${
+              item.name
+            }')" style="background:#f44336;color:#fff;border:none;border-radius:4px;padding:2px 8px;cursor:pointer;">-</button>
           </div>
         `;
   });

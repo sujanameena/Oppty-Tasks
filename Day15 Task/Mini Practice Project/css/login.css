@@ -1,17 +1,19 @@
 .login-btn, .logout-btn {
-  padding-left: 10px;
   background: black;
   border-radius: 8px;
   font-weight: bold;
-  margin-left: 40px;
   font-size: 16px;
   width: 90px;
   height: 35px;
-  align-content: center;
   justify-content: center;
   cursor: pointer;
   border: none;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
 }
 
 .login-btn:hover {
@@ -19,7 +21,7 @@
 }
 
 .login-info {
-    display: flex;
+    margin-left: auto;
 }
 
 .user-name {

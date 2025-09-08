@@ -22,40 +22,51 @@
       </div>
 
       <!-- <div class="items"> -->
-        <!-- <div class="search-bar"> -->
-          <!-- <input -->
-            <!-- type="text" -->
-            <!-- class="search-input" -->
-            <!-- id="searchInput" -->
-            <!-- placeholder="🔍 Search for products and more.." -->
-          <!-- /> -->
-          <!-- <button>Search</button> -->
-        <!-- </div> -->
-        <div id="login-info" class="login-info">
-          <p class="login-user-name"></p>
-          <button class="login-btn" onclick="showLogin()">👤Login</button>
-        </div>
+      <!-- <div class="search-bar"> -->
+      <!-- <input -->
+      <!-- type="text" -->
+      <!-- class="search-input" -->
+      <!-- id="searchInput" -->
+      <!-- placeholder="🔍 Search for products and more.." -->
+      <!-- /> -->
+      <!-- <button>Search</button> -->
+      <!-- </div> -->
+      <div id="login-info" class="login-info">
+        <p class="login-user-name"></p>
+        <button class="login-btn" onclick="showLogin()">👤Login</button>
       </div>
-      <div class="product-grid" id="productGrid"></div>
 
-      <!-- Cart at header -->
-      <!-- <div class="cart">🛒 <span id="cart-item-count">0</span> items</div> -->
-      <!-- <div class="cart-modal-bg" id="cartModalBg"> -->
       <div class="cart-header" onclick="openCart()">
         🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </div>
+      <div id="wishlist" class="wishlist">
+        <button class="wishlist-btn" onclick="openWishlist()">
+          ❤️WishList
+        </button>
+      </div>
+      <div class="cart-modal-bg" id="wishlistModalBg">
+        <div class="cart-modal">
+          <button class="close-cart" onclick="closeWishlist()">×</button>
+          <h3>Your Cart</h3>
+          <div id="wishlistItems" style="color: rgb(4, 3, 3)"></div>
+          <div class="cart-total">
+            Total: ₹<span id="wishlistTotal">0</span>
+          </div>
+          <button class="checkout-btn" onclick="moveToCart()">Move to cart</button>
+        </div>
       </div>
       <div class="cart-modal-bg" id="cartModalBg">
         <div class="cart-modal">
           <button class="close-cart" onclick="closeCart()">×</button>
           <h3>Your Cart</h3>
-          <div id="cartItems" style="color: rgb(4, 3, 3);"></div>
+          <div id="cartItems" style="color: rgb(4, 3, 3)"></div>
           <div class="cart-total">Total: ₹<span id="cartTotal">0</span></div>
           <button class="checkout-btn" onclick="checkout()">Checkout</button>
         </div>
       </div>
 
       <!-- Customer Details Form -->
-      <div class="customer-form-bg" id="customerFormBg" >
+      <div class="customer-form-bg" id="customerFormBg">
         <form class="customer-form" onsubmit="submitCustomer(event)">
           <h3>Customer Details</h3>
           <label>Name:</label>
