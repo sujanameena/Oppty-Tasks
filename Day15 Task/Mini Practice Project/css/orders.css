@@ -1,0 +1,76 @@
+.ordersDashboard {
+  background: black;
+  border-radius: 8px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ordersBtn {
+  background: black;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+/* body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 20px;
+}
+h1 {
+  text-align: center;
+} */
+/* .nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+        } */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #007bff;
+  color: white;
+}
+.success {
+  color: green;
+  font-weight: bold;
+}
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+.action-btn {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}

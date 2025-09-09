@@ -273,7 +273,6 @@ function moveToCart() {
   updateCartCount();
 }
 
-
 function renderWishlist() {
   const wishlistDiv = document.getElementById("wishlistItems");
   wishlistDiv.innerHTML = "";
@@ -290,7 +289,8 @@ function renderWishlist() {
           </div>
         `;
   });
-  if (wishlist.length === 0) wishlistDiv.innerHTML = "<em>Wishlist is empty</em>";
+  if (wishlist.length === 0)
+    wishlistDiv.innerHTML = "<em>Wishlist is empty</em>";
   document.getElementById("wishlistTotal").textContent = total;
 }
 
@@ -406,5 +406,65 @@ function submitCustomer(event) {
   document.getElementById("customerFormBg").style.display = "none";
 }
 
-// Initial render
 updateCartCount();
+// ORDERS DASHBOARD
+const orders = [
+  {
+    id: "ORD001",
+    date: "2025-09-09",
+    customer: "John Doe",
+    payment: "Success",
+    total: "12000",
+    delivery: "Express",
+    items: 3,
+    fulfilment: "Completed",
+  },
+  {
+    id: "ORD002",
+    date: "2025-09-08",
+    customer: "Jane Smith",
+    payment: "Pending",
+    total: "8000",
+    delivery: "Standard",
+    items: 2,
+    fulfilment: "Processing",
+  },
+  {
+    id: "ORD003",
+    date: "2025-09-07",
+    customer: "Alex Johnson",
+    payment: "Success",
+    total: "25000",
+    delivery: "Overnight",
+    items: 5,
+    fulfilment: "Shipped",
+  },
+];
+
+function showOrders() {
+  const section = document.getElementById("orders-section");
+  section.classList.remove("hidden");
+  const tbody = document.getElementById("orders-table-body");
+  tbody.innerHTML = "";
+
+  orders.forEach((order) => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+                    <td>${order.id}</td>
+                    <td>${order.date}</td>
+                    <td>${order.customer}</td>
+                    <td class="${order.payment.toLowerCase()}">${
+      order.payment
+    }</td>
+                    <td>${order.total}</td>
+                    <td>${order.delivery}</td>
+                    <td>${order.items}</td>
+                    <td>${order.fulfilment}</td>
+                    <td><button class="action-btn" onclick="alert('Viewing ${
+                      order.id
+                    }')">View</button></td>
+                `;
+    tbody.appendChild(row);
+  });
+}
