@@ -154,6 +154,12 @@
   box-shadow: 0 4px 16px rgba(79, 140, 255, 0.18);
   transform: translateY(-2px) scale(1.03);
 }
+.filter-button-slected {
+  background: linear-gradient(90deg, #38c6ff 0%, #4f8cff 100%);
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+
 .filter-button:active {
   transform: scale(0.98);
 }

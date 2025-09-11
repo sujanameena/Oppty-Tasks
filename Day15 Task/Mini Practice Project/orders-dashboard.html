@@ -39,10 +39,26 @@
             </div>
             <div id="date-range-filter" class="date-range-filter">
                 <label for="from-date">From:</label>
-                <input type="date" id="from-date" class="date-picker" name="from-date">
+                <input type="date" id="from-date" class="date-picker" name="from-date" oninput="onFromDateChange(this.value)">
+                <script>
+                    // Set default value of "from-date" input to one month back from today
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var today = new Date();
+                        var lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+                        var lastMonthStr = lastMonth.toISOString().split('T')[0];
+                        document.getElementById('from-date').value = lastMonthStr;
+                    });
+                </script>
                 <label for="to-date">To:</label>
-                <input type="date" id="to-date" class="date-picker" name="to-date">
+                <input type="date" id="to-date" class="date-picker" name="to-date" oninput="onToDateChange(this.value)">
             </div>
+            <script>
+                // Set default value of "to-date" input to today's date
+                document.addEventListener('DOMContentLoaded', function() {
+                    var today = new Date().toISOString().split('T')[0];
+                    document.getElementById('to-date').value = today;
+                });
+            </script>
             <div id="widgets" class="widgets">
                 <div id="total-orders-widget" class="widget">
                     <p id="total-orders-title" class="widget-name">Total Orders</p>
@@ -75,12 +91,12 @@
             </div>
             <div id="options" class="options">
                 <div id="filter-buttons" class="filter-buttons">
-                    <button id="all" class="filter-button">All</button>
-                    <button id="unfulfilled" class="filter-button">unfulfilled</button>
-                    <button id="unpaid" class="filter-button">Unpaid</button>
-                    <button id="open" class="filter-button">Open</button>
-                    <button id="Closed" class="filter-button">Closed</button>
-                    <button id="add" class="filter-button">⊕ Add</button>
+                    <button id="all" class="filter-button" onclick="allSelected()">All</button>
+                    <!-- <button id="unfulfilled" class="filter-button">unfulfilled</button> -->
+                    <button id="unpaid" class="filter-button" onclick="unPaidSelected()">Unpaid</button>
+                    <button id="open" class="filter-button" onclick="openSelected()">Open</button>
+                    <button id="Closed" class="filter-button" onclick="closedSelected()">Closed</button>
+                    <!-- <button id="add" class="filter-button">⊕ Add</button> -->
                 </div>
                 <div id="filters-2" class="filters-2">
                     <button id="inner-search" class="filters-2-button">🔍</button>
