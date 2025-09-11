@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="eng">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zyllo.com</title>
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/login.css" />
-    <link rel="stylesheet" href="css/products.css" />
-    <link rel="stylesheet" href="css/cart.css" />
-    <link rel="stylesheet" href="css/orders.css" />
-    <script src="eCommerce.js"></script>
-  </head>
 
-  <body>
-    <header class="head">
-      <div class="logo_container">
-        <div class="img-container">
-          <img src="assets/zylloLogo.png" alt="zyllo-Logo" class="wave-img" />
-        </div>
-        <div class="name">ZYLLO</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyllo.com</title>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="css/orders.css" />
+  <script src="eCommerce.js"></script>
+</head>
+
+<body>
+  <header class="head">
+    <div class="logo_container">
+      <div class="img-container">
+        <img src="assets/zylloLogo.png" alt="zyllo-Logo" class="wave-img" />
       </div>
+      <div class="name">ZYLLO</div>
+    </div>
 
-      <!-- <div class="items"> -->
-      <!-- <div class="search-bar"> -->
-      <!-- <input -->
-      <!-- type="text" -->
-      <!-- class="search-input" -->
-      <!-- id="searchInput" -->
-      <!-- placeholder="🔍 Search for products and more.." -->
-      <!-- /> -->
-      <!-- <button>Search</button> -->
-      <!-- </div> -->
+    <!-- <div class="items"> -->
+    <!-- <div class="search-bar"> -->
+    <!-- <input -->
+    <!-- type="text" -->
+    <!-- class="search-input" -->
+    <!-- id="searchInput" -->
+    <!-- placeholder="🔍 Search for products and more.." -->
+    <!-- /> -->
+    <!-- <button>Search</button> -->
+    <!-- </div> -->
+    <div id="header-buttons" class="header-buttons">
       <div id="login-info" class="login-info">
         <p class="login-user-name"></p>
         <button class="login-btn" onclick="showLogin()">👤Login</button>
       </div>
-
       <div class="cart-header" onclick="openCart()">
         🛒 Cart <span class="cart-count" id="cartCount">0</span>
       </div>
@@ -45,52 +46,28 @@
           MiniCart
         </button>
       </div>
-      <div class="cart-modal-bg" id="wishlistModalBg">
-        <div class="cart-modal">
-          <button class="close-cart" onclick="closeWishlist()">×</button>
-          <h3>Your Cart</h3>
-          <div id="wishlistItems" style="color: rgb(4, 3, 3)"></div>
-          <div class="cart-total">
-            Total: ₹<span id="wishlistTotal">0</span>
-          </div>
-          <button class="checkout-btn" onclick="moveToCart()">Move to cart</button>
-        </div>
-      </div>
-      <div class="cart-modal-bg" id="cartModalBg">
-        <div class="cart-modal">
-          <button class="close-cart" onclick="closeCart()">×</button>
-          <h3>Your Cart</h3>
-          <div id="cartItems" style="color: rgb(4, 3, 3)"></div>
-          <div class="cart-total">Total: ₹<span id="cartTotal">0</span></div>
-          <button class="checkout-btn" onclick="checkout()">Checkout</button>
-        </div>
-      </div>
-
-      <!-- Customer Details Form -->
-      <div class="customer-form-bg" id="customerFormBg">
-        <form class="customer-form" onsubmit="submitCustomer(event)">
-          <h3>Customer Details</h3>
-          <label>Name:</label>
-          <input type="text" id="custName" required />
-          <label>Email:</label>
-          <input type="email" id="custEmail" required />
-          <label>Address:</label>
-          <input type="text" id="custAddress" required />
-          <label>Phone:</label>
-          <input type="tel" id="custPhone" required />
-          <button class="submit-btn" type="submit">Submit</button>
-        </form>
-      </div>
-    </header>
-
-    <div class="navigationBar">
-      <div class="hamburger" onclick="toggleSidebar()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <h2 style="margin-left: 15px">Filters</h2>
     </div>
+    <div class="cart-modal-bg" id="wishlistModalBg">
+      <div class="cart-modal">
+        <button class="close-cart" onclick="closeWishlist()">×</button>
+        <h3>Your Cart</h3>
+        <div id="wishlistItems" style="color: rgb(4, 3, 3)"></div>
+        <div class="cart-total">
+          Total: ₹<span id="wishlistTotal">0</span>
+        </div>
+        <button class="checkout-btn" onclick="moveToCart()">Move to cart</button>
+      </div>
+    </div>
+    <div class="cart-modal-bg" id="cartModalBg">
+      <div class="cart-modal">
+        <button class="close-cart" onclick="closeCart()">×</button>
+        <h3>Your Cart</h3>
+        <div id="cartItems" style="color: rgb(4, 3, 3)"></div>
+        <div class="cart-total">Total: ₹<span id="cartTotal">0</span></div>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
     <!-- Customer Details Form -->
     <div class="customer-form-bg" id="customerFormBg">
       <form class="customer-form" onsubmit="submitCustomer(event)">
@@ -106,99 +83,107 @@
         <button class="submit-btn" type="submit">Submit</button>
       </form>
     </div>
+  </header>
 
-    <!-- DASHBOARD SIDEBAR -->
-    <div class="sidebar" id="sidebar">
-      <a href="#">Shop by category</a>
-      <select id="category-filter" onchange="changeCategory(this.value)">
-        <option value="All">All</option>
-        <option value="Fashion">Fashion</option>
-        <option value="Electronics">Electronics</option>
-        <option value="Mobiles">Mobiles</option>
-        <option value="Furniture">Furniture</option>
-      </select>
-      <div class="price-range-container">
-        <label for="priceRange">Price Range:</label>
-        <input
-          type="range"
-          id="priceRange"
-          min="0"
-          max="300000"
-          step="10"
-          value="2000"
-          oninput="updatePriceValue(this.value)"
-        />
-        <div class="price-min-max">
-          <span class="priceValuemin" id="priceValueMin">
-            Min : 0 to Max:
-          </span>
-          <span class="priceValue" id="priceValue">300000</span>
-        </div>
-      </div>
-      </div>
-                
-            
+  <div class="navigationBar">
+    <div class="hamburger" onclick="toggleSidebar()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h2 style="margin-left: 15px">Filters</h2>
+  </div>
+  <!-- Customer Details Form -->
+  <div class="customer-form-bg" id="customerFormBg">
+    <form class="customer-form" onsubmit="submitCustomer(event)">
+      <h3>Customer Details</h3>
+      <label>Name:</label>
+      <input type="text" id="custName" required />
+      <label>Email:</label>
+      <input type="email" id="custEmail" required />
+      <label>Address:</label>
+      <input type="text" id="custAddress" required />
+      <label>Phone:</label>
+      <input type="tel" id="custPhone" required />
+      <button class="submit-btn" type="submit">Submit</button>
+    </form>
+  </div>
 
-    <!-- EXTENSION FOR LOGIN BUTTON -->
-    <div class="modal" id="login-modal">
-      <div class="modal-content">
-        <h3>Login</h3>
-        <input type="text" id="login-username" placeholder="Username" />
-        <input type="password" id="login-password" placeholder="Password" />
-        <button onclick="login()">Login</button>
-        <button class="link" onclick="showRegister()">New User?</button>
-        <button class="link" onclick="showForgot()">Forgot Password?</button>
-        <button onclick="closeModal()">Close</button>
+  <!-- DASHBOARD SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+    <a href="#">Shop by category</a>
+    <select id="category-filter" class="category-filter" onchange="changeCategory(this.value)">
+      <option value="All">All</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Mobiles">Mobiles</option>
+      <option value="Furniture">Furniture</option>
+    </select>
+    <div class="price-range-container">
+      <label for="priceRange">Price Range:</label>
+      <input type="range" id="priceRange" min="0" max="300000" step="10" value="2000"
+        oninput="updatePriceValue(this.value)" />
+      <div class="price-min-max">
+        <span class="priceValuemin" id="priceValueMin">
+          Min : 0 to Max:
+        </span>
+        <span class="priceValue" id="priceValue">300000</span>
       </div>
     </div>
+  </div>
 
-    <!-- Register Modal -->
-    <div class="modal" id="register-modal">
-      <div class="modal-content">
-        <h3>Register</h3>
-        <input
-          type="text"
-          id="register-username"
-          placeholder="Choose Username"
-        />
-        <input
-          type="password"
-          id="register-password"
-          placeholder="Choose Password"
-        />
-        <button onclick="register()">Register</button>
-        <button class="link" onclick="showLogin()">Back to Login</button>
-        <button onclick="closeModal()">Close</button>
-      </div>
-    </div>
 
-    <!-- Forgot Password Modal -->
-    <div class="modal" id="forgot-modal">
-      <div class="modal-content">
-        <h3>Forgot Password</h3>
-        <input type="text" id="forgot-username" placeholder="Enter Username" />
-        <button onclick="forgotPassword()">Reset Password</button>
-        <button class="link" onclick="showLogin()">Back to Login</button>
-        <button onclick="closeModal()">Close</button>
-      </div>
-    </div>
-    <!-- Product List Section (content will be loaded from another HTML file) -->
-    <div id="product-list"></div>
 
-    <!--- show products -->
-    <div id="all-products">
-      <div id="products-container" class="productsContainer"></div>
+  <!-- EXTENSION FOR LOGIN BUTTON -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <h3>Login</h3>
+      <input type="text" id="login-username" placeholder="Username" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <button class="link" onclick="showRegister()">New User?</button>
+      <button class="link" onclick="showForgot()">Forgot Password?</button>
+      <button onclick="closeModal()">Close</button>
     </div>
-    <script>
-      window.onload = function () {
-        showProducts();
-      };
-      window.onclick = function () {
-        closeModal();
-      };
-    </script>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal" id="register-modal">
+    <div class="modal-content">
+      <h3>Register</h3>
+      <input type="text" id="register-username" placeholder="Choose Username" />
+      <input type="password" id="register-password" placeholder="Choose Password" />
+      <button onclick="register()">Register</button>
+      <button class="link" onclick="showLogin()">Back to Login</button>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal" id="forgot-modal">
+    <div class="modal-content">
+      <h3>Forgot Password</h3>
+      <input type="text" id="forgot-username" placeholder="Enter Username" />
+      <button onclick="forgotPassword()">Reset Password</button>
+      <button class="link" onclick="showLogin()">Back to Login</button>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  <!-- Product List Section (content will be loaded from another HTML file) -->
+  <div id="product-list"></div>
+
+  <!--- show products -->
+  <div id="all-products">
+    <div id="products-container" class="productsContainer"></div>
+  </div>
+  <script>
+    window.onload = function () {
+      showProducts();
+    };
+  </script>
 
   <!-- CREATING ORDERS DASHBOARD -->
 
-  </body>
+</body>
+
 </html>

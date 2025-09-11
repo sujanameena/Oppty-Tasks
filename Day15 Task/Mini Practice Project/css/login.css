@@ -21,7 +21,8 @@
 }
 
 .login-info {
-    margin-left: auto;
+    display: flex;
+    gap: 10px;
 }
 
 .user-name {
@@ -62,4 +63,15 @@
 }
 .hidden {
   display: none;
+}
+
+.login-user-name {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* background-color: antiquewhite; */
 }

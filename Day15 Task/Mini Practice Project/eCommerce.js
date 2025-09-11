@@ -210,7 +210,7 @@ function updateHeader() {
   const headerUser = document.getElementById("login-info");
   if (currentUser) {
     headerUser.innerHTML = `
-          <span class="logout-btn" >Hello, ${currentUser.username}</span>
+          <span class="login-user-name" >Hello, ${currentUser.username}</span>
           <button class="logout-btn" onclick="logout()">Logout</button>
         `;
   } else {
