@@ -32,6 +32,9 @@
                     <h4 id="admin-user-name"></h4>
                     <p id="admin-user-email"></p>
                 </div>
+                <button class="logout-btn" id="logoutBtn" title="Logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
         </aside>
 
         <!-- Main Content -->
@@ -216,8 +219,9 @@
                         </div>
                     </div>
                     <div style="text-align: right; margin-top: 1.5rem;">
-                        <button type="submit" class="btn-submit">Add Product</button>
+                        <button type="submit" class="btn-submit" onclick="addProduct()">Add Product</button>
                     </div>
+                    <div id="productMessageBox" class="message-box" style="display: none;"></div>
                 </form>
             </div>
         </main>

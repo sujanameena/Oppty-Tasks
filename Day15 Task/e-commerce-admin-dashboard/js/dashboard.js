@@ -181,3 +181,36 @@ quickFilterBtns.forEach((btn) => {
     filterAndDisplayOrders();
   });
 });
+
+function logout() {
+    localStorage.clear();
+    window.location.href = "/login.html";
+}
+
+function addProduct() {
+
+  document.getElementById("addProductForm").reset();
+
+  // Show a message box in the UI instead of alert
+  let msgBox = document.getElementById("productMessageBox");
+  if (!msgBox) {
+    msgBox = document.createElement("div");
+    msgBox.id = "productMessageBox";
+    msgBox.style.position = "fixed";
+    msgBox.style.top = "20px";
+    msgBox.style.right = "20px";
+    msgBox.style.background = "#4caf50";
+    msgBox.style.color = "#fff";
+    msgBox.style.padding = "12px 24px";
+    msgBox.style.borderRadius = "6px";
+    msgBox.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)";
+    msgBox.style.zIndex = "1000";
+    document.body.appendChild(msgBox);
+  }
+  msgBox.textContent = "Product added successfully!";
+  msgBox.style.display = "block";
+  setTimeout(() => {
+    msgBox.style.display = "none";
+  }, 5000);
+  return true;
+}
