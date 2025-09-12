@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-image: url("../assets/backgroundImage.jpg");
+    /* background-image: url("../assets/backgroundImage.jpg"); */
+    background-color: white;
     background-size: cover;
 }
 

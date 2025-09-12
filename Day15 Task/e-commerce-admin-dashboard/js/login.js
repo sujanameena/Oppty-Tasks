@@ -23,7 +23,7 @@ document
       localStorage.setItem("adminEmailId", adminUserEmail);
       localStorage.setItem("adminUserName", adminUserName);
       setTimeout(() => {
-        window.location.href = "/dashboard.html";
+        window.location.href = "./dashboard.html";
       }, 1000);
     } else {
       messageBox.textContent = "Invalid Credentials";
