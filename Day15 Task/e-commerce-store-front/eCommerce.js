@@ -3,7 +3,7 @@ price = 300000;
 
 const products = [
   {
-    image: "assets/appleLaptop.jpeg",
+    image: "e-commerce-store-front/assets/appleLaptop.jpeg",
     name: "Mac book Air",
     description: "Short description of product 3.",
     rating: 4.0,
@@ -11,7 +11,7 @@ const products = [
     category: "Electronics",
   },
   {
-    image: "assets/apple-iphone-14-pro-5.jpg",
+    image: "e-commerce-store-front/assets/apple-iphone-14-pro-5.jpg",
     name: "Apple iPhone 14 Pro",
     description: "Latest Apple iPhone with advanced features.",
     rating: 4.8,
@@ -19,7 +19,7 @@ const products = [
     category: "Mobiles",
   },
   {
-    image: "assets/bed1.jpeg",
+    image: "e-commerce-store-front/assets/bed1.jpeg",
     name: "Classic Wooden Bed",
     description: "Elegant wooden bed for a comfortable sleep.",
     rating: 4.6,
@@ -27,7 +27,7 @@ const products = [
     category: "Furniture",
   },
   {
-    image: "assets/bed2.jpg",
+    image: "e-commerce-store-front/assets/bed2.jpg",
     name: "Luxury King Bed",
     description: "Spacious king size bed with premium finish.",
     rating: 4.7,
@@ -35,7 +35,7 @@ const products = [
     category: "Furniture",
   },
   {
-    image: "assets/chair1.jpg",
+    image: "e-commerce-store-front/assets/chair1.jpg",
     name: "Office Chair",
     description: "Ergonomic office chair for daily use.",
     rating: 4.3,
@@ -43,7 +43,7 @@ const products = [
     category: "Furniture",
   },
   {
-    image: "assets/chair2.jpg",
+    image: "e-commerce-store-front/assets/chair2.jpg",
     name: "Dining Chair",
     description: "Stylish dining chair for your home.",
     rating: 4.1,
@@ -51,7 +51,7 @@ const products = [
     category: "Furniture",
   },
   {
-    image: "assets/chair3.jpeg",
+    image: "e-commerce-store-front/assets/chair3.jpeg",
     name: "Lounge Chair",
     description: "Comfortable lounge chair for relaxation.",
     rating: 4.5,
@@ -59,7 +59,7 @@ const products = [
     category: "Furniture",
   },
   {
-    image: "assets/frock.jpeg",
+    image: "e-commerce-store-front/assets/frock.jpeg",
     name: "Kids Frock",
     description: "Cute frock for kids, available in all sizes.",
     rating: 4.4,
@@ -67,7 +67,7 @@ const products = [
     category: "Fashion",
   },
   {
-    image: "assets/lenovo laptop.jpg",
+    image: "e-commerce-store-front/assets/lenovo laptop.jpg",
     name: "Lenovo Laptop",
     description: "High performance Lenovo laptop for work and play.",
     rating: 4.6,
@@ -75,7 +75,7 @@ const products = [
     category: "Electronics",
   },
   {
-    image: "assets/realme_earbuds.jpg",
+    image: "e-commerce-store-front/assets/realme_earbuds.jpg",
     name: "Realme Earbuds",
     description: "Wireless earbuds with long battery life.",
     rating: 4.2,
@@ -83,7 +83,7 @@ const products = [
     category: "Electronics",
   },
   {
-    image: "assets/samsung-galaxy-a34-5g-500x500.webp",
+    image: "e-commerce-store-front/assets/samsung-galaxy-a34-5g-500x500.webp",
     name: "Samsung Galaxy A34 5G",
     description: "Affordable 5G smartphone from Samsung.",
     rating: 4.3,
@@ -91,7 +91,7 @@ const products = [
     category: "Mobiles",
   },
   {
-    image: "assets/sareeImage.jpeg",
+    image: "e-commerce-store-front/assets/sareeImage.jpeg",
     name: "Designer Saree",
     description: "Elegant saree for festive occasions.",
     rating: 4.7,
@@ -99,7 +99,7 @@ const products = [
     category: "Fashion",
   },
   {
-    image: "assets/sofa.jpg",
+    image: "e-commerce-store-front/assets/sofa.jpg",
     name: "3-Seater Sofa",
     description: "Comfortable 3-seater sofa for your living room.",
     rating: 4.5,
@@ -107,7 +107,7 @@ const products = [
     category: "Furniture",
   },
   {
-    image: "assets/sofa1.webp",
+    image: "e-commerce-store-front/assets/sofa1.webp",
     name: "Modern Sofa",
     description: "Stylish modern sofa with premium fabric.",
     rating: 4.4,
@@ -115,7 +115,7 @@ const products = [
     category: "Furniture",
   },
   {
-    image: "assets/sofa2.webp",
+    image: "e-commerce-store-front/assets/sofa2.webp",
     name: "L-Shaped Sofa",
     description: "Spacious L-shaped sofa for large families.",
     rating: 4.6,
@@ -123,7 +123,7 @@ const products = [
     category: "Furniture",
   },
   {
-    image: "assets/t-shirts.png",
+    image: "e-commerce-store-front/assets/t-shirts.png",
     name: "Men's T-Shirt",
     description: "Comfortable cotton t-shirt for men.",
     rating: 4.2,
@@ -148,7 +148,7 @@ let currentUser = null;
 
 function showLogin() {
   closeModal();
-  document.getElementById("login-modal").style.display = "flex";
+  window.location.href = "./login.html";
 }
 function showRegister() {
   closeModal();
@@ -207,21 +207,24 @@ function forgotPassword() {
 }
 
 function updateHeader() {
+  let username = localStorage.getItem("adminUserName");
   const headerUser = document.getElementById("login-info");
-  if (currentUser) {
+  if (!username) {
+    headerUser.innerHTML = `<button class="login-btn" onclick="showLogin()">Login</button>`;
+  } else {
     headerUser.innerHTML = `
-          <span class="login-user-name" >Hello, ${currentUser.username}</span>
+          <span class="login-user-name" >Hello, ${username}</span>
           <button class="logout-btn" onclick="logout()">Logout</button>
         `;
-  } else {
-    headerUser.innerHTML = `<button class="login-btn" onclick="showLogin()">Login</button>`;
   }
 }
 
 function logout() {
   currentUser = null;
+  localStorage.clear();
+  window.location.href = "./login.html";
   updateHeader();
-  alert("Logged out!");
+  // alert("Logged out!");
 }
 //LOGIN FUNCTION ENDING
 

@@ -5,20 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zyllo.com</title>
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/dashboard.css" />
-  <link rel="stylesheet" href="css/login.css" />
-  <link rel="stylesheet" href="css/products.css" />
-  <link rel="stylesheet" href="css/cart.css" />
-  <link rel="stylesheet" href="css/orders.css" />
-  <script src="eCommerce.js"></script>
+  <link rel="stylesheet" href="e-commerce-store-front/css/header.css" />
+  <link rel="stylesheet" href="e-commerce-store-front/css/dashboard.css" />
+  <link rel="stylesheet" href="e-commerce-store-front/css/login.css" />
+  <link rel="stylesheet" href="e-commerce-store-front/css/products.css" />
+  <link rel="stylesheet" href="e-commerce-store-front/css/cart.css" />
+  <link rel="stylesheet" href="e-commerce-store-front/css/orders.css" />
+  <script src="e-commerce-store-front/eCommerce.js"></script>
 </head>
 
 <body>
   <header class="head">
     <div class="logo_container">
       <div class="img-container">
-        <img src="assets/zylloLogo.png" alt="zyllo-Logo" class="wave-img" />
+        <img src="e-commerce-store-front/assets/zylloLogo.png" alt="zyllo-Logo" class="wave-img" />
       </div>
       <div class="name">ZYLLO</div>
     </div>
@@ -26,7 +26,7 @@
     <div id="header-buttons" class="header-buttons">
       <div id="login-info" class="login-info">
         <p class="login-user-name"></p>
-        <button class="login-btn" onclick="showLogin()">👤Login</button>
+        <!-- <button class="login-btn" onclick="showLogin()">👤Login</button> -->
       </div>
       <div class="cart-header" onclick="openCart()">
         🛒 Cart <span class="cart-count" id="cartCount">0</span>
@@ -168,6 +168,8 @@
   </div>
   <script>
     window.onload = function () {
+      closeModal();
+      updateHeader();
       showProducts();
     };
   </script>

@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   padding: 0 5px;
+  background: linear-gradient(60deg, rgb(231, 190, 149),
+            grey, rgb(200, 125, 39));
 }
 
 .hamburger {
@@ -27,7 +29,9 @@
   position: fixed;
   left: -250px;
   transition: left 0.3s ease;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+   background: linear-gradient(60deg, black, rgb(231, 190, 149),
+            grey, rgb(200, 125, 39));
   height: 100%;
   width: 250px;
 }

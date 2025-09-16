@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Get navigation links
 const ordersLink = document.getElementById("ordersLink");
 const productsLink = document.getElementById("productsLink");
+const siteLink = document.getElementById("siteLink");
 
 // Get content views
 const ordersView = document.getElementById("ordersView");
@@ -35,6 +36,11 @@ ordersLink.addEventListener("click", (e) => {
 productsLink.addEventListener("click", (e) => {
   e.preventDefault();
   switchView(productsLink, addProductView);
+});
+
+siteLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "./eCommerce.html";
 });
 
 // Event Listener for Add Product form
@@ -184,7 +190,7 @@ quickFilterBtns.forEach((btn) => {
 
 function logout() {
     localStorage.clear();
-    window.location.href = "./login.html";
+    window.location.href = "../../login.html";
 }
 
 function addProduct() {
