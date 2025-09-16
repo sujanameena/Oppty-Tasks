@@ -222,7 +222,7 @@ function updateHeader() {
 function logout() {
   currentUser = null;
   localStorage.clear();
-  window.location.href = "./login.html";
+  // window.location.href = "./login.html";
   updateHeader();
   // alert("Logged out!");
 }
