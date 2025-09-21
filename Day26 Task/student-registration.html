@@ -50,15 +50,120 @@
                     <div class="input-row">
                         <input type="number" id="dob-day" name="dob-day" placeholder="Day (00)" min="1" max="31"
                             required>
-                            <input type="number" id="dob-month" name="dob-month" placeholder="Month (00)" min="1" max="12"
+                        <input type="number" id="dob-month" name="dob-month" placeholder="Month (00)" min="1" max="12"
                             required>
-                            <input type="number" id="dob-year" name="dob-year" placeholder="Year (0000)" min="1900" max="2025"
-                            required>
-
+                        <input type="number" id="dob-year" name="dob-year" placeholder="Year (0000)" min="1900"
+                            max="2025" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Calculated Age</label>
+                    <input type="text" id="age" name="age" readonly disabled>
+                </div>
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="nationality">Nationality</label>
+                        <select id="nationality" name="nationality">
+                            <option value="indian">Indian</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="aadhaar" class="required">Aadhaar / Identity Number</label>
+                        <input type="text" id="aadhaar" name="aadhar" placeholder="12-digit aadhaar number" required
+                            pattern="[0-9]{12}" oninput="this.setCustomValidity('')"
+                            oninvalid="this.setCustomValidity('Please enter a 12-digit number.')">
+                    </div>
+                </div>
+            </div>
+            <!-- CONTACT INFORMATION -->
+            <div class="form-section">
+                <h2>Contact Information</h2>
+                <div class="form-group">
+                    <label for="address" class="required">Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Street, City, State"
+                        required></textarea>
+                </div>
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="city" class="required">City</label>
+                        <select id="city" name="city" required>
+                            <option value="">Select City</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Ddelhi</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Kolkata">Kolkata</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="state" class="required">State</label>
+                        <select id="state" name="state" required>
+                            <option value="">Select State</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
                     </div>
                 </div>
 
-        </form>
+
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="country" class="required">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="Indian">India</option>
+                            <option value="UK">UK</option>
+                            <option value="USA">USA</option>
+                            <option value="Canada">canada</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode">Pin Code</label>
+                        <input type="text" id="Pin" name="pin" placeholder="pin code">
+                    </div>
+                </div>
+            </div>
+            <!-- EXTERNAL INFORMATION -->
+            <div class="form-section">
+                <h2>External Details</h2>
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="father-name">Father/Mother Name</label>
+                        <input type="text" id="father-name" name="father-name"
+                            placeholder="Father's/Mother's Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="father-mobile">Father/Mother Mobile Number</label>
+                        <input type="tel" id="father-mobile" name="father-mobile" placeholder="Mobile Number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div style="display: flex;align-items: center;gap: 2px;">
+                        <input type="checkbox" id="no-parents" name="no-parents">
+                        <label for="no-parents" style="margin: left;">I don't have a father or mother</label>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+    </div>
+
+    </form>
     </div>
 
 
