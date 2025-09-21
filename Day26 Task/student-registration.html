@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="student-registration.css">
+    <!-- <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="student-registration.js"></script>
+</head>
+
+<body>
+    <div class="__container">
+        <div>
+            <img src="./student regisration logo.png" alt="logo" class="logo">
+            <h1 class="heading">Student Registration Form</h1>
+            <hr class="heading-line">
+        </div>
+
+
+        <form id="registration-form">
+            <!-- /* Personal details div starts here */ -->
+            <div class="form-section">
+                <h2>Personal Details</h2>
+                <div class="form-group">
+                    <label for="uid" class="required">UID</label>
+                    <input type="text" id="uid" name="uid" placeholder="Enter your unique ID" required>
+                </div>
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="name" class="required">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <select id="title" name="title">
+                            <option value="Mr">Mr.</option>
+                            <option value="Mrs">Mrs.</option>
+                            <option value="Ms">Ms.</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mobile" class="required">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number">
+                </div>
+                <div class="form-group">
+                    <label for="dob-day" class="required">Date of Birth</label>
+                    <div class="input-row">
+                        <input type="number" id="dob-day" name="dob-day" placeholder="Day (00)" min="1" max="31"
+                            required>
+                            <input type="number" id="dob-month" name="dob-month" placeholder="Month (00)" min="1" max="12"
+                            required>
+                            <input type="number" id="dob-year" name="dob-year" placeholder="Year (0000)" min="1900" max="2025"
+                            required>
+
+                    </div>
+                </div>
+
+        </form>
+    </div>
+
+
+    <!-- <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script> -->
+
+</body>
+
+</html>
