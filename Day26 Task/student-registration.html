@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
-    <link rel="stylesheet" href="student-registration.css">
     <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="student-registration.css">
     <script src="student-registration.js"></script>
 </head>
 
@@ -149,7 +149,7 @@
                 <div class="form-group">
                     <div style="display: flex;align-items: center;gap: 2px;">
                         <input type="checkbox" id="no-parents" style="width:2%;margin: 15px;" name="no-parents">
-                        <label for="no-parents" style="margin: left;">I don't have a father or mother</label>
+                        <label for="no-parents" style="margin: left;">I don't have father/mother</label>
                     </div>
                 </div>
                 <div id="guardian-info" class="hidden">
@@ -182,12 +182,19 @@
             </div>
             <!-- BUTTONS -->
             <div class="button-group">
-                <button type="submit" class="btn btn-submit" id="submit-btn">Submit</button>
+                <div class="actions">
+                    <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
+                    <button type="button" id="viewBtn" class="btn btn-ghost">View Form</button>
+                    <button type="button" id="resetBtn" class="btn"
+                        style="background:#fff;border:1px solid #f2d7b8">Reset</button>
+                </div>
             </div>
+            
+            <!-- EDIT AND DELETING -->
+
+            <!-- EDIT AND DELETING -->
         </form>
     </div>
-    </div>
-    <div id="message-box" role="alert"></div>
 
 
 

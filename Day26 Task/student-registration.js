@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   noParentsCheckbox.addEventListener("change", () => {
     guardianInfo.classList.toggle("hidden", !noParentsCheckbox.checked);
   });
-  
 
   // Calculate age dynamically
   function calculateAge() {
@@ -200,3 +199,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// CURD OPERATIONS

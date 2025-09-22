@@ -188,8 +188,8 @@ textarea:focus {
 }
 
 .btn-submit {
-  background-color: var(--accent-color);
-  color: var(--primary-bg);
+  background-color: #ffa07a;
+  color: black;
 }
 
 .btn-submit:hover {
