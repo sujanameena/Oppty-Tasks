@@ -147,23 +147,39 @@
                 </div>
                 <div class="form-group">
                     <div style="display: flex;align-items: center;gap: 2px;">
-                        <input type="checkbox" id="no-parents" name="no-parents">
+                        <input type="checkbox" id="no-parents" style="width:2%;margin: 15px;" name="no-parents">
                         <label for="no-parents" style="margin: left;">I don't have a father or mother</label>
                     </div>
                 </div>
-
-
-
+                <div class="input-row">
+                    <div id="guardian-info" class="hidden">
+                        <div class="form-group">
+                            <label for="guardian-name">Guardian Name</label>
+                            <input type="text" id="guardian-name" name="guardian-name"
+                                placeholder="Guardian's Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="guardian-mobile">Guardian Mobile</label>
+                            <input type="text" id="guardian-mobile" name="guardian-mobile" placeholder="Mobile Number">
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- UPLOAD IMAGE -->
+             <div class="form-section" style="border-bottom: none;">
+                <h2>Upload Image</h2>
+                <div class="form-group">
+                    <label>Upload photo of yourself</label>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="upload-image" name="upload-image" accept="image/*">
+                        <div class="file-upload-btn">Choose File</div>
+                    </div>
+                    <img id="image-preview" src="#" alt="Image Preview" class="uploaded-image-preview hidden">
+                </div>
+             </div>
 
 
-
-
-
-
-    </div>
-
-    </form>
+        </form>
     </div>
 
 
