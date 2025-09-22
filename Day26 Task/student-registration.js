@@ -197,16 +197,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Close modal
-  //   modalClose.addEventListener("click", () => {
-  //     modal.style.display = "none";
-  //   });
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.style.display = "none";
     }
   });
 });
-// BUTTON OPERATIONS
+
 
 // View form data (Read)
 function viewBtnClick(studentId) {
@@ -335,7 +332,7 @@ function deleteBtnClick() {
       .forEach((el) => (el.disabled = false));
   }
 }
-// CURD OPERATIONS
+
 function handleNoParentsCheckbox(isChecked) {
   const fatherMobile = document.getElementById("father-mobile");
   const fatherName = document.getElementById("father-name");
