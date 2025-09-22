@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
     <link rel="stylesheet" href="student-registration.css">
-    <!-- <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="student-registration.js"></script>
 </head>
 
@@ -15,7 +15,6 @@
         <div>
             <img src="./student regisration logo.png" alt="logo" class="logo">
             <h1 class="heading">Student Registration Form</h1>
-            <hr class="heading-line">
         </div>
 
 
@@ -43,7 +42,8 @@
                 </div>
                 <div class="form-group">
                     <label for="mobile" class="required">Mobile Number</label>
-                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number">
+                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" pattern="^\d{10}$"
+                        maxlength="10" required>
                 </div>
                 <div class="form-group">
                     <label for="dob-day" class="required">Date of Birth</label>
@@ -71,7 +71,7 @@
                     <div class="form-group">
                         <label for="aadhaar" class="required">Aadhaar / Identity Number</label>
                         <input type="text" id="aadhaar" name="aadhar" placeholder="12-digit aadhaar number" required
-                            pattern="[0-9]{12}" oninput="this.setCustomValidity('')"
+                            pattern="^\d{12}$" maxlength="12" oninput="this.setCustomValidity('')"
                             oninvalid="this.setCustomValidity('Please enter a 12-digit number.')">
                     </div>
                 </div>
@@ -142,7 +142,8 @@
                     </div>
                     <div class="form-group">
                         <label for="father-mobile">Father/Mother Mobile Number</label>
-                        <input type="tel" id="father-mobile" name="father-mobile" placeholder="Mobile Number">
+                        <input type="tel" id="father-mobile" name="father-mobile" placeholder="Mobile Number"
+                            pattern="^\d{10}$" maxlength="10" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -151,8 +152,8 @@
                         <label for="no-parents" style="margin: left;">I don't have a father or mother</label>
                     </div>
                 </div>
-                <div class="input-row">
-                    <div id="guardian-info" class="hidden">
+                <div id="guardian-info" class="hidden">
+                    <div class="input-row">
                         <div class="form-group">
                             <label for="guardian-name">Guardian Name</label>
                             <input type="text" id="guardian-name" name="guardian-name"
@@ -160,13 +161,15 @@
                         </div>
                         <div class="form-group">
                             <label for="guardian-mobile">Guardian Mobile</label>
-                            <input type="text" id="guardian-mobile" name="guardian-mobile" placeholder="Mobile Number">
+                            <input type="tel" id="guardian-mobile" name="guardian-mobile" placeholder="Mobile Number"
+                                pattern="^\d{10}$" maxlength="10" required>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- UPLOAD IMAGE -->
-             <div class="form-section" style="border-bottom: none;">
+            <div class="form-section" style="border-bottom: none;">
                 <h2>Upload Image</h2>
                 <div class="form-group">
                     <label>Upload photo of yourself</label>
@@ -176,14 +179,19 @@
                     </div>
                     <img id="image-preview" src="#" alt="Image Preview" class="uploaded-image-preview hidden">
                 </div>
-             </div>
-
-
+            </div>
+            <!-- BUTTONS -->
+            <div class="button-group">
+                <button type="submit" class="btn btn-submit" id="submit-btn">Submit</button>
+            </div>
         </form>
     </div>
+    </div>
+    <div id="message-box" role="alert"></div>
 
 
-    <!-- <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script> -->
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
 
 </body>
 
