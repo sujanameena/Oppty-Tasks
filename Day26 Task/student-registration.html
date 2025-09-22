@@ -7,7 +7,6 @@
     <title>Student Registration</title>
     <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="student-registration.css">
-    <script src="student-registration.js"></script>
 </head>
 
 <body>
@@ -64,7 +63,7 @@
                     <div class="form-group">
                         <label for="nationality">Nationality</label>
                         <select id="nationality" name="nationality">
-                            <option value="indian">Indian</option>
+                            <option value="Indian">Indian</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -143,12 +142,12 @@
                     <div class="form-group">
                         <label for="father-mobile">Father/Mother Mobile Number</label>
                         <input type="tel" id="father-mobile" name="father-mobile" placeholder="Mobile Number"
-                            pattern="^\d{10}$" maxlength="10" required>
+                            pattern="^\d{10}$" maxlength="10">
                     </div>
                 </div>
                 <div class="form-group">
                     <div style="display: flex;align-items: center;gap: 2px;">
-                        <input type="checkbox" id="no-parents" style="width:2%;margin: 15px;" name="no-parents">
+                        <input type="checkbox" id="no-parents" style="width:2%;margin: 15px;" name="no-parents" onchange="handleNoParentsCheckbox(this.checked)">
                         <label for="no-parents" style="margin: left;">I don't have father/mother</label>
                     </div>
                 </div>
@@ -162,7 +161,7 @@
                         <div class="form-group">
                             <label for="guardian-mobile">Guardian Mobile</label>
                             <input type="tel" id="guardian-mobile" name="guardian-mobile" placeholder="Mobile Number"
-                                pattern="^\d{10}$" maxlength="10" required>
+                                pattern="^\d{10}$" maxlength="10">
                         </div>
                     </div>
                 </div>
@@ -183,23 +182,56 @@
             <!-- BUTTONS -->
             <div class="button-group">
                 <div class="actions">
-                    <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
-                    <button type="button" id="viewBtn" class="btn btn-ghost">View Form</button>
-                    <button type="button" id="resetBtn" class="btn"
-                        style="background:#fff;border:1px solid #f2d7b8">Reset</button>
+                    <button type="submit" id="submitBtn" class="btn btn-submit">Submit</button>
+                    <button type="reset" id="resetBtn" class="btn btn-reset">Reset</button>
                 </div>
             </div>
-            
-            <!-- EDIT AND DELETING -->
-
-            <!-- EDIT AND DELETING -->
+            <div id="message-box">
+            </div>
         </form>
     </div>
+   
 
-
+    <div class="__container">
+        <h4>submitted student details</h4>
+    <div class="student-details">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>UID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Age</th>
+                    <th>Nationality</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="student-details-table-body">
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <!-- Student Details Popup -->
+    <div id="student-details-popup" class="modal" tabindex="-1" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
+        <div class="modal-dialog" style="max-width:700px; margin:auto;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Student Details</h5>
+                    <button type="button" class="btn-close" aria-label="Close" onclick="document.getElementById('student-details-popup').style.display='none';"></button>
+                </div>
+                <div class="modal-body" id="student-details-popup-body">
+                    <!-- Student details will be injected here dynamically -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('student-details-popup').style.display='none';">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
-
+  <script src="student-registration.js"></script>
 </body>
 
 </html>
