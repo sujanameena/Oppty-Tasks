@@ -3,7 +3,7 @@ let isEditing = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registration-form");
-  const submitBtn = document.getElementById("submit-btn");
+  const submitBtn = document.getElementById("submitBtn");
   const noParentsCheckbox = document.getElementById("no-parents");
   const guardianInfo = document.getElementById("guardian-info");
   const dobDay = document.getElementById("dob-day");
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const existingIndex = studentsList.findIndex(
-      (student) => student.uid === data.uid
+      (student) => String(student.uid) === String(data.uid)
     );
     if (existingIndex !== -1) {
       studentsList[existingIndex] = data;
@@ -144,8 +144,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     form.reset();
+
     ageInput.value = "";
     imagePreview.classList.add("hidden");
+    document.getElementById("uid").style = "";
     savedImageBase64 = null;
     updateStudentsList();
   });
@@ -166,7 +168,7 @@ function updateStudentsList() {
   studentsList.forEach((student, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-            <td class="table-data">${index + 1}</td>
+            <td class="table-data">${student["uid"]}</td>
             <td>
                 <div>
                     ${
