@@ -1,5 +1,5 @@
 var studentsList = [];
- let isEditing = false;
+let isEditing = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registration-form");
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
   dobMonth.addEventListener("input", calculateAge);
   dobYear.addEventListener("input", calculateAge);
 
-  // Handle image upload and preview
   imageUpload.addEventListener("change", (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -91,33 +90,36 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     const noParentsCheckbox = document.getElementById("no-parents");
     const uid = document.getElementById("uid");
-    const existingStudent = studentsList.find((student) => student.uid === uid.value);
+    const existingStudent = studentsList.find(
+      (student) => student.uid === uid.value
+    );
 
     let data = {};
     if (isEditing) {
-        if (existingStudent) {
-            data = existingStudent;
-        }
-    }else {
-        if(existingStudent) {
-            showMessage("Student with uid already exist");
-        }
+      if (existingStudent) {
+        data = existingStudent;
+      }
+    } else {
+      if (existingStudent) {
+        showMessage("Student with uid already exist");
+      }
     }
 
     // Get all form data
     const formData = new FormData(form);
-    
+
     formData.forEach((value, key) => {
       data[key] = value;
     });
     data["no-parents"] = noParentsCheckbox.checked;
     data["age"] = ageInput.value;
-    if(savedImageBase64) {
-        data["image"] = savedImageBase64;
+    if (savedImageBase64) {
+      data["image"] = savedImageBase64;
     }
 
-
-    const existingIndex = studentsList.findIndex(student => student.uid === data.uid);
+    const existingIndex = studentsList.findIndex(
+      (student) => student.uid === data.uid
+    );
     if (existingIndex !== -1) {
       studentsList[existingIndex] = data;
     } else {
@@ -132,10 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isEditing) {
       showMessage("Form data updated successfully!");
       isEditing = false;
-      editBtn.textContent = "Edit";
       submitBtn.textContent = "Submit";
       submitBtn.classList.remove("hidden");
-      deleteBtn.classList.remove("hidden");
       form
         .querySelectorAll("input, select, textarea")
         .forEach((el) => (el.disabled = false));
@@ -150,13 +150,22 @@ document.addEventListener("DOMContentLoaded", () => {
     updateStudentsList();
   });
 
+  // Close modal
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
 
-  function updateStudentsList() {
-    const tableBody = document.getElementById("student-details-table-body");
-    tableBody.innerHTML = "";
-    studentsList.forEach((student, index) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
+function updateStudentsList() {
+  const storedData = localStorage.getItem("studentRegistrationData");
+  let studentsList = storedData ? JSON.parse(storedData) : [];
+  const tableBody = document.getElementById("student-details-table-body");
+  tableBody.innerHTML = "";
+  studentsList.forEach((student, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
             <td class="table-data">${index + 1}</td>
             <td>
                 <div>
@@ -192,18 +201,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </td>
         `;
-      tableBody.appendChild(row);
-    });
-  }
-
-  // Close modal
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
+    tableBody.appendChild(row);
   });
-});
-
+}
 
 // View form data (Read)
 function viewBtnClick(studentId) {
@@ -255,6 +255,7 @@ function viewBtnClick(studentId) {
 
 // Handle edit mode
 function editBtnClick(studentId) {
+  const uidField = document.getElementById("uid");
   const form = document.getElementById("registration-form");
   isEditing = true;
   const storedData = localStorage.getItem("studentRegistrationData");
@@ -277,7 +278,7 @@ function editBtnClick(studentId) {
     document.getElementById("city").value = student.city || "";
     document.getElementById("state").value = student.state || "";
     document.getElementById("country").value = student.country || "";
-    document.getElementById("Pin").value = student.Pin || "";
+    document.getElementById("Pin").value = student.pin || "";
 
     imagePreview = document.getElementById("image-preview");
     if (student.image) {
@@ -290,9 +291,9 @@ function editBtnClick(studentId) {
     }
     const guardianInfo = document.getElementById("guardian-info");
     const noParentsCheckbox = document.getElementById("no-parents");
-    noParentsCheckbox.checked = student["no-parents"] || "";
+    noParentsCheckbox.checked = student["no-parents"] || false;
 
-    if (student["guardian-name"] || student["guardian-mobile"]) {
+    if (student["no-parents"]) {
       guardianInfo.classList.remove("hidden");
       document.getElementById("guardian-name").value =
         student["guardian-name"] || "";
@@ -302,35 +303,38 @@ function editBtnClick(studentId) {
       document.getElementById("father-mobile").disabled = true;
     } else {
       guardianInfo.classList.add("hidden");
-      document.getElementById("guardian-name").value = "";
-      document.getElementById("guardian-mobile").value = "";
+      document.getElementById("father-name").value = student["father-name"] || "";
+      document.getElementById("father-mobile").value = student["father-mobile"] || "";
     }
     // Disable all fields except submit/update
     form
       .querySelectorAll("input, select, textarea")
       .forEach((el) => (el.disabled = false));
   }
-  editBtn.textContent = "Save Changes";
   submitBtn.textContent = "Update";
-  submitBtn.classList.remove("hidden");
+  uidField.disabled = true;
+  uidField.style.backgroundColor = "#e0e0e0";
 }
 
 // Delete form data (Delete)
-function deleteBtnClick() {
-  if (confirm("Are you sure you want to delete this data?")) {
-    localStorage.removeItem("studentRegistrationData");
-    form.reset();
-    ageInput.value = "";
-    imagePreview.classList.add("hidden");
-    showMessage("Form data deleted successfully!");
-
-    // Reset UI
-    submitBtn.classList.remove("hidden");
-    viewBtn.classList.remove("hidden");
-    form
-      .querySelectorAll("input, select, textarea")
-      .forEach((el) => (el.disabled = false));
-  }
+function deleteBtnClick(uid) {
+  const storedData = localStorage.getItem("studentRegistrationData");
+  let studentsList = storedData ? JSON.parse(storedData) : [];
+  studentsList = studentsList.filter(
+    (student) => String(student.uid) !== String(uid)
+  );
+  localStorage.setItem("studentRegistrationData", JSON.stringify(studentsList));
+  updateStudentsList();
+  const messageBox = document.getElementById("message-box");
+  messageBox.textContent = "Student deleted successfully!";
+  messageBox.style.display = "flex";
+  messageBox.style.opacity = 1;
+  setTimeout(() => {
+    messageBox.style.opacity = 0;
+    setTimeout(() => {
+      messageBox.style.display = "none";
+    }, 500);
+  }, 3000);
 }
 
 function handleNoParentsCheckbox(isChecked) {
