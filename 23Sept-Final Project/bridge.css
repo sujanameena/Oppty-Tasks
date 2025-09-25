@@ -3,17 +3,22 @@ body {
   display: block;
   overflow-x: hidden;
 }
+.first-page {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  background-color: rgb(249, 250, 251);
+}
 .header-container {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  width: 100%;
   padding: 30px 0px 30px 50px;
-  height: 100vh;
 }
 
 .logo-img {
-  width: 10%;
-  height: 10%;
+  width: 149px;
+  height: 57px;
 }
 .header-menu {
   display: flex;
@@ -26,17 +31,128 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h3 {
-  margin: 0;
-  cursor: pointer;
-  font-weight: normal;
+.register-now {
+  display: flex;
+  width: 250px;
+  height: 68px;
+  margin-right: auto;
+  padding-left: 30px;
+}
+
+.register-now button {
+  height: 50px;
+  width: 158px;
+  background-color: orange;
+  border: none;
+  border-radius: 0%;
+}
+
+.align-right-most {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
-  font-size: 18px;
+  margin-left: 400px;
 }
-h3:hover {
-  color: #eab133;
-  transition: color 0.2s;
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
 }
+
+.nav_bar {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.nav_bar_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 0;
+}
+.nav_bar_list_item {
+  list-style: none;
+  width: 100pxpx;
+}
+
+.anchor {
+  text-decoration: none;
+  width: 70px;
+  display: block;
+}
+
+.one-slide {
+  display: flex;
+  flex-direction: row;
+}
+.carousel-custom-css {
+  padding-top: 50px;
+}
+.one-slide-left h1 {
+  font-weight: 450;
+  font-size: 55px;
+}
+
+.one-slide-left button {
+  border-radius: 0;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(248, 160, 175);
+  border: none;
+}
+
+.one-slide-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.one-slide-right {
+  width: 50%;
+  height: 400px;
+  display: flex;
+  position: static;
+}
+
+.one-slide-right-image {
+  width: 80%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+.small-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: 300px;
+  z-index: 2;
+  top: 50px;
+}
+.first-page-options {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 50px;
+  z-index: 2;
+  justify-content: center;
+  margin-top: 20px;
+}
+.first-page-circles {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
 /* slider */
 
 /* slider */
@@ -46,7 +162,9 @@ h3:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
 }
+
 .online-courses {
   color: #ffbe30;
   font-family: "Roboto", sans-serif;
@@ -56,8 +174,10 @@ h3:hover {
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
+  position: static;
 }
-.essential-fast-facts,wideRange-courses {
+.essential-fast-facts,
+.wideRange-courses {
   color: #000000;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 40px;
@@ -66,8 +186,8 @@ h3:hover {
   font-weight: 500;
   letter-spacing: 0px;
   text-transform: none;
-  position: relative;
-  top:-20px;
+  position: static;
+  margin-top: 20px;
 }
 .main-heading {
   color: #484848;
@@ -78,8 +198,8 @@ h3:hover {
   font-weight: 400;
   letter-spacing: 0px;
   text-transform: none;
-  position: relative;
-  top:-40px;
+  position: static;
+  margin-top: 40px;
 }
 .main-body {
   display: flex;
@@ -92,12 +212,16 @@ h3:hover {
   justify-content: center;
   width: 100%;
 }
+
+.second-page-inner {
+  margin-top: 150px;
+}
 .image-gallery {
   justify-content: space-between;
   gap: 150px;
   display: flex;
   justify-content: center;
-} 
+}
 
 .gallery-item {
   height: auto;
@@ -115,9 +239,9 @@ h3:hover {
   font-weight: 500;
   letter-spacing: 0px;
   text-transform: none;
-  position: relative;
-  top: -10px;
+  position: static;
   text-align: center;
+  margin-top: 20px;
 }
 .text {
   color: #707070;
@@ -126,13 +250,19 @@ h3:hover {
   line-height: 28px;
   font-style: normal;
   font-weight: 400;
-  position: relative;
-  top:-30px;
+  position: static;
   text-align: center;
+  margin-top: 20px;
 }
 /* third page */
-.third-page{
-    background-color: rgb(238,246,242);
+.third-page {
+  background-color: rgb(238, 246, 242);
+}
+.third-page-mini-container {
+  background-color: white;
+  margin-top: -40px;
+  margin-right: 65em;
+  padding-right: 10px;
 }
 .online-courses1 {
   color: #151314;
@@ -143,4 +273,275 @@ h3:hover {
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.login-icons {
+  display: inline;
+  position: static;
+  float: right;
+  color: #3a3a3a;
+}
+.thirdPage-heading1 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #000;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.1em;
+  /* display: inline-block; */
+  margin-bottom: 0px;
+}
+.thirdPage-heading2 {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.thirdPage-text {
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 0;
+  /* margin-left: 35px; */
+  /* margin-right: 20px; */
+  padding-bottom: 24px;
+  /* border-bottom: 1px dotted #dedede; */
+}
+.third-page-item {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* fourth page */
+.slider-container {
+  background-color: rgb(40, 45, 59);
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.author {
+  color: #ffb648;
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+}
+.slide {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+}
+
+/* .slide-active {
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1s;
+  height:auto;
+
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-active {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: none;
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+/* .slide-content {
+  margin: 0;
+  font-size: 1.5rem;
+} */
+
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 1rem;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #007bff;
+}
+/* fifth page */
+.fifth-page {
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.online-courses {
+  color: #ffbe30;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.fourth-page-heading {
+  color: #000000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-transform: none;
+  position: static;
+  margin-top: 20px;
+}
+.fourth-page-text {
+  color: #484848;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 31px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-transform: none;
+  position: static;
+  margin-top: 40px;
+}
+.main-body {
+  display: flex;
+  flex-direction: column;
+}
+/* fifth-page-images */
+.fifth-page-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.image-gallery {
+  justify-content: space-between;
+  gap: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-item {
+  height: auto;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+}
+.heading {
+  color: #000000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-transform: none;
+  position: static;
+  margin-top: 10px;
+  text-align: center;
+}
+.teacher {
+  color: #ffbe30;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.text {
+  color: #707070;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  font-style: normal;
+  font-weight: 400;
+  position: static;
+  margin-top: 30px;
+  text-align: center;
+}
+/* seventh page */
+.seventh-page-container {
+  background-color: rgba(255, 255, 2557);
+}
+.seventh-page-images {
+  display: flex;
+  position: static;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.eighth-page-container {
+  background-color: rgb(26, 28, 33);
 }

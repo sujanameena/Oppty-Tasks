@@ -6,75 +6,312 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridge.com</title>
     <link rel="stylesheet" href="bridge.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dripicons@2.0.0/css/dripicons.min.css">
+    <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="bridge.js"></script>
 </head>
 
 <body class="main-body">
-    <div class="header-container">
-        <img src="assets/brdg-logo.png" alt="logo" class="logo-img">
-        <div class="header-menu">
-            <h3>Home</h3>
-            <h3>Courses</h3>
-            <h3>Instructors</h3>
-            <h3>About Us</h3>
-            <h3>Pricing</h3>
-            <h3>Contact</h3>
+    <div class="first-page">
+        <div class="header-container">
+            <img src="assets/brdg-logo.png" alt="logo" class="logo-img">
+            <div class="align-right-most">
+                <div class="menu-items">
+                    <nav class="nav_bar">
+                        <ul class="nav_bar_list">
+                            <li class="nav_bar_list_item"><a class="anchor" href="#home">Home</a></li>
+                            <li class="nav_bar_list_item"><a class="anchor" href="#about">Courses</a></li>
+                            <li class="nav_bar_list_item"><a class="anchor" href="#contact">Instructor</a></li>
+                            <li class="nav_bar_list_item"><a class="anchor" href="#home">About Us</a></li>
+                            <li class="nav_bar_list_item"><a class="anchor" href="#about">Pricing</a></li>
+                            <li class="nav_bar_list_item"><a class="anchor" href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="register-now">
+                    <button class="btn btn-primary" href="#">Register now</button>
+                </div>
+            </div>
+        </div>
+        <div id="carouselExample" class="carousel slide carousel-custom-css" data-bs-ride="carousel">
+            <div class="carousel-inner w-75">
+                <div class="carousel-item active">
+                    <div class="one-slide">
+                        <div class="one-slide-left">
+                            <p style="color: orange;">Hello World</p>
+                            <h1>Kids love technology</h1>
+                            <h1>and digital learning</h1>
+                            <p>
+                                Ipsum dolor sit amet, consectetur adipisicing elit, <br>do eiusmod tempor incididunt ut
+                                labore et.
+                            </p>
+                            <button class="btn btn-primary"> Read more</button>
+                        </div>
+                        <div class="one-slide-right">
+                            <img class="one-slide-right-image" width=793 height=785 src="assets/first page image.png">
+                            <div class="small-circle">
+                                <img src="assets/girl with book.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="one-slide">
+                        <div class="one-slide-left">
+                            <p style="color: orange;">Hello World</p>
+                            <h1>Kids love technology</h1>
+                            <h1>and digital learning</h1>
+                            <p>
+                                Ipsum dolor sit amet, consectetur adipisicing elit, <br>do eiusmod tempor incididunt ut
+                                labore et.
+                            </p>
+                            <button class="btn btn-primary"> Read more</button>
+                        </div>
+                        <div class="one-slide-right">
+                            <img class="one-slide-right-image" width=793 height=785 src="assets/first page image.png">
+                            <div class="small-circle">
+                                <img src="assets/girl with book.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="one-slide">
+                        <div class="one-slide-left">
+                            <p style="color: orange;">Hello World</p>
+                            <h1>Kids love technology</h1>
+                            <h1>and digital learning</h1>
+                            <p>
+                                Ipsum dolor sit amet, consectetur adipisicing elit, <br>do eiusmod tempor incididunt ut
+                                labore et.
+                            </p>
+                            <button class="btn btn-primary"> Read more</button>
+                        </div>
+                        <div class="one-slide-right">
+                            <img class="one-slide-right-image" width=793 height=785 src="assets/first page image.png">
+                            <div class="small-circle">
+                                <img src="assets/girl with book.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="first-page-options">
+            <div class="first-page-circles">
+                <img src="assets/language logo.png">
+            </div>
+            <div class="first-page-circles">
+                <img src="assets/business.png">
+            </div>
+            <div class="first-page-circles">
+                <img src="assets/literature.png">
+            </div>
+            <div class="first-page-circles">
+                <img src="assets/software.png">
+            </div>
+            <div class="first-page-circles">
+                <img src="assets/design.png">
+            </div>
+            <div class="first-page-circles">
+                <img src="assets/coaching.png">
+            </div>
         </div>
     </div>
+    <!-- second page -->
+    <div class="second-page" id="second-page">
+        <div class="second-page-inner">
+            <h6 class="online-courses" style="text-align:center;">ONLINE COURSES</h6>
+            <h2 class="essential-fast-facts" style="text-align: center;">Essential Fast Facts</h2>
+            <h5 class="main-heading" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit,
+                sed do eiusmod<br>
+                tempor incididunt ut labore et dolore magna aliqua.</h5>
 
-    <div class="second-page">
-        <h6 class="online-courses" style="text-align:center;">ONLINE COURSES</h6>
-        <h2 class="essential-fast-facts" style="text-align: center;">Essential Fast Facts</h2>
-        <h5 class="main-heading" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod<br>
-            tempor incididunt ut labore et dolore magna aliqua.</h5>
+            <div class="seond-page-container">
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="assets/notifications.png" alt="notification-image" width="128" height="125">
+                        <h4 class="heading">Notification & Emails</h4>
+                        <p class="text">
+                            Duis aute irure dolor in reprehenderit in<br>
+                            voluptate velit esse cillum dolore eu fugiat<br>
+                            nulla pariatur. Excepteur sint.
+                        </p>
+                    </div>
 
-        <div class="seond-page-container">
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="assets/notifications.png" alt="notification-image" width="128" height="125">
-                    <h4 class="heading">Notification & Emails</h4>
-                    <p class="text">
-                        Duis aute irure dolor in reprehenderit in<br>
-                        voluptate velit esse cillum dolore eu fugiat<br>
-                        nulla pariatur. Excepteur sint.
-                    </p>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="assets/certification.png" alt="notification-image" width="128" height="125">
-                    <h4 class="heading">Certification</h4>
-                    <p class="text">
-                        Duis aute irure dolor in reprehenderit in<br>
-                        voluptate velit esse cillum dolore eu fugiat<br>
-                        nulla pariatur. Excepteur sint.
-                    </p>
-                </div>
-                <div class="gallery-item">
+                    <div class="gallery-item">
+                        <img src="assets/certification.png" alt="notification-image" width="128" height="125">
+                        <h4 class="heading">Certification</h4>
+                        <p class="text">
+                            Duis aute irure dolor in reprehenderit in<br>
+                            voluptate velit esse cillum dolore eu fugiat<br>
+                            nulla pariatur. Excepteur sint.
+                        </p>
+                    </div>
+                    <div class="gallery-item">
                         <img src="assets/europe-campus.png" alt="notification-image" width="128" height="125">
                         <h4 class="heading">Europe Campus</h4>
                         <p class="text">
                             Duis aute irure dolor in reprehenderit in<br>
-                             voluptate velit esse cillum dolore eu fugiat<br>
-                             nulla pariatur. Excepteur sint.
+                            voluptate velit esse cillum dolore eu fugiat<br>
+                            nulla pariatur. Excepteur sint.
                         </p>
                     </div>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="third-page">
         <h6 class="online-courses1" style="text-align:center;">ONLINE COURSES</h6>
         <h2 class="wideRange-courses" style="text-align: center;">Wide range online courses</h2>
-        <h5 class="main-heading" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
+        <h5 class="main-heading" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod<br>
             tempor incididunt ut labore et dolore magna aliqua.</h5>
+        <div class="third-page-container">
+            <div class="third-page-gallery">
+                <div class="third-page-item">
+                    <img src="assets/3rdPage-learn.jpg" alt="3rdPage-image" width="414" height="277">
+                    <div class="third-page-mini-container">
+                        <h5 class="thirdPage-heading1">Computer Science</h5>
+                        <span class="thirdPage-heading2">Brenda Harris</span>
+                        <p class="thirdPage-text">
+                            Lorem Ipsn gravida nibh vel velit auctor<br>
+                            aliquet.Aenean sollicitudin, lorem quis<br>
+                            bibendum auci elit conse
+                        </p>
+                        <button class="software-btn">Software</button>
+                        <div class="login-icon">
+                            <i class="dripicons-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- fourth page -->
+    <div class="fourth-page">
+        <div class="slider-container">
+            <div id="carouselExampleAutoplaying2" class="carousel slide fourth-page-corousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="slide">
+                            <img src="assets/4th page image1.png" alt="image">
+                            <div class="slide-content">
+                                <p>Bridge is a life saver. I don't have the time or money for a college<br>
+                                    education. My goal is to become a freelance web developer, and<br>
+                                    thanks to Bridge, I'm really close.</p>
+                                <p class="author">ARLIE BOURLAND</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide">
+                            <img src="assets/4th page image1.png" alt="image">
+                            <div class="slide-content">
+                                <p>Bridge is a life saver. I don't have the time or money for a college<br>
+                                    education. My goal is to become a freelance web developer, and<br>
+                                    thanks to Bridge, I'm really close.</p>
+                                <p class="author">ARLIE BOURLAND</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide">
+                            <img src="assets/4th page image1.png" alt="image">
+                            <div class="slide-content">
+                                <p>Bridge is a life saver. I don't have the time or money for a college<br>
+                                    education. My goal is to become a freelance web developer, and<br>
+                                    thanks to Bridge, I'm really close.</p>
+                                <p class="author">ARLIE BOURLAND</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- fifth page -->
+    <div class="fifth-page">
+        <h6 class="online-courses" style="text-align:center;">ONLINE COURSES</h6>
+        <h2 class="fourth-page-heading" style="text-align: center;">Best tutors you can find</h2>
+        <h5 class="fourth-page-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod<br>
+            tempor incididunt ut labore et dolore magna aliqua.</h5>
+
+        <div class="fifth-page-container">
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/Teacher1.png" alt="notification-image" width="128" height="125">
+                    <h4 class="heading">Brenda Harris</h4>
+                    <h6 class="teacher">Teacher</h6>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consect<br>
+                        etur adipisicing elit, sed do eiusmodem<br>
+                        por incididun ut labore et.
+                    </p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/Teacher2.png" alt="notification-image" width="128" height="125">
+                    <h4 class="heading">Sherlock Anderson</h4>
+                    <h6 class="teacher">Teacher</h6>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consect<br>
+                        etur adipisicing elit, sed do eiusmodem<br>
+                        por incididun ut labore et.
+                    </p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Teacher3.png" alt="notification-image" width="128" height="125">
+                    <h4 class="heading">Simona Rider</h4>
+                    <h6 class="teacher">Teacher</h6>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consect<br>
+                        etur adipisicing elit, sed do eiusmodem<br>
+                        por incididun ut labore et.
+                    </p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Teacher4.png" alt="notification-image" width="128" height="125">
+                    <h4 class="heading">Victor Green</h4>
+                    <h6 class="teacher">Teacher</h6>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consect<br>
+                        etur adipisicing elit, sed do eiusmodem<br>
+                        por incididun ut labore et.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- seventh page -->
+    <div class="seventh-page-container">
+        <div class="seventh-page-images">
+            <img src="assets/7th page-image1.png" alt="brainLab" width="220" height="144">
+            <img src="assets/7th page-image2.png" alt="pocketBook" width="220" height="144">
+            <img src="assets/7th page-image3.png" alt="royalAcademy" width="220" height="144">
+            <img src="assets/7th page-image4.png" alt="whaleBook" width="220" height="144">
+            <img src="assets/7th page-image5.png" alt="quickIdea" width="220" height="144">
+        </div>
+    </div>
+    <!-- eighth page -->
+     
 
 
 
-
-
-
-
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
