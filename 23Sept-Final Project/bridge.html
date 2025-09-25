@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridge.com</title>
     <link rel="stylesheet" href="bridge.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dripicons@2.0.0/css/dripicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/dripicons@2.0.0/dripicons.css">
+    <link href="https://fonts.googleapis.com/css?family=Dripicons" rel="stylesheet">
     <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bridge.js"></script>
 </head>
 
@@ -20,7 +21,9 @@
                 <div class="menu-items">
                     <nav class="nav_bar">
                         <ul class="nav_bar_list">
-                            <li class="nav_bar_list_item"><a class="anchor" href="#home">Home</a></li>
+                            <li class="nav_bar_list_item">
+                                <a class="anchor1" style="color: #ffbe30;text-decoration: none;" href="#home">Home</a>
+                            </li>
                             <li class="nav_bar_list_item"><a class="anchor" href="#about">Courses</a></li>
                             <li class="nav_bar_list_item"><a class="anchor" href="#contact">Instructor</a></li>
                             <li class="nav_bar_list_item"><a class="anchor" href="#home">About Us</a></li>
@@ -39,10 +42,10 @@
                 <div class="carousel-item active">
                     <div class="one-slide">
                         <div class="one-slide-left">
-                            <p style="color: orange;">Hello World</p>
+                            <p style="color: rgb(255,182,72);">Hello World</p>
                             <h1>Kids love technology</h1>
                             <h1>and digital learning</h1>
-                            <p>
+                            <p style="font-size: medium;">
                                 Ipsum dolor sit amet, consectetur adipisicing elit, <br>do eiusmod tempor incididunt ut
                                 labore et.
                             </p>
@@ -62,7 +65,7 @@
                             <p style="color: orange;">Hello World</p>
                             <h1>Kids love technology</h1>
                             <h1>and digital learning</h1>
-                            <p>
+                            <p style="font-size: medium;">
                                 Ipsum dolor sit amet, consectetur adipisicing elit, <br>do eiusmod tempor incididunt ut
                                 labore et.
                             </p>
@@ -79,10 +82,10 @@
                 <div class="carousel-item">
                     <div class="one-slide">
                         <div class="one-slide-left">
-                            <p style="color: orange;">Hello World</p>
+                            <p style="color:#ffbe30;">Hello World</p>
                             <h1>Kids love technology</h1>
                             <h1>and digital learning</h1>
-                            <p>
+                            <p style="font-size: medium;">
                                 Ipsum dolor sit amet, consectetur adipisicing elit, <br>do eiusmod tempor incididunt ut
                                 labore et.
                             </p>
@@ -97,35 +100,39 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-buttons">
+                <button class="carousel-control-prev move-left" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </div>
+    <div class="first-page-options">
+        <div class="first-page-circles">
+            <img src="assets/language logo.png">
         </div>
-        <div class="first-page-options">
-            <div class="first-page-circles">
-                <img src="assets/language logo.png">
-            </div>
-            <div class="first-page-circles">
-                <img src="assets/business.png">
-            </div>
-            <div class="first-page-circles">
-                <img src="assets/literature.png">
-            </div>
-            <div class="first-page-circles">
-                <img src="assets/software.png">
-            </div>
-            <div class="first-page-circles">
-                <img src="assets/design.png">
-            </div>
-            <div class="first-page-circles">
-                <img src="assets/coaching.png">
-            </div>
+        <div class="first-page-circles">
+            <img src="assets/business.png">
         </div>
+        <div class="first-page-circles">
+            <img src="assets/literature.png">
+        </div>
+        <div class="first-page-circles">
+            <img src="assets/software.png">
+        </div>
+        <div class="first-page-circles">
+            <img src="assets/design.png">
+        </div>
+        <div class="first-page-circles">
+            <img src="assets/coaching.png">
+        </div>
+    </div>
     </div>
     <!-- second page -->
     <div class="second-page" id="second-page">
@@ -173,26 +180,87 @@
     </div>
 
     <div class="third-page">
-        <h6 class="online-courses1" style="text-align:center;">ONLINE COURSES</h6>
-        <h2 class="wideRange-courses" style="text-align: center;">Wide range online courses</h2>
-        <h5 class="main-heading" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod<br>
-            tempor incididunt ut labore et dolore magna aliqua.</h5>
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+            <h6 class="online-courses" style="text-align:center;margin-top: 100px;color: black;">ONLINE COURSES</h6>
+            <h2 class="fifth-page-heading" style="text-align: center; font-weight: 500px;">Wide range online courses
+            </h2>
+            <div style="text-align:center; width: 700px; margin: 0 auto;">
+                <h5 class="fifth-page-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</h5>
+            </div>
+        </div>
+
         <div class="third-page-container">
             <div class="third-page-gallery">
                 <div class="third-page-item">
+                    <div class="third-page-price-container"><span>Free</span></div>
                     <img src="assets/3rdPage-learn.jpg" alt="3rdPage-image" width="414" height="277">
                     <div class="third-page-mini-container">
-                        <h5 class="thirdPage-heading1">Computer Science</h5>
-                        <span class="thirdPage-heading2">Brenda Harris</span>
-                        <p class="thirdPage-text">
-                            Lorem Ipsn gravida nibh vel velit auctor<br>
-                            aliquet.Aenean sollicitudin, lorem quis<br>
-                            bibendum auci elit conse
-                        </p>
-                        <button class="software-btn">Software</button>
-                        <div class="login-icon">
-                            <i class="dripicons-user"></i>
+                        <div style="margin: 20px">
+                            <h5 class="thirdPage-heading1">Computer Science</h5>
+                            <span class="thirdPage-heading2">Brenda Harris</span>
+                            <p class="thirdPage-text">
+                                Lorem Ipsn gravida nibh vel velit auctor<br>
+                                aliquet.Aenean sollicitudin, lorem quis<br>
+                                bibendum auci elit conse
+                            </p>
+                        </div>
+                        <hr style="border: 0.3px solid #030202; margin: 0 30px; opacity: 0.2;">
+                        <div class="third-page-buttons-contianer">
+                            <div class="third-page-button" style="background-color: rgb(155, 220, 225);">
+                                <a>Software</a>
+                            </div>
+                            <div>
+                                <i class="dripicons dripicons-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="third-page-item">
+                    <div class="third-page-price-container"><span>$200</span></div>
+                    <img src="assets/3rdPage-books.jpg" alt="3rdPage-image" width="414" height="277">
+                    <div class="third-page-mini-container">
+                        <div style="margin: 20px">
+                            <h5 class="thirdPage-heading1">Computer Science</h5>
+                            <span class="thirdPage-heading2">Brenda Harris</span>
+                            <p class="thirdPage-text">
+                                Lorem Ipsn gravida nibh vel velit auctor<br>
+                                aliquet.Aenean sollicitudin, lorem quis<br>
+                                bibendum auci elit conse
+                            </p>
+                        </div>
+                        <hr style="border: 0.3px solid #030202; margin: 0 30px; opacity: 0.2;">
+                        <div class="third-page-buttons-contianer">
+                            <div class="third-page-button" style="background-color:  rgb(58, 173, 81);">
+                                <a>Software</a>
+                            </div>
+                            <div>
+                                <i class="dripicons dripicons-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="third-page-item">
+                    <div class="third-page-price-container"><span>$200</span></div>
+                    <img src="assets/3rdPage-colors.jpg" alt="3rdPage-image" width="414" height="277">
+                    <div class="third-page-mini-container">
+                        <div style="margin: 20px">
+                            <h5 class="thirdPage-heading1">Computer Science</h5>
+                            <span class="thirdPage-heading2">Brenda Harris</span>
+                            <p class="thirdPage-text">
+                                Lorem Ipsn gravida nibh vel velit auctor<br>
+                                aliquet.Aenean sollicitudin, lorem quis<br>
+                                bibendum auci elit conse
+                            </p>
+                        </div>
+                        <hr style="border: 0.3px solid #030202; margin: 0 30px; opacity: 0.2;">
+                        <div class="third-page-buttons-contianer">
+                            <div class="third-page-button" style="background-color: rgb(243, 172, 175);">
+                                <a>Software</a>
+                            </div>
+                            <div>
+                                <i class="dripicons dripicons-user"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,6 +271,17 @@
     <div class="fourth-page">
         <div class="slider-container">
             <div id="carouselExampleAutoplaying2" class="carousel slide fourth-page-corousel" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="position: absolute; padding-bottom: 125px;">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"
+                        style="width: 12px; height: 12px; border-radius: 50%; background-color: #ccc; border: none; margin: 4px;"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                        style="width: 12px; height: 12px; border-radius: 50%; background-color: #ccc; border: none; margin: 4px;"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                        style="width: 12px; height: 12px; border-radius: 50%; background-color: #ccc; border: none; margin: 4px;"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="slide">
@@ -244,56 +323,174 @@
     </div>
     <!-- fifth page -->
     <div class="fifth-page">
-        <h6 class="online-courses" style="text-align:center;">ONLINE COURSES</h6>
-        <h2 class="fourth-page-heading" style="text-align: center;">Best tutors you can find</h2>
-        <h5 class="fourth-page-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod<br>
-            tempor incididunt ut labore et dolore magna aliqua.</h5>
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+            <h6 class="online-courses" style="text-align:center;margin-top: 150px;">ONLINE COURSES</h6>
+            <h2 class="fifth-page-heading" style="text-align: center; font-weight: 500px;">Best tutors you can find</h2>
+            <div style="text-align:center; width: 700px; margin: 0 auto;">
+                <h5 class="fifth-page-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</h5>
+            </div>
+        </div>
 
         <div class="fifth-page-container">
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="assets/Teacher1.png" alt="notification-image" width="128" height="125">
+                    <img src="assets/Teacher1.png" alt="notification-image" width="150px" height="150px">
                     <h4 class="heading">Brenda Harris</h4>
                     <h6 class="teacher">Teacher</h6>
                     <p class="text">
-                        Lorem ipsum dolor sit amet, consect<br>
-                        etur adipisicing elit, sed do eiusmodem<br>
+                        Lorem ipsum dolor sit amet, consect
+                        etur adipisicing elit, sed do eiusmodem
                         por incididun ut labore et.
                     </p>
+                    <div>
+                        <i class="fa fa-twitter" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                        <i class="fa fa-instagram" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                        <i class="fa fa-facebook-f  simple_social" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                    </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/Teacher2.png" alt="notification-image" width="128" height="125">
+                    <img src="assets/Teacher2.png" alt="notification-image" width="150" height="150">
                     <h4 class="heading">Sherlock Anderson</h4>
                     <h6 class="teacher">Teacher</h6>
                     <p class="text">
-                        Lorem ipsum dolor sit amet, consect<br>
-                        etur adipisicing elit, sed do eiusmodem<br>
-                        por incididun ut labore et.
+                        Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmodem por incididun ut
+                        labore et.
                     </p>
+                    <div>
+                        <i class="fa fa-twitter" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                        <i class="fa fa-instagram" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                        <i class="fa fa-facebook-f  simple_social" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/Teacher3.png" alt="notification-image" width="128" height="125">
+                    <img src="assets/Teacher3.png" alt="notification-image" width="150" height="150">
                     <h4 class="heading">Simona Rider</h4>
                     <h6 class="teacher">Teacher</h6>
                     <p class="text">
-                        Lorem ipsum dolor sit amet, consect<br>
-                        etur adipisicing elit, sed do eiusmodem<br>
-                        por incididun ut labore et.
+                        Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmodem por incididun ut
+                        labore et.
                     </p>
+                    <div>
+                        <i class="fa fa-twitter" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                        <i class="fa fa-instagram" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                        <i class="fa fa-facebook-f  simple_social" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/Teacher4.png" alt="notification-image" width="128" height="125">
+                    <img src="assets/Teacher4.png" alt="notification-image" width="150" height="150">
                     <h4 class="heading">Victor Green</h4>
                     <h6 class="teacher">Teacher</h6>
                     <p class="text">
-                        Lorem ipsum dolor sit amet, consect<br>
-                        etur adipisicing elit, sed do eiusmodem<br>
-                        por incididun ut labore et.
+                        Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmodem por incididun ut
+                        labore et.
                     </p>
+                    <div>
+                        <i class="fa fa-twitter" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                        <i class="fa fa-instagram" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                        <i class="fa fa-facebook-f  simple_social" style="margin: 0 10px 0 10px;font-size: 18px;"></i>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- sixth page -->
+    <div class="sixth-page-container">
+        <div class="registration-form">
+            <h4 class="sixth-page-heading">Get Your Online Courses</h4>
+            <p class="sixth-page-text">The best tutors in town.</p>
+            <form>
+                <input type="text" class="userName" name="userName" placeholder="Your name">
+                <input type="text" class="email" name="email" placeholder="Your email address">
+                <input type="text" class="phone" name="phone" placeholder="Your phone number">
+
+                <div class="sixthPage-register-now">
+                    <button class="btn btn-primary" href="#">Register now</button>
+                </div>
+            </form>
+            <div id="successMessage" class="success-message"></div>
+        </div>
+        <div class="sixth-page-container1">
+            <h6 class="online-courses" style="color: #151314;">Online courses</h6>
+            <h2 class="sixth-page-heading1">Register now and save.</h2>
+            <h5 class="sixth-page-text1">Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do<br>
+                eiusmod tempor incididunt ut.</h5>
+            <div class="sixth-page-numbers">
+                <div style="display: flex;flex-direction: row;justify-content: space-between;gap: 10px;align-items: baseline;">
+                    <p id="membersCount1" style="color: green;font-size: 50px;font-weight: 350;">0</p>
+                    <p style="font-size: 20px;font-weight: 350;">Members</p>
+                </div>
+                <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            let count = 0;
+                            const target = 168;
+                            const duration = 3000;
+                            const stepTime = Math.abs(Math.floor(duration / target));
+                            const el = document.getElementById("membersCount1");
+                            const timer = setInterval(function () {
+                                count++;
+                                el.textContent = count;
+                                if (count >= target) clearInterval(timer);
+                            }, stepTime);
+                        });
+                </script>
+                <div style="display: flex;flex-direction: row;justify-content: space-between;gap: 10px;align-items: baseline;">
+                    <p id="membersCount2" style="color: green;font-size: 50px;font-weight: 350;">73</p>
+                    <p style="font-size: 20px;font-weight: 350;">Classes</p>
+                </div>
+                <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            let count = 0;
+                            const target = 73;
+                            const duration = 3000;
+                            const stepTime = Math.abs(Math.floor(duration / target));
+                            const el = document.getElementById("membersCount2");
+                            const timer = setInterval(function () {
+                                count++;
+                                el.textContent = count;
+                                if (count >= target) clearInterval(timer);
+                            }, stepTime);
+                        });
+                </script>
+                <div style="display: flex;flex-direction: row;justify-content: space-between;gap: 10px;align-items: baseline;">
+                    <p id="membersCount3" style="color: green;font-size: 50px;font-weight: 350;">34</p>
+                    <p style="font-size: 20px;font-weight: 350;">Videos</p>
+                </div>
+                <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            let count = 0;
+                            const target = 34;
+                            const duration = 3000;
+                            const stepTime = Math.abs(Math.floor(duration / target));
+                            const el = document.getElementById("membersCount3");
+                            const timer = setInterval(function () {
+                                count++;
+                                el.textContent = count;
+                                if (count >= target) clearInterval(timer);
+                            }, stepTime);
+                        });
+                </script>
+                <div style="display: flex;flex-direction: row;justify-content: space-between;gap: 10px;align-items: baseline;">
+                    <p id="membersCount4" style="color: green;font-size: 50px;font-weight: 350;">5</p>
+                    <p style="font-size: 20px;font-weight: 350;">Score</p>
+                </div>
+                <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            let count = 0;
+                            const target = 5;
+                            const duration = 3000;
+                            const stepTime = Math.abs(Math.floor(duration / target));
+                            const el = document.getElementById("membersCount4");
+                            const timer = setInterval(function () {
+                                count++;
+                                el.textContent = count;
+                                if (count >= target) clearInterval(timer);
+                            }, stepTime);
+                        });
+                </script>
+            </div>    
         </div>
     </div>
     <!-- seventh page -->
@@ -307,11 +504,99 @@
         </div>
     </div>
     <!-- eighth page -->
-     
+    <footer>
+        <div class="eighth-page-container">
+            <div class="column1">
+                <h5 class="column-heading">About School</h5>
+                <p class="column1-text1">
+                    Donec vitae sapien ut libero venenatis<br>
+                    faucibus. Nullam quis ante. Etiam sit<br>
+                    amet orci eget eros
+                </p>
+                <h5 class="column1-heading1">Contact details</h5>
+                <p class="icon-title">
+                    <i class="dripicons dripicons-pin" style="color: #ffbd2f; margin-right: 8px;"></i>
+                    Langebrogade 1DK, Copenhagen
+                </p>
+                <p class="icon-title">
+                    <i class="dripicons dripicons-phone" style="color: #ffbd2f; margin-right: 8px;"></i>
+                    +0080-33-666-234
+                </p>
+                <p class="icon-title">
+                    <i class="dripicons dripicons-mail" style="color: #ffbd2f; margin-right: 8px;"></i>
+                    bridge@example.com
+                </p>
+            </div>
+            <div class="column2">
+                <h5 class="column-heading">Popular Courses</h5>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Computer Science
+                </a>
+                <span class="instructor">Brenda Harris</span>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Business English
+                </a>
+                <span class="instructor">Brenda Harris</span>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Photoshop Tutorial
+                </a>
+                <span class="instructor">Sarah Rogers</span>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Business Course
+                </a>
+                <span class="instructor">Sarah Rogers</span>
+            </div>
+            <div class="column3">
+                <h5 class="column-heading">Useful Links</h5>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Building an Excellence
+                </a>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Choose Your Destination
+                </a>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Belive in Yourself
+                </a>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Fast Way of Learning!
+                </a>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Educating Leaders
+                </a>
+            </div>
+            <div class="column4">
+                <h5 class="column-heading">Our Place</h5>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317871.428796856!2d-0.2730833219082006!3d51.52864163901416!
+                2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sin!4v1709405232757!5m2!1sen!2sin"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
 
-
-
+        <div class="bottom-text">
+            <div class="bottomText-left">Copyright 2020 Qode Interactive.</div>
+            <div class="bottomText-right">
+                <span> Center: (555) 789 6754 </span>
+                <i class="fa fa-facebook-f  simple_social"
+                    style="color: #464c55;margin: 0 10px 0 10px;font-size: 15px;color: #464c55;"></i>
+                <i class="fa fa-twitter"
+                    style="color: #464c55;margin: 0 10px 0 10px;font-size: 15px;color: #464c55;"></i>
+                <i class="fa fa-instagram"
+                    style="color: #464c55;margin: 0 10px 0 10px;font-size: 15px;color: #464c55;"></i>
+            </div>
+        </div>
+    </footer>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
