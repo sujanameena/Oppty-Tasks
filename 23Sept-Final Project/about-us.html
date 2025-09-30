@@ -88,6 +88,34 @@
             </div>
         </div>
     </div>
+    <!-- third page -->
+    <div class="sixth-page-container">
+        <div class="video-image">
+            <div class="video-container" style="position: relative; width: 100%; max-width: 400px;">
+                <a href="#" id="playVideoBtn"
+                    onclick="document.getElementById('aboutVideo').style.display='block'; this.style.display='none'; return false;">
+                    <img src="assets/about2.jpg" alt="Video Thumbnail"
+                        style="width:100%; display:block; border-radius:none;">
+                    <span
+                        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:48px;color:white;background:rgba(0,0,0,0.5);border-radius:50%;padding:16px;">
+                        <i class="fa fa-play"></i>
+                    </span>
+                </a>
+                <iframe id="aboutVideo" title="vimeo-player" src="https://player.vimeo.com/video/291919936?h=06fa19a8de"
+                    width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    allowfullscreen style="display:none; border-radius:8px; width:100%; max-width:640px;">
+                </iframe>
+            </div>
+        </div>
+        <div class="sixth-page-container1">
+            <h6 class="online-courses" style="color: #151314;">Online courses</h6>
+            <h2 class="sixth-page-heading1">Register now and save.</h2>
+            <h5 class="sixth-page-text1">Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do<br>
+                eiusmod tempor incididunt ut.</h5>
+        </div>
+    </div>
 </body>
 <style>
     .instructor-first-page {
@@ -98,7 +126,8 @@
         height: 100vh;
         padding: 300px 0px 500px 180px;
     }
-     .text-above-title {
+
+    .text-above-title {
         color: #ffbe30;
         font-family: Roboto;
         font-weight: 500;
@@ -117,6 +146,16 @@
         font-weight: 500;
         letter-spacing: 0px;
         text-transform: none;
+    }
+
+    .registration-form {
+        /* background-color: white; */
+        width: 25%;
+        height: 482px;
+        position: static;
+        /* margin-left: 100px; */
+        /* margin-top: 120px; */
+        margin:0px 0px 0px 0px;
     }
 </style>
 
