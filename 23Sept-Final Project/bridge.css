@@ -738,7 +738,7 @@ select:focus {
 /* eighth page */
 .eighth-page-container {
   background-color: rgb(26, 28, 33);
-  height: 810px;
+  height: 600px;
   flex-direction: row;
   display: flex;
   align-items: first baseline;
