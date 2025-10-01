@@ -7,7 +7,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 810px;
   background-color: rgb(249, 250, 251);
 }
 .header-container {
@@ -22,7 +22,7 @@ body {
 }
 .header-menu {
   display: flex;
-  margin-left: 60vh;
+  margin-left: 540px;
   vertical-align: baseline;
   border: 0;
   padding: 0;
@@ -179,7 +179,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 900px;
 }
 
 .online-courses {
@@ -383,7 +383,7 @@ body {
 /* fourth page */
 .slider-container {
   background-color: rgb(40, 45, 59);
-  height: 90vh;
+  height: 810px;
   display: flex;
   justify-content: center;
   color: white;
@@ -605,7 +605,7 @@ body {
 /* sixth page */
 .sixth-page-container {
   background-color: rgb(238, 246, 242);
-  height: 100vh;
+  height: 900px;
 }
 .registration-form {
   background-color: white;
@@ -738,7 +738,7 @@ select:focus {
 /* eighth page */
 .eighth-page-container {
   background-color: rgb(26, 28, 33);
-  height: 90vh;
+  height: 810px;
   flex-direction: row;
   display: flex;
   align-items: first baseline;
