@@ -127,29 +127,15 @@
     </div>
     <!-- fourth page -->
     <div class="fourth-elementor">
-        <div class="tabs-container"></div>
-        <div class="tabs-nav"
-            style="display: flex; flex-direction: column; width: 220px; background: #eab133; border-radius: 12px 0 0 12px; min-height: 400px;">
-            <div class="tab-btn active"
-                style="padding: 24px 18px; color: #fff; font-size: 1.1em; border-bottom: 1px solid rgba(255,255,255,0.2); text-align: left; cursor: pointer;">
-                Education Center</div>
-            <div class="tab-btn"
-                style="padding: 24px 18px; color: #fff; font-size: 1.1em; border-bottom: 1px solid rgba(255,255,255,0.2); text-align: left; cursor: pointer;">
-                We're already there</div>
-            <div class="tab-btn"
-                style="padding: 24px 18px; color: #fff; font-size: 1.1em; border-bottom: 1px solid rgba(255,255,255,0.2); text-align: left; cursor: pointer;">
-                Your financial bridge</div>
-            <div class="tab-btn"
-                style="padding: 24px 18px; color: #fff; font-size: 1.1em; border-bottom: 1px solid rgba(255,255,255,0.2); text-align: left; cursor: pointer;">
-                Quality in everything we do</div>
-            <div class="tab-btn"
-                style="padding: 24px 18px; color: #fff; font-size: 1.1em; border-bottom: 1px solid rgba(255,255,255,0.2); text-align: left; cursor: pointer;">
-                Turning banking on its head</div>
+        <div class="tabs-container">
+            <div class="tab-btn active">Education Center</div>
+            <div class="tab-btn">We're already there</div>
+            <div class="tab-btn">Your financial bridge</div>
+            <div class="tab-btn">Quality in everything we do</div>
+            <div class="tab-btn">Turning banking on its head</div>
         </div>
-        <div class="tabs-content" id="tabs-content"
-            style="flex: 1; padding: 40px 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 320px;">
-            <!-- Content will be injected by JS or you can add static text here -->
-        </div>
+        <!-- fourth-page-corousel -->
+         
     </div>
 
     </div>
@@ -409,86 +395,37 @@
 
     /* tabs nav */
     .fourth-elementor {
-        height: 900px;
+        height: 750px;
         background-color: #272d3c;
     }
 
-    /* .tabs-container {
-        display: flex;
-        max-width: 800px;
-        margin: 60px auto;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        overflow: hidden;
-    }
 
-    .tabs-nav {
-        display: flex;
-        flex-direction: column;
-        width: 180px;
-        background: #eab133;
-    }
-
-    .tab-btn {
-        padding: 24px 18px;
-        border: none;
-        background: none;
-        color: #fff;
-        font-size: 1.1em;
-        cursor: pointer;
-        outline: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        transition: background 0.2s;
-        text-align: left;
-    }
-
-    .tab-btn.active {
-        background: #fff;
-        color: #eab133;
-        font-weight: 600;
-    }
-
-    .tabs-content {
-        flex: 1;
-        padding: 40px 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 320px;
-    }
-
-    .tab-image {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 12px;
-        margin-bottom: 24px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .tab-title {
-        font-size: 2em;
-        color: #eab133;
-        margin-bottom: 12px;
-        text-align: center;
-    }
-
-    .tab-text {
-        font-size: 1.1em;
-        color: #484848;
-        text-align: center;
-        margin-bottom: 0;
-    } */
     .tabs-container {
-        display: flex;
-        max-width: 900px;
-        margin: 60px auto;
-        /* background: #fff; */
-        border-radius: 12px;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        overflow: hidden;
+        font-family: "Noto Sans JP", sans-serif;
+        color: white;
+        font-size: 18px;
+        text-transform: none;
+        border: none;
+        text-align: left;
+        padding: 150px 0px 31px 150px;
+        border-right: 6px solid transparent;
+        box-sizing: border-box;
+        line-height: 80px;
+    }
+
+    .tab-btn:hover {
+        border-color: transparent;
+        background-color: #fff;
+        border-radius: 0;
+        border: none;
+        border-right: 6px solid #ffbe30;
+        color: #000;
+
+    }
+    
+    .tab-btn {
+        padding: 2px 8px 2px 30px;
+        margin: 0px 900px 0px 0px;
     }
 </style>
 
