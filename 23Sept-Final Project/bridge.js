@@ -52,3 +52,48 @@ function resetAutoSlide() {
     showSlide(currentSlide + 1);
   }, 5000);
 }
+// tabs nav
+const tabData = [
+      {
+        title: "About School",
+        text: "Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros.",
+        img: "assets/about1.jpg"
+      },
+      {
+        title: "Popular Courses",
+        text: "Computer Science, Business English, Photoshop Tutorial, Business Course.",
+        img: "assets/certification.png"
+      },
+      {
+        title: "Useful Links",
+        text: "Building an Excellence, Choose Your Destination, Belive in Yourself, Fast Way of Learning!",
+        img: "assets/europe-campus.png"
+      },
+      {
+        title: "Our Place",
+        text: "Langebrogade 1DK, Copenhagen. Visit us for more information.",
+        img: "assets/footer-map-300x235.png"
+      },
+      {
+        title: "Contact Us",
+        text: "Phone: +0080-33-666-234<br>Email: bridge@example.com",
+        img: "assets/notifications.png"
+      }
+    ];
+
+    function showTab(idx) {
+      // Update nav active state
+      document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      // Update content
+      const tab = tabData[idx];
+      document.getElementById('tabs-content').innerHTML = `
+        <img src="${tab.img}" alt="${tab.title}" class="tab-image">
+        <div class="tab-title">${tab.title}</div>
+        <p class="tab-text">${tab.text}</p>
+      `;
+    }
+
+    // Show first tab on load
+    showTab(0);

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pricing.com</title>
+    <title>contact.com</title>
     <link rel="stylesheet" href="bridge.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/dripicons@2.0.0/dripicons.css">
     <link href="https://fonts.googleapis.com/css?family=Dripicons" rel="stylesheet">
@@ -14,9 +14,8 @@
 </head>
 
 <body>
-    <!-- first page -->
-    <div class="pricing-first-page">
-        <div class="pricing-header-container">
+    <div class="contact-first-page">
+        <div class="contact-header-container">
             <img src="assets/brdg-logo.png" alt="logo" class="logo-img">
             <div class="align-right-most">
                 <div class="menu-items">
@@ -41,26 +40,18 @@
         </div>
         <div class="first-page-background" id="title-element">
             <p class="pricing-text-above-title">About our school</p>
-            <h1 class="pricing-title-large-size">Explore Pricing courses at<br>
-                Bridge school</h1>
+            <h1 class="pricing-title-large-size">Bridge Education team is<br>
+                available at any time</h1>
         </div>
     </div>
     <!-- second page -->
-     
-    <div class="pricing-second-page">
-        <div class="registration-form">
-            <form>
-                <input type="text" class="userName" name="userName" placeholder="Your name">
-                <input type="text" class="email" name="email" placeholder="Your email address">
-                <input type="text" class="phone" name="phone" placeholder="Your phone number">
-                <div class="sixthPage-register-now">
-                    <button class="btn btn-primary" href="#">Register now</button>
-                </div>
-            </form>
-        </div>
+    <div class="contact-secondPage-container">
+        <p>hello</p>
     </div>
-     <!-- third page -->
-       <footer>
+    <!-- third page -->
+    <div class="third-page-container"></div>
+    <!-- fourth page -->
+    <footer>
         <div class="eighth-page-container">
             <div class="column1">
                 <h5 class="column-heading">About School</h5>
@@ -129,7 +120,8 @@
             </div>
             <div class="column4">
                 <h5 class="column-heading">Our Place</h5>
-                <img src="assets/footer-map-300x235.png" alt="Our Place Map" width="100%" height="235" style="object-fit: cover; border: 0;">
+                <img src="assets/footer-map-300x235.png" alt="Our Place Map" width="100%" height="235"
+                    style="object-fit: cover; border: 0;">
             </div>
         </div>
 
@@ -146,29 +138,27 @@
             </div>
         </div>
     </footer>
-
 </body>
+
 <style>
-    .pricing-first-page {
-       width: 100vw;
+    .contact-first-page {
+        width: 100vw;
         display: flex;
         flex-direction: column;
         height: 810px;
         background-color: rgb(249, 250, 251);
-        
     }
 
-    .pricing-header-container {
+    .contact-header-container {
         display: flex;
         width: 100%;
         padding: 30px 0px 10px 50px;
-        
     }
 
     .first-page-background {
-        background-image: url('assets/pricing-title-img.jpg');
-        background-size: cover;
+        background-image: url('assets/contact-title-img.jpg');
         background-position: center;
+        background-size: cover;
         background-repeat: no-repeat;
         height: 700px;
     }
@@ -198,18 +188,20 @@
         text-transform: none;
     }
 
-    .pricing-second-page {
+    .contact-secondPage-container {
         background-color: rgb(238, 246, 242);
-        height: 100em;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 900px;
     }
 
-    .registration-form {
-        background-color: white;
-        width: 25%;
-        /* height: 482px; */
-        position: static;
-        /* margin-left: 100px; */
-        /* margin-top: 120px; */
+    .third-page-container {
+        background-image: url('assets/contact-map.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
     }
 </style>
 
