@@ -46,7 +46,65 @@
     </div>
     <!-- second page -->
     <div class="contact-secondPage-container">
-        <p>hello</p>
+        <div class="contact-tab-content">
+            <div id="tab1" class="tab-pane active">
+                <h6 class="contact-tab-text">online courses</h6>
+                <h2 class="contact-text-heading">Contact us today.</h2>
+                <h5 class="contact-sub-text">Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit, sed do eiusmod
+                    tempor.
+                </h5>
+            </div>
+            <div class="list-items" style="padding-top: 40px">
+                <h5 class="list-items-heading">New York Office</h5>
+                <p>
+                    <i class="dripicons dripicons-phone"
+                        style="color: #28ac75; margin-right: 8px; font-size:19px; font-weight:100;"></i>
+                    1-677-124-44227
+                </p>
+                <p>
+                    <i class="dripicons dripicons-mail"
+                        style="color: #28ac75; margin-right: 8px; font-size:19px; font-weight:100;"></i>
+                    bridge@example.com
+                </p>
+                <p>
+                    <i class="dripicons dripicons-pin"
+                        style="color: #28ac75; margin-right: 8px; font-size:19px; font-weight:100;"></i>
+                    184 Main Collins Street West victoria 8007
+                </p>
+            </div>
+            <div class="list-items">
+                <h5 class="list-items-heading">Hamburg Office</h5>
+                <p>
+                    <i class="dripicons dripicons-phone"
+                        style="color: #28ac75; margin-right: 8px; font-size:19px; font-weight:100;"></i>
+                    1-677-124-44227
+                </p>
+                <p>
+                    <i class="dripicons dripicons-mail"
+                        style="color: #28ac75; margin-right: 8px; font-size:19px; font-weight:100;"></i>
+                    bridge@example.com
+                </p>
+                <p>
+                    <i class="dripicons dripicons-pin"
+                        style="color: #28ac75; margin-right: 8px; font-size:19px; font-weight:100;"></i>
+                    184 Main Collins Street West victoria 8007
+                </p>
+            </div>
+        </div>
+        <!-- get in touch form -->
+        <div class="contact-registration-form">
+            <h4 class="contact-form-heading">Get In Touch</h4>
+            <form>
+                <input type="text" class="userName" name="userName" placeholder="Your name">
+                <input type="text" class="email" name="email" placeholder="Your email address">
+                <input type="text" class="phone" name="phone" placeholder="Your phone number">
+
+                <div class="contact-register-now">
+                    <button class="btn btn-primary" href="#">Register now</button>
+                </div>
+            </form>
+            <div id="successMessage" class="success-message"></div>
+        </div>
     </div>
     <!-- third page -->
     <div class="third-page-container"></div>
@@ -188,20 +246,114 @@
         text-transform: none;
     }
 
-    .contact-secondPage-container {
-        background-color: rgb(238, 246, 242);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 900px;
-    }
-
     .third-page-container {
         background-image: url('assets/contact-map.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         height: 500px;
+    }
+
+    /* second page css */
+
+    .contact-secondPage-container {
+        height: 850px;
+        background-color: rgb(238, 246, 242);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contact-tab-content {
+        padding: 150px 0px 0px 80px;
+    }
+
+    .contact-tab-text {
+        color: #151314;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        line-height: 18px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .contact-text-heading {
+        color: #000;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 40px;
+        line-height: 50px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0px;
+        text-transform: none;
+        text-align: left;
+    }
+
+    .contact-sub-text {
+        color: #484848;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        line-height: 31px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0px;
+        text-transform: none;
+        text-align: left;
+    }
+
+    .list-items-heading {
+        color: #484848;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        line-height: 31px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0px;
+        text-transform: none;
+    }
+
+    /* registration form */
+    .contact-registration-form {
+        background-color: white;
+        width: 50%;
+        height: 550px;
+        position: static;
+        margin: -542px 0px 0px 550px;
+    }
+
+    .contact-form-heading {
+        text-align: left;
+        color: #000000;
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 22px;
+        line-height: 30px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0px;
+        text-transform: none;
+        padding: 40px 0px 0px 50px;
+    }
+
+    .contact-register-now {
+        display: flex;
+        align-items: left;
+        width: 50%;
+        height: 68px;
+        margin: 0 auto;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .contact-register-now button {
+        height: 50px;
+        width: 75%;
+        background-color: orange;
+        border: none;
+        border-radius: 0%;
+        align-items: left;
     }
 </style>
 

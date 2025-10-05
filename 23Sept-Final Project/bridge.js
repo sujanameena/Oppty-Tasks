@@ -97,3 +97,15 @@ const tabData = [
 
     // Show first tab on load
     showTab(0);
+
+function toggleTab(index) {
+    // Remove 'active' from all tab buttons
+    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+    });
+    // Show only the corresponding tab-pane
+    document.querySelectorAll('.tab-content').forEach((pane, i) => {
+        pane.classList.toggle('active', i === index);
+        pane.style.display = i === index ? 'block' : 'none';
+    });
+}

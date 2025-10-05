@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bridge.com</title>
+    <title>courses.com</title>
     <link rel="stylesheet" href="bridge.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/dripicons@2.0.0/dripicons.css">
     <link href="https://fonts.googleapis.com/css?family=Dripicons" rel="stylesheet">
@@ -12,7 +12,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bridge.js"></script>
 </head>
-<body>
 
+<body>
+    <div class="header-container">
+        <img src="assets/brdg-logo.png" alt="logo" class="logo-img">
+        <div class="align-right-most">
+            <div class="menu-items">
+                <nav class="nav_bar">
+                    <ul class="nav_bar_list">
+                        <li class="nav_bar_list_item">
+                            <a class="anchor1" style="color: #212121;text-decoration: none;" href="bridge.html">Home</a>
+                        </li>
+                        <li class="nav_bar_list_item"><a class="anchor" href="courses.html">Courses</a></li>
+                        <li class="nav_bar_list_item"><a class="anchor" href="instructor.html">Instructor</a></li>
+                        <li class="nav_bar_list_item"><a class="anchor" href="about-us.html">About Us</a></li>
+                        <li class="nav_bar_list_item"><a class="anchor" href="pricing.html">Pricing</a></li>
+                        <li class="nav_bar_list_item"><a class="anchor" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="register-now">
+                <button class="btn btn-primary" href="#">Register now</button>
+            </div>
+        </div>
+    </div>
+    <div class="courses-container">
+        <h1 style="color: white; margin-left: 50px;">All Courses</h1>
+    </div>
+    <div class="courses-list-parent">
+        <div class="courses-list-left" style="width: 80%;">
+            <div class="options" style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center;">
+                    <i class="dripicons dripicons-view-apps" style="font-size: 20px"></i>
+                    <i class="dripicons dripicons-view-list" style="font-size: 17px; margin-left: 10px;"></i>
+                    <span style="margin-left: 20px;">Showing 1 – 9 of 12</span>
+                </div>
+                <div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            style="border-radius: 0%; background-color: white; color: black; border: none; width: 220px;">
+                            Newly Published
+                        </button>
+                        <ul class="dropdown-menu" style="width: 220px;">
+                            <li><a class="dropdown-item" href="#">Newly Published</a></li>
+                            <li><a class="dropdown-item" href="#">A-Z</a></li>
+                            <li><a class="dropdown-item" href="#">Z-A</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-list" style="margin-top: 30px;">
+               <div class="third-page-item" style="width: 300px; height: 450px;">
+                    <div class="third-page-price-container"><span>$200</span></div>
+                    <img src="assets/3rdPage-colors.jpg" alt="3rdPage-image" width="100%" height="50%">
+                    <div class="third-page-mini-container">
+                        <div style="margin: 20px">
+                            <h5 class="thirdPage-heading1">Computer Science</h5>
+                            <span class="thirdPage-heading2">Brenda Harris</span>
+                            <p class="thirdPage-text">
+                                Lorem Ipsn gravida nibh vel velit auctor
+                                aliquet.Aenean sollicitudin, lorem quis
+                                bibendum auci elit conse
+                            </p>
+                        </div>
+                        <hr style="border: 0.3px solid #030202; margin: 0 30px; opacity: 0.2;">
+                        <div class="third-page-buttons-contianer">
+                            <div class="third-page-button" style="background-color: rgb(243, 172, 175);">
+                                <a>Software</a>
+                            </div>
+                            <div>
+                                <i class="dripicons dripicons-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function renderGridViewItem(item) {
+
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="courses-list-right">
+
+        </div>
+    </div>
+    <!-- Bootstrap JS and Popper.js for dropdown functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<style>
+    .courses-container {
+        background-color: rgb(42, 171, 115);
+        background-image: radial-gradient(rgb(129, 179, 157) 2px, transparent 1px);
+        background-size: 30px 30px;
+        background-position: center;
+        height: 250px;
+        display: flex;
+        align-items: center;
+    }
+
+    .courses-list-parent {
+        background-color: rgb(221, 242, 233);
+        padding: 8% 6%;
+        height: 100vh;
+    }
+</style>
+
 </html>
