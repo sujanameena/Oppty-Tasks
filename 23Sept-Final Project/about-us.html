@@ -90,14 +90,14 @@
         </div>
     </div>
     <!-- third page -->
-    <div class="sixth-page-container">
-        <div class="video-image">
-            <div class="video-container"
-                style="position: relative; width: 100%; max-width: 400px;margin:50px 0px 250px 50px">
+    <div class="sixth-page-container" style="display: flex;flex-direction: row;align-items: center; gap: 50px;">
+        <div class="video-image" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-left: 50px;">
+            <div class="video-container" style="position: relative; width: 640px; max-width: 100%;">
                 <a href="#" id="playVideoBtn"
-                    onclick="document.getElementById('aboutVideo').style.display='block'; this.style.display='none'; return false;">
+                    onclick="document.getElementById('aboutVideo').style.display='block'; this.style.display='none'; return false;"
+                    style="display: block; position: relative;">
                     <img src="assets/about2.jpg" alt="Video Thumbnail"
-                        style="width:100%; display:block; border-radius:none;margin:50px 0px 250px 50px">
+                        style="width:100%; display:block; border-radius:none;">
                     <span
                         style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:48px;color:#ffbe30;background:white;border-radius:50%;padding:16px;">
                         <i class="fa fa-play"></i>
@@ -107,22 +107,22 @@
                     width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                     allowfullscreen
-                    style="display:none; border-radius:8px; width:100%; max-width:640px;margin:300px 300px 300px 300px;">
+                    style="display:none; border-radius:8px; width:100%; max-width:640px;">
                 </iframe>
             </div>
         </div>
-        <div class="sixth-page-container1">
-            <h6 class="online-courses" style="color: #151314; margin-left:300px;">Online courses</h6>
-            <h2 class="sixth-page-heading1" style="margin-left:300px;">Individual Attention</h2>
-            <h5 class="sixth-page-text1" style="margin-left:300px;">Lorem ipsum dolor sit amet, consectetur
+        <div class="sixth-page-container_1" style="display: flex;flex-direction: column;align-items: flex-start;">
+            <h6 class="online-courses" style="color: #151314;">Online courses</h6>
+            <h2 class="sixth-page-heading1">Individual Attention</h2>
+            <h5 class="sixth-page-text1">Lorem ipsum dolor sit amet, consectetur
                 adipisicing<br>
                 elit, sed do eiusmod tempor incididunt ut.</h5>
-            <p class="elementor-text" style="margin-left:300px;">Lorem ipsum dolor sit amet, consectetur adipisicing
+            <p class="elementor-text">Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit, sed<br>
                 do eiusmod tempor incididunt ut labore et dolore magna<br>
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br>
                 ullamco labore et dolore minim.</p>
-            <button class="btn btn-primary" id="button" style="margin-left:300px;">Contact us</button>
+            <button class="btn btn-primary" id="button">Contact us</button>
         </div>
     </div>
     <!-- fourth page -->

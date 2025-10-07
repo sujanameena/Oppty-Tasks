@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/dripicons@2.0.0/dripicons.css">
     <link href="https://fonts.googleapis.com/css?family=Dripicons" rel="stylesheet">
     <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="courses.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bridge.js"></script>
 </head>
@@ -39,85 +40,155 @@
     <div class="courses-container">
         <h1 style="color: white; margin-left: 50px;">All Courses</h1>
     </div>
-    <div class="courses-list-parent">
-        <div class="courses-list-left" style="width: 80%;">
-            <div class="options" style="display: flex; align-items: center; justify-content: space-between;">
-                <div style="display: flex; align-items: center;">
-                    <i class="dripicons dripicons-view-apps" style="font-size: 20px"></i>
-                    <i class="dripicons dripicons-view-list" style="font-size: 17px; margin-left: 10px;"></i>
-                    <span style="margin-left: 20px;">Showing 1 – 9 of 12</span>
-                </div>
-                <div>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            style="border-radius: 0%; background-color: white; color: black; border: none; width: 220px;">
-                            Newly Published
-                        </button>
-                        <ul class="dropdown-menu" style="width: 220px;">
-                            <li><a class="dropdown-item" href="#">Newly Published</a></li>
-                            <li><a class="dropdown-item" href="#">A-Z</a></li>
-                            <li><a class="dropdown-item" href="#">Z-A</a></li>
-                        </ul>
+    <div class="courses-page-parent" style="display: flex;flex-direction: row;">
+        <div class="courses-list-parent" style="width: 75%;">
+            <div class="courses-list-left">
+                <div class="options" style="display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <i id="grid-icon-apps" class="dripicons dripicons-view-apps layout-icon" style="font-size: 20px"
+                            onclick="renderGridView()"></i>
+                        <i id="grid-icon-list" class="dripicons dripicons-view-list "
+                            style="font-size: 17px; margin-left: 10px;" onclick="renderlistView()"></i>
+                        <span style="margin-left: 20px;">Showing 1 – 9 of 12</span>
                     </div>
-                </div>
-            </div>
-            <div class="courses-list" style="margin-top: 30px;">
-               <div class="third-page-item" style="width: 300px; height: 450px;">
-                    <div class="third-page-price-container"><span>$200</span></div>
-                    <img src="assets/3rdPage-colors.jpg" alt="3rdPage-image" width="100%" height="50%">
-                    <div class="third-page-mini-container">
-                        <div style="margin: 20px">
-                            <h5 class="thirdPage-heading1">Computer Science</h5>
-                            <span class="thirdPage-heading2">Brenda Harris</span>
-                            <p class="thirdPage-text">
-                                Lorem Ipsn gravida nibh vel velit auctor
-                                aliquet.Aenean sollicitudin, lorem quis
-                                bibendum auci elit conse
-                            </p>
+                    <div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                style="border-radius: 0%; background-color: white; color: black; border: none; width: 220px;">
+                                Newly Published
+                            </button>
+                            <ul class="dropdown-menu" style="width: 220px;">
+                                <li><a class="dropdown-item" href="#">Newly Published</a></li>
+                                <li><a class="dropdown-item" href="#">A-Z</a></li>
+                                <li><a class="dropdown-item" href="#">Z-A</a></li>
+                            </ul>
                         </div>
-                        <hr style="border: 0.3px solid #030202; margin: 0 30px; opacity: 0.2;">
-                        <div class="third-page-buttons-contianer">
-                            <div class="third-page-button" style="background-color: rgb(243, 172, 175);">
-                                <a>Software</a>
-                            </div>
-                            <div>
-                                <i class="dripicons dripicons-user"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    function renderGridViewItem(item) {
 
-                    }
-                </script>
+                    </div>
+                </div>
+                <!-- arranging pictures column1-->
+                <div class="arranging-items-column" style="display: flex; flex-direction: row; gap: 30px; width: 100%;">
+                    <div id="courses-list" class="courses-list"
+                        style="margin-top: 30px; width: 100%; display: flex; flex-wrap: wrap; gap: 30px;">
+                    </div>
+                </div>
+                <!-- arranging pictures column3-->
             </div>
+
         </div>
-        <div class="courses-list-right">
+        <!-- courses page registration form -->
+        <div class="courses-list-right" style="width: 15%;">
+            <div class="courses-items-container">
+                <div class="registration-form">
+                    <h4 class="courses-page-heading">Courses for Free</h4>
+                    <p class="courses-page-text">The best tutors in town.</p>
+                    <form>
+                        <input type="text" class="userName" name="userName" placeholder="Your name">
+                        <input type="text" class="email" name="email" placeholder="Your email address">
+                        <input type="text" class="phone" name="phone" placeholder="Your phone number">
 
+                        <div class="courses-register-now">
+                            <button class="btn btn-primary" href="#">Register now</button>
+                        </div>
+                    </form>
+                    <div id="successMessage" class="success-message"></div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Bootstrap JS and Popper.js for dropdown functionality -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-</body>
-<style>
-    .courses-container {
-        background-color: rgb(42, 171, 115);
-        background-image: radial-gradient(rgb(129, 179, 157) 2px, transparent 1px);
-        background-size: 30px 30px;
-        background-position: center;
-        height: 250px;
-        display: flex;
-        align-items: center;
-    }
+    <script src="courses.js"></script>
 
-    .courses-list-parent {
-        background-color: rgb(221, 242, 233);
-        padding: 8% 6%;
-        height: 100vh;
-    }
-</style>
+    <!-- third page -->
+    <footer>
+        <div class="eighth-page-container">
+            <div class="column1">
+                <h5 class="column-heading">About School</h5>
+                <p class="column1-text1">
+                    Donec vitae sapien ut libero venenatis<br>
+                    faucibus. Nullam quis ante. Etiam sit<br>
+                    amet orci eget eros
+                </p>
+                <h5 class="column1-heading1">Contact details</h5>
+                <p class="icon-title">
+                    <i class="dripicons dripicons-pin" style="color: #ffbd2f; margin-right: 8px;"></i>
+                    Langebrogade 1DK, Copenhagen
+                </p>
+                <p class="icon-title">
+                    <i class="dripicons dripicons-phone" style="color: #ffbd2f; margin-right: 8px;"></i>
+                    +0080-33-666-234
+                </p>
+                <p class="icon-title">
+                    <i class="dripicons dripicons-mail" style="color: #ffbd2f; margin-right: 8px;"></i>
+                    bridge@example.com
+                </p>
+            </div>
+            <div class="column2">
+                <h5 class="column-heading">Popular Courses</h5>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Computer Science
+                </a>
+                <span class="instructor">Brenda Harris</span>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Business English
+                </a>
+                <span class="instructor">Brenda Harris</span>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Photoshop Tutorial
+                </a>
+                <span class="instructor">Sarah Rogers</span>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Business Course
+                </a>
+                <span class="instructor">Sarah Rogers</span>
+            </div>
+            <div class="column3">
+                <h5 class="column-heading">Useful Links</h5>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Building an Excellence
+                </a>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Choose Your Destination
+                </a>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Belive in Yourself
+                </a>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Fast Way of Learning!
+                </a>
+                <br>
+                <a href="http://192.168.0.89:5500/23Sept-Final%20Project/bridge.html" class="custom-link">
+                    Educating Leaders
+                </a>
+            </div>
+            <div class="column4">
+                <h5 class="column-heading">Our Place</h5>
+                <img src="assets/footer-map-300x235.png" alt="Our Place Map" width="100%" height="235"
+                    style="object-fit: cover; border: 0;">
+            </div>
+        </div>
+
+        <div class="bottom-text">
+            <div class="bottomText-left">Copyright 2020 Qode Interactive.</div>
+            <div class="bottomText-right">
+                <span> Center: (555) 789 6754 </span>
+                <i class="fa fa-facebook-f  simple_social"
+                    style="color: #464c55;margin: 0 10px 0 10px;font-size: 15px;color: #464c55;"></i>
+                <i class="fa fa-twitter"
+                    style="color: #464c55;margin: 0 10px 0 10px;font-size: 15px;color: #464c55;"></i>
+                <i class="fa fa-instagram"
+                    style="color: #464c55;margin: 0 10px 0 10px;font-size: 15px;color: #464c55;"></i>
+            </div>
+        </div>
+</body>
 
 </html>

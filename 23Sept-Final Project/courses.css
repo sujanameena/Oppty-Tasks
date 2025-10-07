@@ -1,0 +1,138 @@
+.courses-container {
+  background-color: rgb(42, 171, 115);
+  background-image: radial-gradient(rgb(129, 179, 157) 2px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.courses-list-parent {
+  background-color: rgb(221, 242, 233);
+  padding: 8% 6%;
+  display: flex;
+  flex-direction: row;
+}
+
+.thirdPage-heading1 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #000;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.1em;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.thirdPage-heading2 {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.thirdPage-text {
+  color: #707070;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.course-item-list-view-parent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.course-item-list-view-mini-container {
+  background-color: white;
+}
+
+.course-item-list-view-price {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(254, 193, 81);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+  margin-right: 30px;
+  z-index: 1;
+  position: absolute;
+  margin: -23px 0px 0px 900px;
+}
+.layout-icon:hover {
+  color: orange;
+}
+/* courses registration form */
+.courses-items-container{
+margin: 0px 0px 0px 0px;
+width: 10%;
+}
+.courses-page-container1 {
+  display: block;
+  width: 50%;
+  /* margin-top: -355px; */
+  text-align: left;
+  float: right;
+  
+}
+.registration-form {
+  background-color: white;
+  width: 25%;
+  height: 482px;
+  position: static;
+  margin-left: 100px;
+  margin-top: 120px;
+}
+.courses-page-heading {
+  text-align: center;
+  color: #000000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-transform: none;
+  padding-top: 40px;
+  position: static;
+}
+.courses-page-text {
+  text-align: center;
+  color: #707070;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  font-style: normal;
+  font-weight: 400;
+  position: static;
+}
+.courses-register-now button:hover {
+  background-color: rgb(241, 91, 78);
+  color: #fff;
+  cursor: pointer;
+}
+.courses-register-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses-register-now button {
+  height: 50px;
+  width: 75%;
+  background-color: orange;
+  border: none;
+  border-radius: 0%;
+  margin-top: 30px;
+}
+

@@ -109,3 +109,4 @@ function toggleTab(index) {
         pane.style.display = i === index ? 'block' : 'none';
     });
 }
+
