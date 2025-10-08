@@ -646,8 +646,8 @@ body {
 }
 
 .userName,
-.email,
-.phone {
+.website,
+.message {
   border: none;
   border-bottom: 1px solid #dcdada;
   padding-bottom: 10px;
