@@ -41,7 +41,7 @@
         <h1 style="color: white; margin-left: 50px;">All Courses</h1>
     </div>
     <div class="courses-page-parent" style="display: flex;flex-direction: row;">
-        <div class="courses-list-parent" style="width: 75%;">
+        <div class="courses-list-parent" style="width: 75%;padding-bottom: 180px;">
             <div class="courses-list-left">
                 <div class="options" style="display: flex; align-items: center; justify-content: space-between;">
                     <div style="display: flex; align-items: center;">
@@ -51,7 +51,7 @@
                             style="font-size: 17px; margin-left: 10px;" onclick="renderlistView()"></i>
                         <span style="margin-left: 20px;">Showing 1 – 9 of 12</span>
                     </div>
-                    <div>
+                    <div style="margin-right: 50px;">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false"
@@ -64,23 +64,21 @@
                                 <li><a class="dropdown-item" href="#">Z-A</a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
                 <!-- arranging pictures column1-->
-                <div class="arranging-items-column" style="display: flex; flex-direction: row; gap: 30px; width: 100%;">
+                <div class="arranging-items-column" style="display: flex; flex-direction: row; width: 100%;">
                     <div id="courses-list" class="courses-list"
-                        style="margin-top: 30px; width: 100%; display: flex; flex-wrap: wrap; gap: 30px;">
+                        style="margin-right: 50px; margin-top: 30px; width: 100%; display: flex; flex-wrap: wrap; gap: 30px;">
+                        
                     </div>
                 </div>
-                <!-- arranging pictures column3-->
             </div>
-
         </div>
         <!-- courses page registration form -->
-        <div class="courses-list-right" style="width: 15%;">
-            <div class="courses-items-container">
-                <div class="registration-form">
+        <div class="courses-list-right" style="width: 25%;background-color: rgb(221, 242, 233);">
+            <div class="courses-items-container" style="width: 100%;">
+                <div class="courses-registration-form">
                     <h4 class="courses-page-heading">Courses for Free</h4>
                     <p class="courses-page-text">The best tutors in town.</p>
                     <form>
@@ -93,6 +91,48 @@
                         </div>
                     </form>
                     <div id="successMessage" class="success-message"></div>
+                </div>
+
+                <div class="d-flex align-items-start justify-content-start flex-column" style="margin-top: 50px;">
+                    <h5 style="font-size: 27px; font-weight: 400;letter-spacing: 1px;">Categories</h5>
+                    <h6 style="margin-top: 10px;">Business</h6>
+                    <h6 style="margin-top: 10px;">Design</h6>
+                    <h6 style="margin-top: 10px;">Education</h6>
+                    <h6 style="margin-top: 10px;">Languages</h6>
+                    <h6 style="margin-top: 10px;">Software</h6>
+                    <h6 style="margin-top: 10px;">Tutoring</h6>
+                </div>
+            </div>
+            <div style="margin-top: 40px;">
+                <h5 style="font-size: 27px; font-weight: 400;letter-spacing: 1px;">You may like</h5>
+                <div style="margin-top: 20px;">
+                    <div class="d-flex flex-row" style="margin: 5px;">
+                        <img src="assets/courses-yml-1.png" style="width: 100px; height: 60px;">
+                        <div style="display: flex;flex-direction: column; margin-left: 20px; align-items: start; height: 60px;">
+                            <div style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                                <h6 style="margin: 0;">Experiences Education</h6>
+                                <span style="color: #ffbd2f; font-size: small;margin-top: 5px;">$200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row" style="margin: 5px; margin-top: 30px;">
+                        <img src="assets/courses-tml-2.png" style="width: 100px; height: 60px;">
+                        <div style="display: flex;flex-direction: column; margin-left: 20px; align-items: start; height: 60px;">
+                            <div style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                                <h6 style="margin: 0;">Legacy of Excellence.</h6>
+                                <span style="color: #ffbd2f; font-size: small;margin-top: 5px;">$200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row" style="margin: 5px; margin-top: 30px;">
+                        <img src="assets/courses-yml-3.png" style="width: 100px; height: 60px;">
+                        <div style="display: flex;flex-direction: column; margin-left: 20px; align-items: start; height: 60px;">
+                            <div style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                                <h6 style="margin: 0;">Motivated achievers.</h6>
+                                <span style="color: #ffbd2f; font-size: small;margin-top: 5px;">Free</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

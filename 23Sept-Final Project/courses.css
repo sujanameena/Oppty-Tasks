@@ -10,7 +10,8 @@
 
 .courses-list-parent {
   background-color: rgb(221, 242, 233);
-  padding: 8% 6%;
+  padding-left: 50px;
+  padding-top: 100px;
   display: flex;
   flex-direction: row;
 }
@@ -52,30 +53,13 @@
   background-color: white;
 }
 
-.course-item-list-view-price {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: rgb(254, 193, 81);
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  color: white;
-  font-weight: 500;
-  font-size: large;
-  margin-right: 30px;
-  z-index: 1;
-  position: absolute;
-  margin: -23px 0px 0px 900px;
-}
 .layout-icon:hover {
   color: orange;
 }
 /* courses registration form */
-.courses-items-container{
-margin: 0px 0px 0px 0px;
-width: 10%;
+.courses-items-container {
+  margin: 0px 0px 0px 0px;
+  width: 10%;
 }
 .courses-page-container1 {
   display: block;
@@ -83,15 +67,12 @@ width: 10%;
   /* margin-top: -355px; */
   text-align: left;
   float: right;
-  
 }
-.registration-form {
+.courses-registration-form {
   background-color: white;
-  width: 25%;
-  height: 482px;
-  position: static;
-  margin-left: 100px;
-  margin-top: 120px;
+  margin-top: 130px;
+  width: 80%;
+  padding-bottom: 50px;
 }
 .courses-page-heading {
   text-align: center;
@@ -135,4 +116,9 @@ width: 10%;
   border-radius: 0%;
   margin-top: 30px;
 }
-
+.flexing {
+  flex: 1 1 250px;
+  min-width: 150px;
+  max-width: 330px;
+  box-sizing: border-box;
+}

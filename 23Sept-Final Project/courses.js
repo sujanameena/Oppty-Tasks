@@ -88,12 +88,12 @@ function renderGridView() {
   courses.forEach((course) => {
 
     const courseDiv = document.createElement("div");
-    courseDiv.className = "third-page-item";
-    courseDiv.style.width = "300px";
+    courseDiv.className = "third-page-item flexing";
+    courseDiv.style.width = "280px";
     courseDiv.style.height = "480px";
-    courseDiv.style.margin = "10px";
+    courseDiv.style.margin = "5px";
     courseDiv.innerHTML = `
-        <div class="third-page-price-container" style="margin: 160px 0 0 220px; width="200px"><span>${course.price}</span></div>
+        <div class="third-page-price-container" style="margin: 160px 0 0 200px; width="200px"><span>${course.price}</span></div>
         <img src=${course.image} alt="3rdPage-image" width="100%" height="40%">
         <div class="third-page-mini-container">
             <div style="margin: 20px">
