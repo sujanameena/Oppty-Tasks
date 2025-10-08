@@ -651,10 +651,10 @@ body {
   border: none;
   border-bottom: 1px solid #dcdada;
   padding-bottom: 10px;
-  width: 75%;
+  width: 80%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 90px;
+  margin-right: 50px;
   margin-top: 40px;
 }
 input:focus,
