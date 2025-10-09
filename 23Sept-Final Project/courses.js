@@ -2,7 +2,7 @@ courses = [
   {
     image: "assets/courses-img-1.jpg",
     name: "Computer Science",
-    subText: "Brenda Harris",
+    subText: "BRENDA HARRIS",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "free",
@@ -10,8 +10,8 @@ courses = [
   },
    {
     image: "assets/courses-img-2.jpg",
-    name: "Computer Science",
-    subText: "Brenda Harris",
+    name: "Business English",
+    subText: "BRENDA HARRIS",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "$200",
@@ -19,8 +19,8 @@ courses = [
   },
    {
     image: "assets/courses-img-3.jpg",
-    name: "Computer Science",
-    subText: "Brenda Harris",
+    name: "Photoshop Tutorial",
+    subText: "SARAH ROGERS",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "$200",
@@ -28,8 +28,8 @@ courses = [
   },
    {
     image: "assets/courses-img-4.jpg",
-    name: "Computer Science",
-    subText: "Brenda Harris",
+    name: "Business Course",
+    subText: "SARAH ROGERS",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "$200",
@@ -37,8 +37,8 @@ courses = [
   },
    {
     image: "assets/courses-img-5.jpg",
-    name: "Computer Science",
-    subText: "Brenda Harris",
+    name: "Academic English",
+    subText: "SEM RODRIGES",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "$200",
@@ -46,8 +46,8 @@ courses = [
   },
    {
     image: "assets/courses-img-6.jpg",
-    name: "Computer Science",
-    subText: "Brenda Harris",
+    name: "Learn Spanish",
+    subText: "BRED HARSON",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "$200",
@@ -55,8 +55,8 @@ courses = [
   },
    {
     image: "assets/courses-img-7.jpg",
-    name: "Computer Science",
-    subText: "Brenda Harris",
+    name: "Social Computing",
+    subText: "AMANDA JONSON",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "$200",
@@ -64,8 +64,8 @@ courses = [
   },
    {
     image: "assets/courses-img-8.jpg",
-    name: "Computer Science",
-    subText: "Brenda Harris",
+    name: "Java, html, css",
+    subText: "VICTOR GREEN",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "$200",
@@ -74,7 +74,7 @@ courses = [
    {
     image: "assets/courses-img-9.jpg",
     name: "Computer Science",
-    subText: "Brenda Harris",
+    subText: "VICTOR GREEN",
     description:
       "Lorem Ipsn gravida nibh vel velit auctor aliquet.Aenean sollicitudin, lorem quis bibendum auci elit conse",
     price: "$200",
