@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 810px;
-  background-color: rgb(249, 250, 251);
+  background-color: rgba(255, 255, 255, 1);
 }
 .header-container {
   display: flex;
@@ -844,6 +844,10 @@ select:focus {
   font-weight: 500;
   text-transform: none;
   margin-bottom: 20px;
+}
+.bottomText-left:hover {
+  color: #ffbe30;
+  cursor: pointer;
 }
 .bottomText-right {
   right: 40px;
