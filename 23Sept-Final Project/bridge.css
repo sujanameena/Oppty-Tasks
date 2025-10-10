@@ -2,6 +2,7 @@ body {
   background-color: transparent;
   display: block;
   overflow-x: hidden;
+  
 }
 .first-page {
   width: 100vw;
@@ -9,11 +10,13 @@ body {
   flex-direction: column;
   height: 810px;
   background-color: rgba(255, 255, 255, 1);
+  
 }
 .header-container {
   display: flex;
   width: 100%;
   padding: 30px 0px 30px 50px;
+  background-color: rgb(247 250 249);
 }
 
 .logo-img {
@@ -173,7 +176,8 @@ body {
   gap: 50px;
   z-index: 2;
   justify-content: center;
-  margin-top: 163px;
+  margin-top: -103px;
+  margin-bottom: 30px;
 }
 .first-page-circles {
   width: 130px;
@@ -186,7 +190,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 900px;
+  height: 700px;
 }
 
 .online-courses {
@@ -238,7 +242,7 @@ body {
 }
 
 .second-page-inner {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .image-gallery {
   justify-content: space-between;

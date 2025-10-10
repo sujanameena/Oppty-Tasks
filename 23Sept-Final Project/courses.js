@@ -127,7 +127,6 @@ function renderlistView() {
     courseDiv.style.width = "100%";
     courseDiv.style.height = "262px";
     courseDiv.innerHTML = `
-        <div class="course-item-list-view-price"><span>${course.price}</span></div>
         <img src=${course.image} alt="3rdPage-image" width="36%" height="100%">
         <div class="course-item-list-view-mini-container">
             <div style="margin: 20px">
