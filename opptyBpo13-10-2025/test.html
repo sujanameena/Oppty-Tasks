@@ -1,0 +1,42 @@
+ <ul class="sidebar-menu">
+                    <li class="expandable" style="position: relative;">
+                        <a href="#" id="expandBtn" style="display: flex; align-items: center;"></a>
+                        <ul id="expandContent" style="display:none; list-style:none; padding-left:20px; margin:0;">
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </li>
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var expandBtn = document.getElementById('expandBtn');
+                        var expandContent = document.getElementById('expandContent');
+                        var expandIcon = document.getElementById('expandIcon');
+                        expandBtn.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            if (expandContent.style.display === 'none') {
+                                expandContent.style.display = 'block';
+                                expandIcon.innerHTML = '&#9660;';
+                            } else {
+                                expandContent.style.display = 'none';
+                                expandIcon.innerHTML = '&#9654;';
+                            }
+                        });
+                    });
+                    </script>
+                    <style>
+                    .expandable > a {
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .expandable ul li a {
+                        font-size: 0.95em;
+                        color: #555;
+                    }
+                    </style></li>
+                    <li><a href="#">Capabilities</a></li>
+                    <li><a href="#">Industries</a></li>
+                    <li><a href="#">Perspectives</a></li>
+                </ul>

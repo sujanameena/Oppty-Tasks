@@ -1,10 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('customHamburger').addEventListener('click', function () {
-        alert('Hamburger clicked!');
-    });
-});
-
-
+// hamburger
+ document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.getElementById('customHamburger');
+                const sidebar = document.getElementById('sidebar');
+                document.addEventListener('click', function(e) {
+                    if (hamburger.contains(e.target)) {
+                        sidebar.classList.toggle('active');
+                    } else if (!sidebar.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                });
+            });
 // first page video script
 document.addEventListener('DOMContentLoaded', function () {
     var video = document.getElementById('bgVideo');
