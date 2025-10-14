@@ -1,0 +1,165 @@
+body {
+    background-color: black;
+    display: block;
+    overflow-x: hidden;
+}
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80px;
+    background-color: black;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+    margin: 0px -100px 0px -1px;
+}
+
+.search-icon-btn {
+    color: white;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    margin-left: 800px;
+}
+
+.register-now {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    width: 200px;
+    height: 68px;
+}
+
+.register-now button {
+    width: 120px;
+    background-color: #ed1c24;
+    border: 2px solid #ed1c24;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    height: 35px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 20px 30px 0px 30px;
+}
+
+.register-now button:hover {
+    background-color: white;
+    color: #ed1c24;
+    border-color: #ed1c24;
+    cursor: pointer;
+}
+
+/* first page css */
+.first-page-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    background-color: black;
+}
+
+.video-background {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    right: 50px;
+    bottom: 30px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(0.6);
+    object-fit: cover;
+}
+
+#speakerToggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    background: #3b3b3bb8;
+    background-size: 65%;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    /* width: 70rem; */
+    /* height:70rem; */
+}
+#speakerIcon{
+    color: white;
+    font-size: 14px;
+}
+/* scroll down button */
+.scroll-down-container {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#scrollDownBtn {
+    width: 70px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* transition: background 0.2s; */
+    outline: none;
+    padding: 0;
+}
+
+#scrollDownBtn:hover {
+    background: #f0f0f0;
+}
+
+.scroll-down-text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.7);
+    user-select: none;
+    font-family: Poppins-Regular;
+    color: white;
+    text-transform: uppercase;
+}
