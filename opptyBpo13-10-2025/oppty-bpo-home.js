@@ -45,3 +45,24 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             });
         });
+        // images hover hiding arrow third page
+          document.addEventListener('DOMContentLoaded', function () {
+                    var items = document.querySelectorAll('.custom-image-hover-arrow');
+                    items.forEach(function(item) {
+                        var arrow = item.querySelector('.hover-arrow');
+                        item.addEventListener('mouseenter', function() {
+                            arrow.style.display = 'inline-block';
+                        });
+                        item.addEventListener('mouseleave', function() {
+                            arrow.style.display = 'none';
+                        });
+                    });
+                });
+                // fourth page images script
+                 // Optional: Add click event for "Read More" if needed
+        document.querySelectorAll('.hover-image-read-more').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // Add your logic here, e.g., open modal or navigate
+            });
+        });
