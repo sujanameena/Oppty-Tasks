@@ -43,14 +43,14 @@ dots.forEach((dot, index) => {
 // Automatic slideshow
 let autoSlideInterval = setInterval(() => {
   showSlide(currentSlide + 1);
-}, 5000); // Change slide every 5 seconds
+}, 1000); // Change slide every 5 seconds
 
 // Reset the timer when a button or dot is clicked
 function resetAutoSlide() {
   clearInterval(autoSlideInterval);
   autoSlideInterval = setInterval(() => {
     showSlide(currentSlide + 1);
-  }, 5000);
+  }, 1000);
 }
 // tabs nav
 const tabData = [
