@@ -163,3 +163,16 @@ body {
     color: white;
     text-transform: uppercase;
 }
+
+.scroll-down-text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.7);
+    user-select: none;
+    font-family: Poppins-Regular;
+    color: white;
+    text-transform: uppercase;
+}
