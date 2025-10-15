@@ -1,15 +1,15 @@
 // hamburger
- document.addEventListener('DOMContentLoaded', function() {
-                const hamburger = document.getElementById('customHamburger');
-                const sidebar = document.getElementById('sidebar');
-                document.addEventListener('click', function(e) {
-                    if (hamburger.contains(e.target)) {
-                        sidebar.classList.toggle('active');
-                    } else if (!sidebar.contains(e.target)) {
-                        sidebar.classList.remove('active');
-                    }
-                });
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('customHamburger');
+    const sidebar = document.getElementById('sidebar');
+    document.addEventListener('click', function (e) {
+        if (hamburger.contains(e.target)) {
+            sidebar.classList.toggle('active');
+        } else if (!sidebar.contains(e.target)) {
+            sidebar.classList.remove('active');
+        }
+    });
+});
 // first page video script
 document.addEventListener('DOMContentLoaded', function () {
     var video = document.getElementById('bgVideo');
@@ -35,32 +35,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // scroll down button
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var btn = document.getElementById('scrollDownBtn');
-            btn.addEventListener('click', function() {
-            window.scrollBy({
-                top: window.innerHeight,
-                left: 0,
-                behavior: 'smooth'
-            });
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('scrollDownBtn');
+    btn.addEventListener('click', function () {
+        window.scrollBy({
+            top: window.innerHeight,
+            left: 0,
+            behavior: 'smooth'
         });
-        // images hover hiding arrow third page
-          document.addEventListener('DOMContentLoaded', function () {
-                    var items = document.querySelectorAll('.custom-image-hover-arrow');
-                    items.forEach(function(item) {
-                        var arrow = item.querySelector('.hover-arrow');
-                        item.addEventListener('mouseenter', function() {
-                            arrow.style.display = 'inline-block';
-                        });
-                        item.addEventListener('mouseleave', function() {
-                            arrow.style.display = 'none';
-                        });
-                    });
-                });
-                // fourth page images script
-        document.querySelectorAll('.hover-image-read-more').forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
+    });
+});
+// images hover hiding arrow third page
+document.addEventListener('DOMContentLoaded', function () {
+    var items = document.querySelectorAll('.custom-image-hover-arrow');
+    items.forEach(function (item) {
+        var arrow = item.querySelector('.hover-arrow');
+        item.addEventListener('mouseenter', function () {
+            arrow.style.display = 'inline-block';
         });
+        item.addEventListener('mouseleave', function () {
+            arrow.style.display = 'none';
+        });
+    });
+});
+// fourth page images script
+document.querySelectorAll('.hover-image-read-more').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+});
+// paragraph slider
