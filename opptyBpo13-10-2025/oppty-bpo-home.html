@@ -445,7 +445,7 @@
             </div>
         </div>
         <!-- first slider -->
-        <div class="swiper-container" style="position: relative;">
+        <div class="swiper-container">
             <div class="swiper-slider">
                 <div class="swiper-content">
                     <h3 class="swiper-heading">
@@ -474,7 +474,7 @@
                 </div>
             </div>
             <!-- second slider -->
-            <div class="swiper-slider">
+            <!-- <div class="swiper-slider">
                 <div class="swiper-content">
                     <h3 class="swiper-heading">
                         Co-creating Smarter Airline Claims with AI to Detect $6.3M in Fraud
@@ -500,12 +500,94 @@
                         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                     </video>
                 </div>
-            </div>
+            </div> -->
         </div>
+        <!-- companies scrolling -->
+        <div class="business-heading">
+            <h2 class="smartBusiness-heading">Partnerships That Power Smarter Businesses</h2>
+        </div>
+        <div class="companies-list-container">
+            <div class="companies-slider">
+                <div class="companies-track" id="companiesTrack">
+                    <a href="https://www.ibm.com/in-en" target="_blank" class="company-icon" title="ibm">
+                        <img src="assets/61-ibm.png" alt="ibm" />
+                    </a>
+                    <a href="https://www.uniphore.com/" target="_blank" class="company-icon" title="uniphore">
+                        <img src="assets/62-uni.png" alt="uniphore" />
+                    </a>
+                    <a href="https://www.blackline.com/" target="_blank" class="company-icon" title="blackline">
+                        <img src="assets/63-blackline.png" alt="blackline" />
+                    </a>
+                    <a href="https://www.microsoft.com/en-in/" target="_blank" class="company-icon" title="microsoft">
+                        <img src="assets/64-miscrosoft.png" alt="microsoft" />
+                    </a>
+                    <a href="https://www.pega.com/" target="_blank" class="company-icon" title="pega">
+                        <img src="assets/65-pega.png" alt="pega" />
+                    </a>
+                    <a href="https://www.zohocorp.com/" target="_blank" class="company-icon" title="zoho">
+                        <img src="assets/66-zoho.png" alt="zoho" />
+                    </a>
+                    <a href="https://www.uipath.com/" target="_blank" class="company-icon" title="uiPath">
+                        <img src="assets/67-uiPath.png" alt="uiPath" />
+                    </a>
+                    <a href="https://www.ibm.com/in-en" target="_blank" class="company-icon" title="ibm">
+                        <img src="assets/68-workfusion.png" alt="ibm" />
+                    </a>
+                    <a href="https://appian.com/" target="_blank" class="company-icon" title="appian">
+                        <img src="assets/69-appian.png" alt="appian" />
+                    </a>
+                    <a href="https://www.blueprism.com/" target="_blank" class="company-icon" title="ssc">
+                        <img src="assets/610-ssc.png" alt="ssc" />
+                    </a>
+                    <a href="https://algonox.com/index" target="_blank" class="company-icon" title="igonox">
+                        <img src="assets/611-igonox.png" alt="igonox" />
+                    </a>
+                    <a href="https://www.logmein.com/" target="_blank" class="company-icon" title="logMeln">
+                        <img src="assets/612-logMeln.png" alt="logMeln" />
+                    </a>
+                    <a href="https://tradeshift.com/" target="_blank" class="company-icon" title="tradeshift">
+                        <img src="assets/613-tradeshift.png" alt="tradeshift" />
+                    </a>
+                    <a href="https://www.nice.com/" target="_blank" class="company-icon" title="nice">
+                        <img src="assets/614-nice.png" alt="nice" />
+                    </a>
+                </div>
+            </div>
+            <script>
+                (function () {
+                    const track = document.getElementById('companiesTrack');
+                    const slider = track.parentElement;
+                    let speed = 1; // px per frame
+                    let pos = 0;
+                    let trackWidth = track.scrollWidth / 2; // since we duplicated the icons
 
-        
+                    function animate() {
+                        pos += speed;
+                        if (pos >= trackWidth) {
+                            pos = 0;
+                        }
+                        track.style.transform = `translateX(-${pos}px)`;
+                        requestAnimationFrame(animate);
+                    }
+
+                    // Pause on hover
+                    slider.addEventListener('mouseenter', () => speed = 0);
+                    slider.addEventListener('mouseleave', () => speed = 1);
+
+                    // Clicks handled by <a> tags (default behavior)
+                    animate();
+                })();
+            </script>
+        </div>
+        <div class="view-all" style="transition: transform 0.3s; position: relative; z-index: 2;">
+            <p class="view-all-text-partner-hover">
+                View Our Global Partner Network
+                <span style="display: inline-block; transform: rotate(45deg); margin-left: 8px;">
+                    <i class="fa fa-arrow-up" aria-hidden="true" style="color: #f76e11;"></i>
+                </span>
+            </p>
+        </div>
     </div>
-
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
 </body>

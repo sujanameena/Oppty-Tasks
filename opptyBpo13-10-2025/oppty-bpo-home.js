@@ -59,10 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                 });
                 // fourth page images script
-                 // Optional: Add click event for "Read More" if needed
         document.querySelectorAll('.hover-image-read-more').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
-                // Add your logic here, e.g., open modal or navigate
             });
         });

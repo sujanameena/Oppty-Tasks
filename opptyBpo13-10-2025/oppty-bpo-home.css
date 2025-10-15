@@ -645,8 +645,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 700px;
-    background-color: rgb(239,242,255);
+    height: 1150px;
+    background-color: rgb(239, 242, 255);
 }
 
 .fifth-page-content-container {
@@ -686,6 +686,7 @@ body {
 .swiper-slider {
     margin-top: 200px;
 }
+
 .swiper-heading {
     position: absolute;
     width: 39%;
@@ -698,6 +699,7 @@ body {
     font-family: "Poppins-Regular", serif;
     letter-spacing: 2px;
 }
+
 .swiper-text {
     position: absolute;
     width: 40%;
@@ -711,16 +713,84 @@ body {
     letter-spacing: 2px;
     margin-top: 80px;
 }
+
 .swiper-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin: 50px 50px 0px 50px
 }
-.swiper-video{
+
+.swiper-video {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin: -20px 50px 0px -40px;
     align-items: flex-end;
+}
+
+.business-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.smartBusiness-heading {
+    font-family: "Poppins-Regular", serif;
+    color: #262626;
+    font-size: 44px;
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+/* css for companies scrolling section */
+.companies-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background: transparent;
+    position: relative;
+    margin-top: 150px;
+}
+
+.companies-track {
+    display: flex;
+    width: max-content;
+    gap: 48px;
+    will-change: transform;
+}
+
+.company-icon img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transition: transform 0.2s;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.company-icon:hover img {
+    transform: scale(1.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    background: transparent !important;
+}
+
+.view-all-text-partner-hover {
+    cursor: pointer;
+    color: #262626;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.partner-hover:hover {
+    color: #f76e11 !important;
+    transition: color 0.2s;
 }
