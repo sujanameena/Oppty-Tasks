@@ -8,9 +8,13 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-
 .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1100;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -798,7 +802,7 @@ body {
 /* sixth page */
 .sixth-page-container {
     width: 100%;
-    height: 2300px;
+    height: 2000px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -1056,8 +1060,125 @@ body {
 .seventh-page-container {
     width: 100%;
     height: 300px;
-    background-color: black;
+    background-color: rgb(239, 242, 255);
     display: flex;
     flex-direction: column;
 }
+.smarter-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.smarterBusiness-heading {
+    font-family: "Poppins-Regular", serif;
+    color: #262626;
+    font-size: 44px;
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    width: 100%;
+    letter-spacing: 1px;
+}
+/*footer section*/
+.site-footer {
+    background-color: black;
+    color: #ffffff;
+    padding: 80px 0;
+    font-size: 1rem;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.footer-grid {
+    display: grid;
+    /* First column is wider, the rest are equal */
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr 1fr; 
+    gap: 40px;
+}
+
+/* --- Column 1: About --- */
+.footer-about .footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding-right: 20px; /* Give it some breathing room */
+}
+
+/* --- General Column Styling --- */
+.footer-column h4 {
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.footer-column p,
+.footer-column li {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--text-light);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 1024px) {
+    .footer-grid {
+        /* On tablets, switch to a 3-column layout */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-about {
+        /* Make the 'about' section span all 3 columns */
+        grid-column: 1 / -1; 
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        /* On smaller tablets, switch to a 2-column layout */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        /* On mobile, stack all columns vertically */
+        grid-template-columns: 1fr;
+    }
+    .footer-about, .footer-column {
+        text-align: center;
+    }
+    .footer-about p {
+        padding-right: 0;
+    }
+    .footer-about .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
