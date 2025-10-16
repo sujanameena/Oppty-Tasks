@@ -798,7 +798,7 @@ body {
 /* sixth page */
 .sixth-page-container {
     width: 100%;
-    height: 2500px;
+    height: 2300px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -1053,3 +1053,11 @@ body {
     letter-spacing: 2px;
     line-height: 30px;
 }
+.seventh-page-container {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+

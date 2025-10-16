@@ -64,4 +64,3 @@ document.querySelectorAll('.hover-image-read-more').forEach(function (btn) {
         e.stopPropagation();
     });
 });
-// paragraph slider
