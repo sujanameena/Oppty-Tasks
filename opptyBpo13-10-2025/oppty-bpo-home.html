@@ -818,21 +818,85 @@
                 });
             })();
         </script>
+        <!-- AI Powered. -->
         <div class="ai-powered">
-        <div class="human-content">
-            <div class="human-heading">
-                <h2>AI Powered.
-                    Human Led.
-                    Future Ready.</h2>
+            <div class="human-content">
+                <div class="human-heading">
+                    <h2>AI Powered.
+                        Human Led.
+                        Future Ready.</h2>
+                </div>
+                <div class="human-text">
+                    <p>At WNS, we combine AI with human ingenuity to
+                        co-create smarter businesses.</p>
+                </div>
+                <div class="explore-more-container" style="margin-top: 230px; text-align: left;">
+                    <span id="exploreMoreText"
+                        style="cursor:pointer; color: white; font-weight: bold; font-size: 15px; display: inline-flex; align-items: center;">
+                        Read More
+                        <span id="exploreMoreArrow"
+                            style="display: inline-block; margin-left: 8px; transition: transform 0.2s;">
+                            <i class="fa fa-arrow-up" aria-hidden="true"
+                                style="color: #f76e11; transform: rotate(45deg);"></i>
+                        </span>
+                    </span>
+                </div>
             </div>
-            <div class="human-text">
-                <p>At WNS, we combine AI with human ingenuity to
-                    co-create smarter businesses.</p>
-            </div>
-            <div class="explore-more-container" style="margin-top: 230px; text-align: left;">
+            <!-- text-image container -->
+
+            <div class="six-col-grid" id="sixColGrid"></div>
+            <script>
+                // Example data: alternate text and image
+                const gridData = [
+                    { type: 'text', value: '3<br>Global<br>Headquarters' },
+                    { type: 'image', value: 'assets/g-1.jpg' },
+                    { type: 'text', value: '4<br>Innovation' },
+                    { type: 'image', value: 'assets/g-2.jpg' },
+                    { type: 'text', value: '13<br>Countries' },
+                    { type: 'image', value: 'assets/g-3.jpg' },
+
+                    { type: 'image', value: 'assets/g-4.jpg' },
+                    { type: 'text', value: '65<br>Delivery Centers' },
+                    { type: 'image', value: 'assets/g-5.jpg' },
+                    { type: 'text', value: '700+<br>Clients' },
+                    { type: 'image', value: 'assets/g-6.jpg' },
+                    { type: 'text', value: '66,000+<br>Employees' },
+
+                    { type: 'text', value: '100+<br>Industry-<br>specific<br>AI Use Cases<br>7,000+<br>AI Specialists' },
+                    { type: 'image', value: 'assets/g-7.jpg' },
+                    { type: 'text', value: '3<br>DesAign Hubs<br>Across New York,<br>London and<br>Pune, India' },
+                    { type: 'image', value: 'assets/g-8.jpg' },
+                    { type: 'text', value: '20+<br>Industry and<br>Domain Centers<br>of Excellence' },
+                    { type: 'image', value: 'assets/g-9.jpg' }
+                ];
+
+                const grid = document.getElementById('sixColGrid');
+                gridData.forEach(cell => {
+                    const div = document.createElement('div');
+                    div.className = 'six-col-cell';
+                    if (cell.type === 'text') {
+                        div.innerHTML = `
+                <span style="display:inline-block; position:relative;">
+                    <span style="display:block; text-align:center;">${cell.value}</span>
+                </span>
+                `;
+                    } else {
+                        const img = document.createElement('img');
+                        img.src = cell.value;
+                        img.alt = '';
+                        div.appendChild(img);
+                    }
+                    grid.appendChild(div);
+                });
+            </script>
+        </div>
+        <!-- Awards  -->
+        <div class="awards-content">
+            <h2 class="awards-heading">Awards & Recognition</h2>
+            <div class="explore-more-container" style="margin-top: 30px; text-align: left;">
                 <span id="exploreMoreText"
                     style="cursor:pointer; color: white; font-weight: bold; font-size: 15px; display: inline-flex; align-items: center;">
-                    Read More
+                    View All
                     <span id="exploreMoreArrow"
                         style="display: inline-block; margin-left: 8px; transition: transform 0.2s;">
                         <i class="fa fa-arrow-up" aria-hidden="true"
@@ -840,59 +904,460 @@
                     </span>
                 </span>
             </div>
+            <div class="awards-images">
+                <style>
+                    /* Awards slider styles (scoped to avoid colliding with other styles) */
+                    .awards-slider {
+                        position: relative;
+                        width: 100%;
+                        overflow: hidden;
+                        padding: 12px 0;
+                    }
+
+                    .awards-track {
+                        display: flex;
+                        gap: 16px;
+                        transition: transform 0.45s cubic-bezier(.22, .9, .32, 1);
+                        will-change: transform;
+                        align-items: stretch;
+                    }
+
+                    .award-slide {
+                        flex: 0 0 22%;
+                        min-width: 180px;
+                        max-width: 260px;
+                        position: relative;
+                        border-radius: 8px;
+                        overflow: visible;
+                        transition: transform 0.28s ease, box-shadow 0.28s ease;
+                        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+                        background: #fff;
+                    }
+
+                    .award-slide img {
+                        display: block;
+                        width: 100%;
+                        height: 350px;
+                        object-fit: cover;
+                        border-radius: 8px;
+                        transition: transform 0.28s ease;
+                        transform-origin: center;
+                    }
+
+                    /* overlay containing text + arrow (hidden by default) */
+                    .award-overlay {
+                        position: absolute;
+                        left: 12px;
+                        right: 12px;
+                        bottom: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 8px;
+                        background: rgba(0, 0, 0, 0.55);
+                        color: white;
+                        padding: 8px 10px;
+                        border-radius: 6px;
+                        opacity: 0;
+                        transform: translateY(8px);
+                        transition: opacity 0.22s ease, transform 0.22s ease;
+                        pointer-events: none;
+                    }
+
+                    /* ensure overlay text is white by default */
+                    .award-overlay .award-text {
+                        color: #fff;
+                        transition: color 0.18s ease;
+                    }
+
+                    /* when hovering the text itself change only the text color */
+                    .award-overlay .award-text:hover {
+                        color: #f76e11;
+                        cursor: pointer;
+                    }
+
+                    /* award text */
+                    .award-text {
+                        font-size: 0.95rem;
+                        line-height: 1.1;
+                        margin: 0;
+                        flex: 1 1 auto;
+                        text-align: left;
+                    }
+
+                    /* arrow button */
+                    .award-arrow {
+                        background: transparent;
+                        border: none;
+                        color: #f76e11;
+                        font-size: 1rem;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transform: rotate(0deg);
+                        pointer-events: auto;
+                    }
+
+                    /* rotate the icon 45deg so arrow points diagonally up */
+                    .award-arrow i {
+                        transform: rotate(45deg);
+                        display: inline-block;
+                    }
+
+                    /* Hover: reveal overlay and expand image horizontally */
+                    .award-slide:hover {
+                        transform: translateY(-6px);
+                        z-index: 3;
+                        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
+                    }
+
+                    .award-slide:hover img {
+                        transform: scaleX(1.12);
+                    }
+
+                    .award-slide:hover .award-overlay {
+                        opacity: 1;
+                        transform: translateY(0);
+                        pointer-events: auto;
+                    }
+
+                    /* Controls and progress */
+                    .awards-controls {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 14px;
+                        gap: 12px;
+                    }
+
+                    .awards-progress {
+                        flex: 1 1 auto;
+                        height: 8px;
+                        background: #e6e6e6;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        margin-right: 12px;
+                    }
+
+                    .awards-progress-inner {
+                        height: 100%;
+                        width: 0%;
+                        background: linear-gradient(90deg, #f76e11 40%, #ed1c24 100%);
+                        transition: width 0.36s cubic-bezier(.22, .9, .32, 1);
+                    }
+
+                    .awards-btns {
+                        display: flex;
+                        gap: 8px;
+                        flex: 0 0 auto;
+                        margin-right: 80px;
+                    }
+
+                    .awards-btn {
+                        background: #fff;
+                        border: none;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        cursor: pointer;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    /* responsive adjustments */
+                    @media (max-width: 1100px) {
+                        .award-slide {
+                            flex: 0 0 30%;
+                            min-width: 180px;
+                        }
+
+                        .award-slide img {
+                            height: 140px;
+                        }
+                    }
+
+                    @media (max-width: 760px) {
+                        .award-slide {
+                            flex: 0 0 46%;
+                            min-width: 140px;
+                        }
+
+                        .award-slide img {
+                            height: 120px;
+                        }
+                    }
+
+                    @media (max-width: 420px) {
+                        .award-slide {
+                            flex: 0 0 80%;
+                            min-width: 220px;
+                        }
+
+                        .awards-controls {
+                            flex-direction: column;
+                            align-items: stretch;
+                            gap: 8px;
+                        }
+
+                        .awards-progress {
+                            margin-right: 0;
+                        }
+                    }
+                </style>
+
+                <div class="awards-slider" id="awardsSlider">
+                    <div class="awards-track" id="awardsTrack">
+                        <!-- Eight slides (images use placeholder URLs) -->
+                        <div class="award-slide">
+                            <img src="assets/awards-1.jpg" alt="Award 1">
+                            <div class="award-overlay">
+                                <p class="award-text">OPPTY Positioned in the Leaders’ Quadrant of AIM Research’s 2025
+                                    PeMa Quadrant for Agentic AI Services</p>
+                                <button class="award-arrow" aria-label="Read more about Award 1"><i
+                                        class="fa fa-arrow-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="award-slide">
+                            <img src="assets/awards-2.jpg" alt="Award 2">
+                            <div class="award-overlay">
+                                <p class="award-text">OPPTY Procurement Named a Leader in the 2025 ISG Provider Lens™
+                                    Global Report for Procurement Services</p>
+                                <button class="award-arrow" aria-label="Read more about Award 2"><i
+                                        class="fa fa-arrow-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="award-slide">
+                            <img src="assets/awards-3.jpg" alt="Award 3">
+                            <div class="award-overlay">
+                                <p class="award-text">OPPTY named to TIME’s 2025 List of World’s Most Sustainable
+                                    Companies</p>
+                                <button class="award-arrow" aria-label="Read more about Award 3"><i
+                                        class="fa fa-arrow-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="award-slide">
+                            <img src="assets/awards-4.png" alt="Award 4">
+                            <div class="award-overlay">
+                                <p class="award-text">OPPTY Recognized as One of America’s Most
+                                    Reliable Companies 2025</p>
+                                <button class="award-arrow" aria-label="Read more about Award 4"><i
+                                        class="fa fa-arrow-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="award-slide">
+                            <img src="assets/awards-5.png" alt="Award 5">
+                            <div class="award-overlay">
+                                <p class="award-text">OPPTY Analytics Wins the AWS AI Award for Gen AI
+                                    and Advanced Analytics</p>
+                                <button class="award-arrow" aria-label="Read more about Award 5"><i
+                                        class="fa fa-arrow-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="award-slide">
+                            <img src="assets/awards-6.png" alt="Award 6">
+                            <div class="award-overlay">
+                                <p class="award-text">Howden Group and OPPTY have been awarded the
+                                    title of Best Data Story or Data Visualisation</p>
+                                <button class="award-arrow" aria-label="Read more about Award 6"><i
+                                        class="fa fa-arrow-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="award-slide">
+                            <img src="assets/awards-7.png" alt="Award 7">
+                            <div class="award-overlay">
+                                <p class="award-text">OPPTY Achieves Platinum Medal Rating from
+                                    EcoVadis for Sustainability Performance</p>
+                                <button class="award-arrow" aria-label="Read more about Award 7"><i
+                                        class="fa fa-arrow-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="award-slide">
+                            <img src="assets/awards-1.jpg" alt="Award 8">
+                            <div class="award-overlay">
+                                <p class="award-text">OPPTY Positioned in the Leaders’ Quadrant of AIM Research’s 2025
+                                    PeMa Quadrant for Agentic AI Services</p>
+                                <button class="award-arrow" aria-label="Read more about Award 8"><i
+                                        class="fa fa-arrow-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls: progress + prev/next -->
+                    <div class="awards-controls" aria-hidden="false">
+                        <div class="awards-progress" aria-hidden="true">
+                            <div class="awards-progress-inner" id="awardsProgress"></div>
+                        </div>
+                        <div class="awards-btns">
+                            <button class="awards-btn" id="awardsPrev" aria-label="Previous awards"><i
+                                    class="fa fa-chevron-left"></i></button>
+                            <button class="awards-btn" id="awardsNext" aria-label="Next awards"><i
+                                    class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    (function () {
+                        const container = document.getElementById('awardsSlider');
+                        const track = document.getElementById('awardsTrack');
+                        const slides = Array.from(track.children);
+                        const prev = document.getElementById('awardsPrev');
+                        const next = document.getElementById('awardsNext');
+                        const progressInner = document.getElementById('awardsProgress');
+
+                        let currentIndex = 0;
+                        let visibleCount = 4; // will be recalculated
+                        let slideWidth = 0;
+                        const gap = parseInt(getComputedStyle(track).gap || 16, 10);
+
+                        function calcSizes() {
+                            // Calculate slide width including gap
+                            const first = slides[0];
+                            if (!first) return;
+                            // Use bounding width (includes padding/border)
+                            const rect = first.getBoundingClientRect();
+                            slideWidth = rect.width + gap;
+                            // visible count based on container width
+                            visibleCount = Math.max(1, Math.floor(container.clientWidth / slideWidth));
+                            // If visibleCount greater than total slides, clamp
+                            visibleCount = Math.min(visibleCount, slides.length);
+                            // adjust index bounds
+                            const maxIndex = Math.max(0, slides.length - visibleCount);
+                            if (currentIndex > maxIndex) currentIndex = maxIndex;
+                        }
+
+                        function updateTrack(animate = true) {
+                            if (!animate) track.style.transition = 'none';
+                            else track.style.transition = '';
+                            const x = currentIndex * slideWidth;
+                            track.style.transform = `translateX(-${x}px)`;
+                            updateProgress();
+                            if (!animate) {
+                                // force reflow then restore
+                                void track.offsetWidth;
+                                track.style.transition = '';
+                            }
+                        }
+
+                        function updateProgress() {
+                            const maxIndex = Math.max(0, slides.length - visibleCount);
+                            const percent = maxIndex === 0 ? 100 : (currentIndex / maxIndex) * 100;
+                            progressInner.style.width = percent + '%';
+                        }
+
+                        prev.addEventListener('click', () => {
+                            currentIndex = Math.max(0, currentIndex - 1);
+                            updateTrack();
+                        });
+
+                        next.addEventListener('click', () => {
+                            const maxIndex = Math.max(0, slides.length - visibleCount);
+                            currentIndex = Math.min(maxIndex, currentIndex + 1);
+                            updateTrack();
+                        });
+
+                        // Allow clicking arrow overlay to act like read more - simple focus demo
+                        track.addEventListener('click', (e) => {
+                            const btn = e.target.closest('.award-arrow');
+                            if (!btn) return;
+                            const slide = e.target.closest('.award-slide');
+                            const idx = slides.indexOf(slide);
+                            // Move clicked slide into view (if needed)
+                            if (idx !== -1) {
+                                if (idx < currentIndex) currentIndex = idx;
+                                else if (idx >= currentIndex + visibleCount) currentIndex = Math.min(idx, slides.length - visibleCount);
+                                updateTrack();
+                            }
+                            // Here you can open a details panel or navigate; demo shows a console log
+                            console.log('Read more clicked for slide', idx + 1);
+                        });
+
+                        // Resize handling
+                        let resizeTimeout;
+                        window.addEventListener('resize', () => {
+                            clearTimeout(resizeTimeout);
+                            resizeTimeout = setTimeout(() => {
+                                calcSizes();
+                                updateTrack(false);
+                            }, 120);
+                        });
+
+                        // Init once DOM and images are ready
+                        function init() {
+                            calcSizes();
+                            // ensure track fits initial slides
+                            updateTrack(false);
+
+                            // allow dragging with mouse/touch for quick navigation (optional)
+                            let isDown = false, startX = 0, startTranslate = 0;
+                            track.addEventListener('pointerdown', (ev) => {
+                                isDown = true;
+                                track.setPointerCapture(ev.pointerId);
+                                startX = ev.clientX;
+                                const style = track.style.transform;
+                                const m = /translateX\(-?([\d.]+)px\)/.exec(style);
+                                startTranslate = m ? parseFloat(m[1]) : 0;
+                                track.style.transition = 'none';
+                            });
+                            track.addEventListener('pointermove', (ev) => {
+                                if (!isDown) return;
+                                const dx = ev.clientX - startX;
+                                let newTranslate = Math.max(0, startTranslate - dx);
+                                track.style.transform = `translateX(-${newTranslate}px)`;
+                            });
+                            track.addEventListener('pointerup', (ev) => {
+                                isDown = false;
+                                track.releasePointerCapture(ev.pointerId);
+                                track.style.transition = '';
+                                // snap to nearest slide
+                                const style = track.style.transform;
+                                const m = /translateX\(-?([\d.]+)px\)/.exec(style);
+                                const translate = m ? parseFloat(m[1]) : 0;
+                                const idx = Math.round(translate / slideWidth);
+                                const maxIndex = Math.max(0, slides.length - visibleCount);
+                                currentIndex = Math.min(maxIndex, Math.max(0, idx));
+                                updateTrack();
+                            });
+                            track.addEventListener('pointercancel', () => { isDown = false; });
+
+                            // Make sure images loaded before initial sizing (some browsers may not have sizes yet)
+                            const imgs = track.querySelectorAll('img');
+                            let loaded = 0;
+                            if (imgs.length === 0) {
+                                initFinished();
+                            } else {
+                                imgs.forEach(img => {
+                                    if (img.complete) loaded++;
+                                    else img.addEventListener('load', () => { loaded++; if (loaded === imgs.length) initFinished(); });
+                                });
+                                if (loaded === imgs.length) initFinished();
+                            }
+                        }
+
+                        function initFinished() {
+                            calcSizes();
+                            updateTrack(false);
+                        }
+
+                        // Kick off
+                        init();
+
+                    })();
+                </script>
+            </div>
         </div>
-        <!-- text-image container -->
-      
-        <div class="six-col-grid" id="sixColGrid"></div>
-        <script>
-            // Example data: alternate text and image
-            const gridData = [
-            { type: 'text', value: '3<br>Global<br>Headquarters' },
-            { type: 'image', value: 'assets/g-1.jpg' },
-            { type: 'text', value: '4<br>Innovation' },
-            { type: 'image', value: 'assets/g-2.jpg' },
-            { type: 'text', value: '13<br>Countries' },
-            { type: 'image', value: 'assets/g-3.jpg' },
-
-            { type: 'image', value: 'assets/g-4.jpg' },
-            { type: 'text', value: '65<br>Delivery Centers' },
-            { type: 'image', value: 'assets/g-5.jpg' },
-            { type: 'text', value: '700+<br>Clients' },
-            { type: 'image', value: 'assets/g-6.jpg' },
-            { type: 'text', value: '66,000+<br>Employees' },
-
-            { type: 'text', value: '100+<br>Industry-<br>specific<br>AI Use Cases<br>7,000+<br>AI Specialists' },
-            { type: 'image', value: 'assets/g-7.jpg' },
-            { type: 'text', value: '3<br>DesAign Hubs<br>Across New York,<br>London and<br>Pune, India' },
-            { type: 'image', value: 'assets/g-8.jpg' },
-            { type: 'text', value: '20+<br>Industry and<br>Domain Centers<br>of Excellence' },
-            { type: 'image', value: 'assets/g-9.jpg' }
-            ];
-
-            const grid = document.getElementById('sixColGrid');
-            gridData.forEach(cell => {
-            const div = document.createElement('div');
-            div.className = 'six-col-cell';
-            if (cell.type === 'text') {
-                div.innerHTML = `
-                <span style="display:inline-block; position:relative;">
-                    <span style="display:block; text-align:center;">${cell.value}</span>
-                </span>
-                `;
-            } else {
-                const img = document.createElement('img');
-                img.src = cell.value;
-                img.alt = '';
-                div.appendChild(img);
-            }
-            grid.appendChild(div);
-            });
-        </script>
-        </div>
-    </div>
-
-    <!-- seventh page -->
-    <!-- <div class="seventh-page-container">
+        <!-- seventh page -->
+        <!-- <div class="seventh-page-container">
         <div class="human-content">
             <h2 class="human-heading">In the News</h2>
             <div class="explore-more-container" style="margin-top: 30px; text-align: left;">
@@ -906,8 +1371,8 @@
                     </span>
                 </span>
             </div>
-        </div>
         </div> -->
+    </div>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
 </body>
