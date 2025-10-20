@@ -1,0 +1,222 @@
+:root {
+    --primary-red: #d92d27;
+    --text-dark: #000000;
+    --text-light: #aaaaaa;
+    --border-color: #cccccc;
+    --background-light: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+.background-waves {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-dark);
+}
+
+.logo-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-wns {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.logo-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
+    color: #555;
+}
+
+.contact-btn {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #b0241f;
+}
+
+/* Main Content Styles */
+main {
+    padding-left: 5rem; /* Indent main content as in the image */
+}
+
+/* Search Section */
+.search-section {
+    margin-top: 3rem;
+}
+
+.search-label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.search-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 600px;
+}
+
+.search-bar input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 2.5rem 1rem 0;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.search-bar input::placeholder {
+    color: var(--text-light);
+    opacity: 1;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-bottom-color: var(--text-dark);
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    color: var(--text-dark);
+    stroke-width: 2.5px;
+}
+
+/* Trending Section */
+.trending-section {
+    margin-top: 4rem;
+}
+
+.trending-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.triangle-icon {
+    color: var(--primary-red);
+    font-size: 0.8rem;
+}
+
+.trending-title h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.trending-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    font-weight: 300;
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 800px;
+}
+
+.tag {
+    background-color: transparent;
+    border: 1px solid var(--text-dark);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tag:hover, .tag.active {
+    background-color: var(--text-dark);
+    color: white;
+}
