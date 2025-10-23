@@ -153,65 +153,6 @@
             </div>
             <div class="offer-section">
                 <!-- offer section starting -->
-                <style>
-                    .offer-steps {
-                        display: flex;
-                        gap: 20px;
-                        align-items: stretch;
-                        justify-content: space-between;
-                        flex-wrap: wrap;
-                        margin-top: 16px;
-                    }
-
-                    .offer-step {
-                        flex: 1 1 calc(33.333% - 13.333px);
-                        background: #fff;
-                        border-radius: 8px;
-                        overflow: hidden;
-                        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-                        display: flex;
-                        flex-direction: column;
-                        text-align: left;
-                    }
-
-                    .offer-step img {
-                        width: 100%;
-                        height: auto;
-                        display: block;
-                        object-fit: cover;
-                    }
-
-                    .offer-step .step-body {
-                        padding: 16px;
-                        background: #fff;
-                        /* explicit white background for captions */
-                    }
-
-                    .offer-step .step-title {
-                        margin: 0 0 8px;
-                        font-weight: 600;
-                        color: #bd1a29;
-                        font-size: 24px;
-                        display: block;
-                        text-align: left;
-                    }
-
-                    .offer-step .step-notes {
-                        color: #231f20;
-                        line-height: 1.6;
-                        font-size: 18px;
-                        text-align: left;
-                        display: block;
-                        margin: 6px 0;
-                    }
-
-                    @media (max-width: 768px) {
-                        .offer-step {
-                            flex: 1 1 100%;
-                        }
-                    }
-                </style>
-
                 <div class="offer-steps" role="list" aria-label="Three step process">
                     <div class="offer-step" role="listitem" aria-labelledby="step1-title">
                         <img src="assets/offer1.png" alt="Step 1 image">
@@ -247,7 +188,7 @@
                         </div>
                     </div>
 
-                    <div class="offer-step" role="listitem" aria-labelledby="step2-title">
+                    <div class="offer-step" style="margin-top: 100px;" role="listitem" aria-labelledby="step2-title">
                         <img src="assets/offer2.png" alt="Step 2 image">
                         <div class="step-body">
                             <h4 id="step1-title" class="step-title">Compliance and Regulatory Services</h4>
@@ -284,7 +225,7 @@
                         </div>
                     </div>
 
-                    <div class="offer-step" role="listitem" aria-labelledby="step3-title">
+                    <div class="offer-step" style="margin-top: 200px;" role="listitem" aria-labelledby="step3-title">
                         <img src="assets/offer3.png" alt="Step 3 image">
                         <div class="step-body">
                             <h4 id="step1-title" class="step-title">Fraud Assessment</h4>
@@ -306,6 +247,18 @@
                 <!-- offer-section-ending -->
             </div>
         </div>
+    </div>
+    <div class="advantages-fourth-page-container">
+        <div class="advantages-content">
+            <div class="advantage-image-container">
+                <img src="assets/The-WNS-Advantage.png" alt="Advantage Image">
+            </div>
+            <div class="advantage-text-container">
+                <h2>Key Advantages</h2>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
