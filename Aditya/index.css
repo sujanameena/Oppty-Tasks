@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    min-height: 200em;
+}
+
+/* Header css starts */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(9, 33, 99);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-img {
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.nav-brand h2 {
+    color: white;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ddd;
+}
+
+/* Header css ends */
+.hero-section {
+    background-image: url(./assets/aditya-college.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 60px 0;
+    text-align: center;
+    color: rgb(9, 33, 99);
+    position: relative;
+}
+
+.hero-section::after {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.aditya-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+}
+
+.place-heading {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+    color: #000000;
+}
+
+.degree-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+}
+
+.divider {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    width: 150px;
+    height: 4px;
+    background: rgb(9, 33, 99);
+    margin: 30px 0 30px 0px;
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+.courses-section {
+    width: 100%;
+    background: #f9f9f9;
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.courses-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: rgb(9, 33, 99);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+}
+
+.courses-description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+    font-family: Poppins, sans-serif;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 24px 20px;
+    box-shadow: 0 1px 6px rgba(44, 62, 80, 0.06);
+}
+
+.course-title {
+    font-size: 1.3rem;
+    color: rgb(9, 33, 99);
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+}
+
+.course-list {
+    line-height: 30px;
+    margin: 0;
+    padding-left: 20px;
+    color: #333;
+    font-size: 1rem;
+    font-family: Poppins, sans-serif;
+}
