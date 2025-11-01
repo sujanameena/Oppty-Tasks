@@ -192,3 +192,243 @@
 
 </body>
 </html>
+<!-- write a code nice proffesional design in html,css and javascript
+ Add login page before the typing speed test-full screen login page
+login page should have
+username input field
+password input field
+login button
+ after login page user should redirect to new page in this left side verbal reasoning,typing test,logical reasoning should appears as sidebar
+ when clicked on typing test typing test should show the following
+ name and email id should appear on right side of the typing speed test page
+Requirements for typing speed test page:
+login name should be displayed on left of the typing speed test page
+mail id should be displayed on left of the typing speed test page
+15 minutes timer
+Start test button
+after clicking on the start button time runs automatically form 15 minutes runs to zero
+time running in grenn color-when 5 minutes remaining time should show in red color from 5 minutes
+background white color
+NO extra typing allowed except the text given above
+automatically test should submit showing as sessions end
+generate codefor mobile version also -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing-Speed</title>
+    <link rel="stylesheet" href="typing-speed.css">
+    <link rel="stylesheet" href="typing-speed-mobile.css">
+    <script src="typing-speed.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="test-start">Let's take the test</h2>
+        <div class="test-section">
+            <div class="given-text" id="givenText">
+                A new Union Tribal Affairs Ministry policy framework is a reminder that India’s
+                conservation strategy is not a fortress conservation model but one in which protecting the
+                country’s tigers is a social contract. The policy’s foremost virtue is reiteration that people
+                living near or inside forests cannot be relocated until the Forest Rights Act (FRA) 2006 process
+                has been completed, affirming that they are stakeholders, not trespassers. This view has sadly been
+                falling out of favour with a government that is increasingly seeing forests solely for their climate
+                utility and a judiciary keen to settle long-standing disputes. The policy casting relocation as an
+                “exceptional” measure also overturns the 2024 National Tiger Conservation Authority directive to remove
+                villages en masse from tiger reserves. Instead of treating humans and tigers as mutually exclusive, the
+                framework promotes research and pilot projects on sustainable co-habitation that could help redefine
+                tiger
+                conservation through a more socially legitimate, and possibly more resilient model. Its invocation of
+                the
+                SC/ST (Prevention of Atrocities) Act for unlawful evictions and a three-tier system for redress also
+                provide
+                a safety net rarely available to these communities.
+            </div>
+            <div class="timer" id="timer">15:00</div>
+            <textarea id="typingArea" placeholder="Start typing here..." disabled></textarea>
+            <button id="startBtn">Start Test</button>
+            <div class="session-end" id="sessionEnd" style="display:none;">Session Ended. Test Submitted.</div>
+        </div>
+    </div>
+    <style>
+        body {
+            background: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        }
+        .test-start{
+            text-align: center;
+            color: rgb(36,124,166);
+        }
+
+        .test-section {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .given-text {
+            background: #f5f5f5;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 1.1em;
+            color: #222;
+            user-select: none;
+        }
+
+        .timer {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: rgb(36,124,166);
+            align-self: flex-end;
+            transition: color 0.3s;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            font-size: 1.1em;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            resize: none;
+            background: #fafafa;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 24px;
+            font-size: 1em;
+            background: rgb(36,124,166);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .session-end {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .given-text {
+                font-size: 1em;
+                padding: 8px;
+            }
+
+            .timer {
+                font-size: 1.2em;
+            }
+
+            textarea {
+                font-size: 1em;
+                min-height: 80px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const timerEl = document.getElementById('timer');
+        const typingArea = document.getElementById('typingArea');
+        const givenText = document.getElementById('givenText').innerText.trim();
+        const sessionEnd = document.getElementById('sessionEnd');
+        let interval, timeLeft = 15 * 60, started = false;
+
+        function formatTime(sec) {
+            const m = Math.floor(sec / 60).toString().padStart(2, '0');
+            const s = (sec % 60).toString().padStart(2, '0');
+            return `${m}:${s}`;
+        }
+
+        function updateTimer() {
+            timerEl.textContent = formatTime(timeLeft);
+            if (timeLeft <= 300) {
+                timerEl.style.color = '#d32f2f';
+            } else {
+                timerEl.style.color = '#1aaf1a';
+            }
+            if (timeLeft <= 0) {
+                endTest();
+            }
+        }
+
+        function startTest() {
+            started = true;
+            timeLeft = 15 * 60;
+            typingArea.value = '';
+            typingArea.disabled = false;
+            typingArea.focus();
+            startBtn.disabled = true;
+            sessionEnd.style.display = 'none';
+            updateTimer();
+            interval = setInterval(() => {
+                timeLeft--;
+                updateTimer();
+            }, 1000);
+        }
+
+        function endTest() {
+            clearInterval(interval);
+            typingArea.disabled = true;
+            startBtn.disabled = false;
+            sessionEnd.style.display = 'block';
+        }
+
+        typingArea.addEventListener('input', function (e) {
+            // Prevent extra typing: only allow up to the length of given text
+            if (this.value.length > givenText.length) {
+                this.value = this.value.slice(0, givenText.length);
+            }
+            // Prevent typing characters not matching the given text
+            for (let i = 0; i < this.value.length; i++) {
+                if (this.value[i] !== givenText[i]) {
+                    this.value = this.value.slice(0, i);
+                    break;
+                }
+            }
+            // If completed, end the test automatically
+            if (this.value === givenText) {
+                endTest();
+            }
+        });
+
+        startBtn.addEventListener('click', startTest);
+
+        // Prevent pasting into textarea
+        typingArea.addEventListener('paste', e => e.preventDefault());
+    </script>
+
+</body>
+
+</html>
