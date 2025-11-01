@@ -11,24 +11,24 @@
 </head>
 
 <body>
-<div class="coin-animation-container">
-    <h1 class="welcome-heading">Welcome To</h1>
-    <h2 class="sub-heading">SBI PO Exams</h2>
-    <div class="coins">
-        <div class="coin"><span class="rupee-symbol">₹</span></div>
-        <div class="coin"><span class="rupee-symbol">₹</span></div>
-        <div class="coin"><span class="rupee-symbol">₹</span></div>
-        <div class="coin"><span class="rupee-symbol">₹</span></div>
-        <div class="coin"><span class="rupee-symbol">₹</span></div>
+    <div class="coin-animation-container">
+        <h1 class="welcome-heading">Welcome To</h1>
+        <h2 class="sub-heading">SBI PO Exams</h2>
+        <div class="coins">
+            <div class="coin"><span class="rupee-symbol">₹</span></div>
+            <div class="coin"><span class="rupee-symbol">₹</span></div>
+            <div class="coin"><span class="rupee-symbol">₹</span></div>
+            <div class="coin"><span class="rupee-symbol">₹</span></div>
+            <div class="coin"><span class="rupee-symbol">₹</span></div>
+        </div>
     </div>
-</div>
-<script>
-document.body.addEventListener('click', function() {
-    window.location.href = 'loginpage.html';
-});
-</script>
-<style>
-body {
+    <script>
+        document.body.addEventListener('click', function () {
+            window.location.href = 'login-page.html';
+        });
+    </script>
+    <style>
+        body {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -38,7 +38,7 @@ body {
 .coin-animation-container {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 40em;
     overflow: hidden;
 }
 .welcome-heading {
@@ -77,7 +77,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 40em;
     pointer-events: none;
     z-index: 1;
 }
@@ -113,9 +113,9 @@ body {
     0% { top: -60px; opacity: 0;}
     10% { opacity: 1;}
     90% { opacity: 1;}
-    100% { top: 100vh; opacity: 0;}
+    100% { top: 40em; opacity: 0;}
 }
-</style>
+    </style>
 
 </body>
 
