@@ -1,10 +1,11 @@
+// Functions Example:1
 // // // // // // // // function greet() {
 // // // // // // // //     console.log("Hello, world!");
 // // // // // // // // }
 
 // // // // // // // // greet();
 
-
+// Functions Example:2
 // // // // // // // function add(a , b){
 // // // // // // //     console.log(a ** b); 
 
@@ -12,14 +13,14 @@
 // // // // // // // add(5, 10);
 // // // // // // // add(20, 30);
 
-
+// Functions Example:3
 // // // // // // function printName(name){
 // // // // // //     console.log("My name is " + name);
 // // // // // // }
 
 // // // // // // printName("rakesh");
 
-
+// Functions Example:4
 // // // // // function checkNumber(num){
 // // // // //     if(num > 0)
 // // // // //        if(num >= 0) return "positive even";
@@ -30,7 +31,7 @@
 // // // // //     console.log(checkNumber(-10));        
     
     
-
+// Functions Example:5
 // // // // function check(num) {
 // // // //     if (num > 0) {
 // // // //         console.log("positive");
@@ -48,7 +49,7 @@
 
 
 
-
+// Functions Example:6
 // // // function reverseString(str) {
 // // //     let result = "";
 
@@ -63,7 +64,7 @@
 
 
 
-
+// Functions Example:7
 // // // function isValidEmail(email) {
 // // //     return email.includes("@") && email.includes(".");
 // // // }
@@ -71,7 +72,7 @@
 // // // console.log(isValidEmail("rakesh@gmail.com"));
 
 
-
+// Functions Example:8
 // // function generateotp() {
 // //     let otp = "";
 // //     for (let i = 0; i <4; i++) { 
@@ -85,7 +86,7 @@
 
 
 
-
+// Functions TO-Do-LIST Example:1
 let cart  = [];
 // added items to cart
 function addItem(name, price) {
