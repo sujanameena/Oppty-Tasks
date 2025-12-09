@@ -1,71 +1,3 @@
-//       Ask the user to enter a number.
-// If the number is positive, print: "Positive number".
-
-// let num=prompt("Enter any number :");
-// if (num > 0 );
-// console.log("positive number");
-
-//       Ask for a person’s age.
-// If the age is 18 or above, print: "You can vote".
-
-// let age = prompt("Enter your age");
-// if (age >= 18){
-//   console.log("You can vote")
-// }
-
-
-//     Ask for marks (0–100).
-// If marks ≥ 90 → print "A grade"
-// Else If marks ≥ 75 → print "B grade"
-// Else If marks ≥ 50 → print "C grade"
-// Else → print "Fail"
-
-// let marks = prompt("Enter your marks");
-// if (marks >= 90) {
-//     console.log("A Grade");
-// } else if(marks >= 75) {
-//     console.log("B Grade");
-// } else if(marks >= 50) {
-//     console.log("C Grade");
-// } else if(marks >= 40) {
-//     console.log("D Grade");
-// } else {
-//     console.log("Fail");
-// }
-
-// Ask for a speed.
-// If speed > 120 → "Over speeding!"
-// Else If speed > 60 → "Normal speed"
-// Else → "Slow speed".
-
-// let speed = prompt("Enter Speed");
-// if (speed > 120){
-//     console.log("Over speed");
-// } else if (speed > 60){
-//     console.log("Normal Speed");
-// } else {
-//     console.log("Slow speed");
-// }
-
-
-// For Nested If
-// let age = prompt("Enter age");
-// let country = "india";
-// if (country == "india") {
-//     if (age >= 16) {
-//         console.log("He can drive");
-//     }
-// }
-// let age = prompt("Enter your age");
-// if (age >= 18) {
-//     console.log("You can vote");
-// } else {
-//     console.log("You cannot vote");
-// }
-
-
-// Switch
-// let day = "tuesday";
 
 // for (i = 20; i >= 1; i--) {
 //     console.log("Decrement numbers:", i);
@@ -85,19 +17,21 @@
 //     console.log(7 || i);
 // }
 
-
+//while Example:1
 // let i = 0;
 // while (i < 3) {
 //   console.log(i);
 //   i++;
 // }
 
+//while Example:2
 // let i = 1;
 // while (i <= 10) {
 //   console.log(i);
 //   i++;
 // }
 
+//while Example:3
 // even numbers 2 to 20
 // let i = 2;
 // while (i <= 20) {
@@ -105,6 +39,7 @@
 //     i += 2;
 // }
 
+//while Example:4
 // let i = 1;
 // let sum = 0;
 
@@ -114,6 +49,7 @@
 // }
 // console.log(sum);
 
+//while Example:5
 // sum of 50 numbers
 // let i = 1;
 // let sum = 0;
@@ -123,6 +59,7 @@
 // }
 // console.log(sum);
 
+//while Example:6
 // 5. Ask for a password until the user enters "1234"
 // let password = "";
 // while (password !== "1234") {
@@ -130,8 +67,8 @@
 // }
 // alert("Correct!");
 
+//while Example:7
 // Print all multiples of 5 between 1 and 50
-
 // let i = 1;
 // while (i <= 50) {
 //     if (i % 5 === 0) {
@@ -140,11 +77,13 @@
 //     i++;
 // }
 
+//while Example:8
 // let i = 1; 
 // while (i <= 10) { 
 //   console.log(5 * i);
 //   i++;
 // }
+
 // while = repeats a block of code as long as the condition is true.
 // let i = 1;
 // while (i <= 5) {
