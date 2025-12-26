@@ -115,7 +115,7 @@ element.style.cssText = 'color: red; font-size: 20px; margin: 10px;';
 // Get computed style (final rendered style)
 const styles = window.getComputedStyle(element);
 const color = styles.color;
-const fontSize = styles.fontSize;
+const fontSize = styles.fontSize; 
 
 
 // ============================================
@@ -404,7 +404,7 @@ button.addEventListener('click', handler);
 document.querySelector('.btn').addEventListener('click', handler); // Avoid in loops
 
 // ✅ Use DocumentFragment for batch insertions
-const fragment = document.createDocumentFragment();
+const fragments = document.createDocumentFragment(); 
 for (let i = 0; i < 100; i++) {
     const div = document.createElement('div');
     fragment.appendChild(div);
@@ -434,6 +434,7 @@ element.style.display = element.style.display === 'none' ? 'block' : 'none';
 document.querySelectorAll('.item').forEach(item => {
     console.log(item);
 });
+
 
 // Convert HTMLCollection to Array
 const divsArray = Array.from(document.getElementsByTagName('div'));

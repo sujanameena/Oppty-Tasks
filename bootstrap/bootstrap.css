@@ -1,0 +1,26 @@
+/* .text-primary-color {
+    color: rgb(209, 214, 64);
+}
+
+.text-secondary-color {
+    color: rgb(209, 80, 131);
+}
+
+.text-bg-primary-color {
+    color: blueviolet;
+    background-color: aqua;
+}
+.text-bg-dark-secondButton{
+    color: rgb(88, 11, 159);
+    background-color: rgb(158, 44, 65);
+} */
+
+
+.btn.btn-primary-button { 
+    background-color: brown;
+    color: rgb(207, 227, 220);
+}
+.btn.btn-primary-button:hover {
+    background-color: #d6b1b1;
+    color: #1f946f;
+}
