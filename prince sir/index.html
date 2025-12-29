@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oppty TechHub – Company Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f4f6fb;
+      padding: 20px;
+    }
+
+    .doc {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      padding: 24px 28px 32px;
+    }
+
+    /* Colors */
+    :root {
+      --blue: #003366;
+      --light-blue: #e6f2ff;
+      --orange: #ff9933;
+      --light-orange: #ffb366;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--orange);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+
+    .header-logo img {
+      max-height: 60px;
+    }
+
+    .header-title {
+      text-align: right;
+    }
+
+    .header-title h1 {
+      font-size: 26px;
+      color: var(--blue);
+      letter-spacing: 1px;
+    }
+
+    .header-title p {
+      font-size: 12px;
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    /* Main title */
+    .title-block {
+      text-align: center;
+      margin: 24px 0 18px;
+    }
+
+    .title-block h2 {
+      font-size: 28px;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+
+    .title-block p {
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    /* Section */
+    .section {
+      margin-top: 22px;
+      page-break-inside: avoid;
+    }
+
+    .section-header {
+      background: var(--light-orange);
+      color: var(--blue);
+      padding: 8px 12px;
+      border-left: 5px solid var(--blue);
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 13px;
+      margin-bottom: 8px;
+      text-align: justify;
+    }
+
+    .section h3 {
+      font-size: 14px;
+      color: var(--blue);
+      margin: 10px 0 4px;
+    }
+
+    .section ul {
+      margin-left: 20px;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .section li {
+      margin-bottom: 4px;
+    }
+
+    /* Value tags */
+    .value-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .value-tag {
+      background: var(--light-orange);
+      color: var(--blue);
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* Service box */
+    .service-box {
+      background: var(--light-blue);
+      border-left: 4px solid var(--orange);
+      border-radius: 4px;
+      padding: 10px 12px;
+      margin-top: 8px;
+    }
+
+    .service-box h4 {
+      font-size: 13px;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 12px;
+    }
+
+    /* GIS highlight */
+    .highlight-box {
+      background: linear-gradient(135deg, var(--blue), #005599);
+      color: #ffffff;
+      border-radius: 4px;
+      padding: 10px 12px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .highlight-box strong {
+      color: var(--light-orange);
+    }
+
+    /* Offices */
+    .office-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .office-card {
+      background: var(--light-blue);
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+
+    .office-card h4 {
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    /* Contact */
+    .contact-block {
+      background: var(--blue);
+      color: #ffffff;
+      border-radius: 4px;
+      text-align: center;
+      padding: 10px 12px;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .contact-block strong {
+      color: var(--light-orange);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      border-top: 1px solid var(--orange);
+      margin-top: 24px;
+      padding-top: 8px;
+      font-size: 11px;
+      color: #666;
+    }
+
+    .footer-logo img {
+      max-height: 40px;
+      margin-bottom: 4px;
+    }
+
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .doc { box-shadow: none; border-radius: 0; }
+      .section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="doc">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-logo">
+        <!-- Replace src with your own hosted logo path if needed -->
+        <img src="oppty-1.jpg" alt="Oppty TechHub Logo">
+      </div>
+      <div class="header-title">
+        <h1>OPPTY TECHUB</h1>
+        <p>PRIVATE LIMITED</p>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="title-block">
+      <h2>COMPANY PROFILE</h2>
+      <p>Your Partner for Digital Transformation</p>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="section">
+      <div class="section-header">EXECUTIVE SUMMARY</div>
+      <p>Oppty TechHub Private Limited is a leading provider of innovative business solutions, delivering cutting-edge IT services, Business Process Outsourcing (BPO), e-commerce solutions, web development, Artificial Intelligence (AI) services, AIOps, and advanced GIS Mapping solutions. With offices in Hyderabad and Udaipur, we partner with industry leaders to drive digital transformation and business growth.</p>
+      <p>Our commitment to excellence, integrity, and client-centricity ensures long-term partnerships and measurable success for every project we undertake.</p>
+    </div>
+
+    <!-- Company Overview -->
+    <div class="section">
+      <div class="section-header">COMPANY OVERVIEW</div>
+
+      <h3>Our Mission</h3>
+      <p>To deliver innovative solutions that drive client success and foster long-term partnerships through integrity and excellence.</p>
+
+      <h3>Our Vision</h3>
+      <p>To be a leading global provider of comprehensive business services, recognized for our commitment to collaboration and client-centricity.</p>
+
+      <h3>Our Core Values</h3>
+      <div class="value-tags">
+        <span class="value-tag">Innovation</span>
+        <span class="value-tag">Excellence</span>
+        <span class="value-tag">Integrity</span>
+        <span class="value-tag">Client-Centricity</span>
+        <span class="value-tag">Collaboration</span>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="section">
+      <div class="section-header">SERVICE PORTFOLIO</div>
+
+      <div class="service-grid">
+        <div>
+          <h3>1. IT Services</h3>
+          <p>Robust IT infrastructure, cybersecurity, and efficient operations designed to support your business growth and protect your digital assets.</p>
+          <div class="service-box">
+            <h4>Key Offerings</h4>
+            <ul>
+              <li>IT Infrastructure Management</li>
+              <li>Cybersecurity Solutions</li>
+              <li>System Integration</li>
+              <li>IT Consulting and Strategy</li>
+              <li>Managed IT Services</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>2. Business Process Outsourcing (BPO)</h3>
+          <p>Enhance efficiency and reduce operational costs by outsourcing critical business processes while maintaining quality and compliance.</p>
+          <div class="service-box">
+            <h4>Key Offerings</h4>
+            <ul>
+              <li>Finance and Accounting Outsourcing</li>
+              <li>Customer Support Services</li>
+              <li>Data Entry and Processing</li>
+              <li>Administrative Services</li>
+              <li>Specialized Process Outsourcing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>3. E-Commerce Solutions</h3>
+          <p>Establish, manage, and grow your online store with expert solutions tailored to maximize sales and customer satisfaction.</p>
+          <div class="service-box">
+            <h4>Key Offerings</h4>
+            <ul>
+              <li>E-commerce Platform Development</li>
+              <li>Store Setup and Configuration</li>
+              <li>Payment Gateway Integration</li>
+              <li>Inventory Management</li>
+              <li>Marketing and Optimization Services</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>4. Web Development</h3>
+          <p>Crafting responsive, secure, and visually appealing websites that drive engagement and conversions.</p>
+          <div class="service-box">
+            <h4>Key Offerings</h4>
+            <ul>
+              <li>Custom Web Application Development</li>
+              <li>Responsive Website Design</li>
+              <li>Content Management Systems</li>
+              <li>Web Maintenance and Support</li>
+              <li>Performance Optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>5. Artificial Intelligence Solutions</h3>
+          <p>Leverage AI to automate processes, gain actionable insights, and innovate your business operations for competitive advantage.</p>
+          <div class="service-box">
+            <h4>Key Offerings</h4>
+            <ul>
+              <li>Machine Learning Solutions</li>
+              <li>Natural Language Processing</li>
+              <li>Data Analytics and Insights</li>
+              <li>Process Automation</li>
+              <li>AI Consulting and Strategy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>6. AIOps (AI for IT Operations)</h3>
+          <p>Transforming IT operations with AI for proactive management, predictive analytics, and intelligent automation.</p>
+          <div class="service-box">
+            <h4>Key Offerings</h4>
+            <ul>
+              <li>Intelligent Monitoring and Alerting</li>
+              <li>Predictive Maintenance</li>
+              <li>Automated Incident Resolution</li>
+              <li>AI-Driven Performance Analytics</li>
+              <li>AIOps Platform Implementation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GIS Mapping -->
+    <div class="section">
+      <div class="section-header">GIS MAPPING SOLUTIONS</div>
+      <p>Leverage advanced Geographic Information Systems (GIS) technology to visualize, analyze, and optimize spatial data for strategic decision-making and enhanced business intelligence.</p>
+
+      <div class="service-box">
+        <h4>Key Offerings</h4>
+        <ul>
+          <li>GIS Data Collection and Processing</li>
+          <li>Spatial Analysis and Mapping</li>
+          <li>Custom GIS Application Development</li>
+          <li>Satellite Imagery Analysis</li>
+          <li>Location-Based Services and Analytics</li>
+          <li>GIS Database Management</li>
+          <li>Cartography and Map Production</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <strong>Our GIS Expertise</strong><br>
+        With over <strong>5 years</strong> of specialized experience in GIS Mapping, Oppty TechHub has delivered complex spatial analysis and mapping projects for diverse clients across multiple domains. Our team includes more than <strong>60 fully trained GIS Analysts</strong> who are proficient in industry-standard GIS tools and methodologies, enabling us to take up large-scale, time-critical assignments with confidence.
+      </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="section">
+      <div class="section-header">WHY CHOOSE OPPTY TECHUB?</div>
+      <div class="service-grid">
+        <div class="service-box">
+          <h4>Expertise Across Diverse Domains</h4>
+          <p>Specialized knowledge across IT, BPO, e-commerce, web development, AI, AIOps, and GIS Mapping enables end‑to‑end solutions aligned to your business goals.</p>
+        </div>
+        <div class="service-box">
+          <h4>Client-Focused Approach</h4>
+          <p>Engagement models built around your objectives, clear communication, and measurable outcomes ensure long‑term, value‑driven partnerships.</p>
+        </div>
+        <div class="service-box">
+          <h4>Innovative Technology Stack</h4>
+          <p>Use of modern platforms, tools, and frameworks to deliver scalable, secure, and future‑ready solutions.</p>
+        </div>
+        <div class="service-box">
+          <h4>Quality Assurance</h4>
+          <p>Structured processes, reviews, and testing frameworks to maintain consistently high delivery quality.</p>
+        </div>
+        <div class="service-box">
+          <h4>Cost-Effective Solutions</h4>
+          <p>Optimized delivery models and efficient resource allocation help control costs without compromising on quality.</p>
+        </div>
+        <div class="service-box">
+          <h4>Dedicated Support</h4>
+          <p>Responsive support, maintenance, and continuous improvement to keep your solutions performing reliably.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offices -->
+    <div class="section">
+      <div class="section-header">OUR OFFICES</div>
+      <div class="office-grid">
+        <div class="office-card">
+          <h4>Hyderabad, Telangana</h4>
+          <p>
+            Flat Number 601, Mahitha's Green Galaxy<br>
+            CBCID Colony, NRSA Colony,<br>
+            Bagath Singh Nagar Phase 2,<br>
+            Kukatpally, Hyderabad,<br>
+            Telangana 500085
+          </p>
+        </div>
+        <div class="office-card">
+          <h4>Udaipur, Rajasthan</h4>
+          <p>
+            Plot No: 26, 100 Feet Road,<br>
+            Shobhagpura,<br>
+            Udaipur,<br>
+            Rajasthan 313011
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact & Commitment -->
+    <div class="section">
+      <div class="section-header">CONTACT & COMMITMENT TO EXCELLENCE</div>
+
+      <div class="contact-block">
+        <p><strong>Phone:</strong> +91 9491209900</p>
+        <p><strong>Email:</strong> info@oppty.in</p>
+        <p><strong>Website:</strong> oppty.in</p>
+      </div>
+
+      <p>At Oppty TechHub, the focus is on building lasting relationships through transparent communication, agile delivery, and continuous improvement.</p>
+      <ul>
+        <li>Transparent communication and regular progress updates.</li>
+        <li>Agile methodology to adapt quickly to changing requirements.</li>
+        <li>Skilled professionals with proven technical and domain expertise.</li>
+        <li>Adoption of industry best practices and standards.</li>
+        <li>Ongoing investment in technology and team development.</li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-logo">
+        <img src="oppty-1.jpg" alt="Oppty TechHub Logo">
+      </div>
+      <div>Oppty TechHub Private Limited – Your Partner for Digital Transformation</div>
+    </div>
+  </div>
+</body>
+</html>
